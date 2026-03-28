@@ -64,6 +64,12 @@
 @layer base {
   * {
     @apply border-border;
+    cursor: url('/cursors/default.png'), auto;
+  }
+
+  a, button, [role="button"], input[type="submit"], input[type="button"],
+  select, label, summary, [tabindex]:not([tabindex="-1"]) {
+    cursor: url('/cursors/pointer.png'), pointer;
   }
 
   body {
