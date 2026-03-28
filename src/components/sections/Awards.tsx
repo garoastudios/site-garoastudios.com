@@ -20,6 +20,16 @@ import gamescomLatam24Gold from '@/assets/awards/gamescomlatam24_gold.png';
 import gamethonWhite from '@/assets/awards/gamethon_white.png';
 import jogatorioWhite from '@/assets/awards/jogatorio_white.png';
 import perifaconWhite from '@/assets/awards/perifacon_white.png';
+import sbmSbgames from '@/assets/awards/sbm_sbgames.png';
+import sbm6ecra from '@/assets/awards/sbm_6ecra.png';
+import sbmLeblanc from '@/assets/awards/sbm_leblanc_2022.png';
+import bestGameMusic from '@/assets/awards/best_game_music.png';
+import cartomanteChainsaw from '@/assets/awards/cartomante_chainsaw.png';
+import cljJogatorio from '@/assets/awards/clj_jogatorio.png';
+import cljPerifacon24 from '@/assets/awards/clj_perifacon24.png';
+import cljSbgamesArt from '@/assets/awards/clj_sbgames_art.png';
+import finalistaMelhorBr from '@/assets/awards/finalista_melhorbr.png';
+import officialSelection5ecra from '@/assets/awards/official_selection_5ecra.png';
 
 const LAURELS = [
   big24BrazilGold,
@@ -42,6 +52,16 @@ const LAURELS = [
   dropsWhite,
   gamethonWhite,
   jogatorioWhite,
+  sbmSbgames,
+  sbm6ecra,
+  sbmLeblanc,
+  bestGameMusic,
+  cartomanteChainsaw,
+  cljJogatorio,
+  cljPerifacon24,
+  cljSbgamesArt,
+  finalistaMelhorBr,
+  officialSelection5ecra,
 ];
 
 export default function AwardsSection() {
