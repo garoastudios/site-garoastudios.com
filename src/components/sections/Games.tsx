@@ -59,11 +59,11 @@ function GameCard({ game, locale, title }: { game: GameDef; locale: Locale; titl
   return (
     <Link
       to={`/${locale}/games/${game.slug}`}
-      className="group block bg-card border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-colors"
+      className="group flex bg-card border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-colors h-28 sm:h-32"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="relative w-full aspect-[460/215]">
+      <div className="relative w-48 sm:w-64 shrink-0 aspect-[460/215]">
         <img
           src={getGameCapsule(game.asset, locale)}
           alt={title}
@@ -81,16 +81,16 @@ function GameCard({ game, locale, title }: { game: GameDef; locale: Locale; titl
           />
         )}
       </div>
-      <div className="p-4 flex items-center justify-between">
+      <div className="flex-1 p-4 flex flex-col justify-center gap-2">
+        <h3 className="font-display text-base sm:text-lg text-foreground">{title}</h3>
         <div className="flex items-center gap-3">
-          <h3 className="font-display text-base text-foreground">{title}</h3>
           <div className="flex items-center gap-1.5 text-foreground/70">
             {game.platforms.map((p) => (
               <PlatformIcon key={p} platform={p} />
             ))}
           </div>
+          <span className="font-display text-sm text-muted-foreground">{game.year}</span>
         </div>
-        <span className="font-display text-sm text-muted-foreground">{game.year}</span>
       </div>
     </Link>
   );
@@ -106,7 +106,7 @@ export default function GamesSection() {
           {t.games.heading}
         </h2>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4 max-w-3xl mx-auto">
           {GAMES.map((game) => (
             <GameCard key={game.slug} game={game} locale={locale} title={t.games[game.key].title} />
           ))}
