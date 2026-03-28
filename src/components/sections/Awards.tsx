@@ -30,8 +30,14 @@ import cljPerifacon24 from '@/assets/awards/clj_perifacon24.png';
 import cljSbgamesArt from '@/assets/awards/clj_sbgames_art.png';
 import finalistaMelhorBr from '@/assets/awards/finalista_melhorbr.png';
 import officialSelection5ecra from '@/assets/awards/official_selection_5ecra.png';
+import big24Panorama from '@/assets/awards/big24_panorama.png';
+import sbgamesTransparent from '@/assets/awards/sbgames_transparent.png';
+import winnerPopularvote from '@/assets/awards/winner_popularvote.png';
+import sbmPanoramaBig from '@/assets/awards/sbm_panorama_big.png';
+import seloBigTransparent from '@/assets/awards/selo_big_transparent.png';
+import controlesVoadores from '@/assets/awards/controles_voadores_2023.png';
 
-const LAURELS = [
+const ALL_LAURELS = [
   big24BrazilGold,
   big24FinalistSound,
   gamescomLatam24Gold,
@@ -62,7 +68,17 @@ const LAURELS = [
   cljSbgamesArt,
   finalistaMelhorBr,
   officialSelection5ecra,
+  big24Panorama,
+  sbgamesTransparent,
+  winnerPopularvote,
+  sbmPanoramaBig,
+  seloBigTransparent,
+  controlesVoadores,
 ];
+
+const half = Math.ceil(ALL_LAURELS.length / 2);
+const ROW1 = ALL_LAURELS.slice(0, half);
+const ROW2 = ALL_LAURELS.slice(half);
 
 export default function AwardsSection() {
   const { t } = useLocale();
@@ -73,21 +89,24 @@ export default function AwardsSection() {
         {t.awards.heading}
       </h2>
 
-      <div className="relative w-full overflow-hidden">
-        {/* Fade edges */}
+      {/* Row 1: scrolls right-to-left */}
+      <div className="relative w-full overflow-hidden mb-6">
         <div className="absolute left-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-r from-background to-transparent pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-l from-background to-transparent pointer-events-none" />
-
         <div className="awards-scroll-track flex items-center gap-12 w-max">
-          {/* Duplicate set for seamless loop */}
-          {[...LAURELS, ...LAURELS].map((src, i) => (
-            <img
-              key={i}
-              src={src}
-              alt="Award laurel"
-              className="h-24 sm:h-28 w-auto object-contain shrink-0"
-              loading="lazy"
-            />
+          {[...ROW1, ...ROW1].map((src, i) => (
+            <img key={i} src={src} alt="Award laurel" className="h-24 sm:h-28 w-auto object-contain shrink-0" loading="lazy" />
+          ))}
+        </div>
+      </div>
+
+      {/* Row 2: scrolls left-to-right */}
+      <div className="relative w-full overflow-hidden">
+        <div className="absolute left-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-r from-background to-transparent pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-l from-background to-transparent pointer-events-none" />
+        <div className="awards-scroll-track-reverse flex items-center gap-12 w-max">
+          {[...ROW2, ...ROW2].map((src, i) => (
+            <img key={i} src={src} alt="Award laurel" className="h-24 sm:h-28 w-auto object-contain shrink-0" loading="lazy" />
           ))}
         </div>
       </div>

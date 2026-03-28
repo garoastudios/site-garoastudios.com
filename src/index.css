@@ -104,14 +104,19 @@
 }
 
 @keyframes awards-scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes awards-scroll-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }
 
 .awards-scroll-track {
-  animation: awards-scroll 40s linear infinite;
+  animation: awards-scroll 52s linear infinite;
+}
+
+.awards-scroll-track-reverse {
+  animation: awards-scroll-reverse 52s linear infinite;
 }
