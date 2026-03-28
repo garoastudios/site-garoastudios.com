@@ -33,7 +33,7 @@ const PlatformIcon = ({ platform }: { platform: Platform }) => {
   }
 };
 
-function GameCard({ game, locale, title }: { game: GameDef; locale: string; title: string }) {
+function GameCard({ game, locale, title }: { game: GameDef; locale: Locale; title: string }) {
   const [hovering, setHovering] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
