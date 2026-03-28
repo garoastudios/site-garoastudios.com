@@ -46,6 +46,7 @@ export const br = {
       description: 'Uma aventura cósmica com o porco mais corajoso da galáxia.',
     },
     learnMore: 'Saiba Mais',
+    backToGames: 'Voltar para Nossos Jogos',
   },
   about: {
     heading: 'Sobre Nós',

@@ -46,6 +46,7 @@ export const es = {
       description: 'Una aventura cósmica con el cerdo más valiente de la galaxia.',
     },
     learnMore: 'Saber Más',
+    backToGames: 'Volver a Nuestros Juegos',
   },
   about: {
     heading: 'Sobre Nosotros',

@@ -46,6 +46,7 @@ export const zh = {
       description: '银河系最勇敢的猪的宇宙冒险。',
     },
     learnMore: '了解更多',
+    backToGames: '返回我们的游戏',
   },
   about: {
     heading: '关于我们',

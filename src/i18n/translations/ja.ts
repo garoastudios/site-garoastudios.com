@@ -46,6 +46,7 @@ export const ja = {
       description: '銀河で最も勇敢なブタの宇宙冒険。',
     },
     learnMore: '詳細を見る',
+    backToGames: '私たちのゲームに戻る',
   },
   about: {
     heading: '会社概要',
