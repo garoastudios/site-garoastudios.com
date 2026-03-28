@@ -25,7 +25,7 @@ const GAMES: GameDef[] = [
 ];
 
 const PlatformIcon = ({ platform }: { platform: Platform }) => {
-  const cls = "w-4 h-4";
+  const cls = "w-5 h-5";
   switch (platform) {
     case 'steam': return <SteamIcon className={cls} />;
     case 'itch': return <ItchIcon className={cls} />;
