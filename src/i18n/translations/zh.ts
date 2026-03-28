@@ -13,10 +13,10 @@ export const zh = {
   },
   stats: {
     heading: '我们用心制作游戏',
-    subtitle: '细雨工作室是一家成立于2018年的开发与娱乐工作室。我们的目标是打造下一代游戏体验。',
-    consistentCreation: '持续创作',
-    awards: '10+奖项',
-    positiveRating: '95%好评率',
+    subtitle: '我们是一家屡获殊荣的游戏工作室，总部位于里约，专注于游戏玩法和叙事的实验性与艺术性探索。\n\n\n我们热爱音乐和紫色。',
+    consistentCreation: '持续创新创作——我们发布！',
+    awards: '30+ 官方奖项和节展入选',
+    positiveRating: '> 95% Steam好评率',
   },
   games: {
     heading: '我们的游戏',
