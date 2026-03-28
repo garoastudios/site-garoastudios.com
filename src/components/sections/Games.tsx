@@ -106,7 +106,7 @@ export default function GamesSection() {
           {t.games.heading}
         </h2>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4 max-w-3xl mx-auto">
           {GAMES.map((game) => (
             <GameCard key={game.slug} game={game} locale={locale} title={t.games[game.key].title} />
           ))}
