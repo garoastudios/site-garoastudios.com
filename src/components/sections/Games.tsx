@@ -1,31 +1,102 @@
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useLocale } from '@/i18n/useLocale';
 import { getGameCapsule } from '@/i18n/assets';
+import { SteamIcon, ItchIcon, SpawndIcon } from '@/components/PlatformIcons';
 
-const GAMES = [
-  { slug: 'rhythmania', key: 'rhythmania' as const },
-  { slug: 'cartomante', key: 'cartomante' as const },
-  { slug: 'stand-by-me', key: 'standByMe' as const },
-  { slug: 'cat-leather-jackets', key: 'catLeatherJackets' as const },
-  { slug: 'astro-pig', key: 'astroPig' as const },
+type Platform = 'steam' | 'itch' | 'spawnd';
+
+interface GameDef {
+  slug: string;
+  key: 'rhythmania' | 'cartomante' | 'standByMe' | 'catLeatherJackets' | 'astroPig';
+  asset: string;
+  year: string;
+  platforms: Platform[];
+  trailerWebm?: string; // future: path to webm micro-trailer
+}
+
+const GAMES: GameDef[] = [
+  { slug: 'rhythmania', key: 'rhythmania', asset: 'rhythmania', year: 'Coming Soon', platforms: ['steam', 'itch', 'spawnd'] },
+  { slug: 'cartomante', key: 'cartomante', asset: 'cartomante', year: '2020', platforms: ['steam', 'itch'] },
+  { slug: 'stand-by-me', key: 'standByMe', asset: 'stand_by_me', year: '2021', platforms: ['steam', 'itch'] },
+  { slug: 'cat-leather-jackets', key: 'catLeatherJackets', asset: 'cat_leather_jackets', year: '2023', platforms: ['steam', 'itch'] },
+  { slug: 'astro-pig', key: 'astroPig', asset: 'astro_pig', year: '2024', platforms: ['steam', 'itch'] },
 ];
 
-// Map slug to asset filename
-const SLUG_TO_ASSET: Record<string, string> = {
-  'rhythmania': 'rhythmania',
-  'cartomante': 'cartomante',
-  'stand-by-me': 'stand_by_me',
-  'cat-leather-jackets': 'cat_leather_jackets',
-  'astro-pig': 'astro_pig',
+const PlatformIcon = ({ platform }: { platform: Platform }) => {
+  const cls = "w-4 h-4";
+  switch (platform) {
+    case 'steam': return <SteamIcon className={cls} />;
+    case 'itch': return <ItchIcon className={cls} />;
+    case 'spawnd': return <SpawndIcon className={cls} />;
+  }
 };
+
+function GameCard({ game, locale, title }: { game: GameDef; locale: string; title: string }) {
+  const [hovering, setHovering] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleMouseEnter = () => {
+    if (game.trailerWebm) {
+      timerRef.current = setTimeout(() => {
+        setHovering(true);
+        videoRef.current?.play();
+      }, 1500);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (timerRef.current) clearTimeout(timerRef.current);
+    setHovering(false);
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  };
+
+  return (
+    <Link
+      to={`/${locale}/games/${game.slug}`}
+      className="group block bg-card border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-colors"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className="relative w-full aspect-[460/215]">
+        <img
+          src={getGameCapsule(game.asset, locale)}
+          alt={title}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${hovering ? 'opacity-0' : 'opacity-100'}`}
+          loading="lazy"
+        />
+        {game.trailerWebm && (
+          <video
+            ref={videoRef}
+            src={game.trailerWebm}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${hovering ? 'opacity-100' : 'opacity-0'}`}
+            muted
+            loop
+            playsInline
+          />
+        )}
+      </div>
+      <div className="p-4 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <h3 className="font-display text-base text-foreground">{title}</h3>
+          <div className="flex items-center gap-1.5 text-foreground/70">
+            {game.platforms.map((p) => (
+              <PlatformIcon key={p} platform={p} />
+            ))}
+          </div>
+        </div>
+        <span className="font-display text-sm text-muted-foreground">{game.year}</span>
+      </div>
+    </Link>
+  );
+}
 
 export default function GamesSection() {
   const { locale, t } = useLocale();
-
-  const featured = GAMES[0];
-  const rest = GAMES.slice(1);
-
-  const getGameInfo = (key: typeof GAMES[number]['key']) => t.games[key];
 
   return (
     <section id="games" className="snap-section flex flex-col justify-center px-4 py-20">
@@ -34,60 +105,16 @@ export default function GamesSection() {
           {t.games.heading}
         </h2>
 
-        {/* Featured game */}
-        <Link
-          to={`/${locale}/games/${featured.slug}`}
-          className="group block mb-10"
-        >
-          <div className="flex flex-col md:flex-row gap-6 bg-card border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-colors">
-            <div className="md:w-1/2">
-              <img
-                src={getGameCapsule(SLUG_TO_ASSET[featured.slug], locale)}
-                alt={getGameInfo(featured.key).title}
-                className="w-full h-64 md:h-80 object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div className="md:w-1/2 p-6 flex flex-col justify-center">
-              <h3 className="font-display text-2xl sm:text-3xl text-foreground mb-2">
-                {getGameInfo(featured.key).title}
-              </h3>
-              <p className="font-display text-accent text-sm mb-3">
-                {getGameInfo(featured.key).subtitle}
-              </p>
-              <p className="text-muted-foreground mb-4">
-                {getGameInfo(featured.key).description}
-              </p>
-              <span className="text-accent font-display text-sm group-hover:underline">
-                {t.games.learnMore} →
-              </span>
-            </div>
-          </div>
-        </Link>
+        {/* Featured game (first) */}
+        <div className="mb-8">
+          <GameCard game={GAMES[0]} locale={locale} title={t.games[GAMES[0].key].title} />
+        </div>
 
         {/* Game grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {rest.map((game) => {
-            const info = getGameInfo(game.key);
-            return (
-              <Link
-                key={game.slug}
-                to={`/${locale}/games/${game.slug}`}
-                className="group bg-card border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-colors"
-              >
-                <img
-                  src={getGameCapsule(SLUG_TO_ASSET[game.slug], locale)}
-                  alt={info.title}
-                  className="w-full h-40 object-cover"
-                  loading="lazy"
-                />
-                <div className="p-4">
-                  <h3 className="font-display text-lg text-foreground mb-1">{info.title}</h3>
-                  <p className="text-muted-foreground text-sm line-clamp-2">{info.description}</p>
-                </div>
-              </Link>
-            );
-          })}
+          {GAMES.slice(1).map((game) => (
+            <GameCard key={game.slug} game={game} locale={locale} title={t.games[game.key].title} />
+          ))}
         </div>
       </div>
     </section>
