@@ -3,6 +3,7 @@ export const ja = {
     games: 'ゲーム',
     aboutUs: '会社概要',
     press: 'プレス',
+    jobs: '採用',
     workWithUs: '採用情報',
     contact: 'お問い合わせ',
   },

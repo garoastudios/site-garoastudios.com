@@ -3,6 +3,7 @@ export const zh = {
     games: '游戏',
     aboutUs: '关于我们',
     press: '媒体',
+    jobs: '招聘',
     workWithUs: '加入我们',
     contact: '联系',
   },

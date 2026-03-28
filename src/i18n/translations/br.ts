@@ -3,6 +3,7 @@ export const br = {
     games: 'JOGOS',
     aboutUs: 'SOBRE NÓS',
     press: 'IMPRENSA',
+    jobs: 'VAGAS',
     workWithUs: 'TRABALHE CONOSCO',
     contact: 'CONTATO',
   },
