@@ -22,12 +22,12 @@ export const es = {
   games: {
     heading: 'NUESTROS JUEGOS',
     rhythmania: {
-      title: 'RHYTHMANIA',
+      title: 'RITMANÍA',
       subtitle: 'DOMINA DESAFÍOS RÍTMICOS',
       description: 'Desafíos animados por artistas virales con una banda sonora original inspirada en Brasil.',
     },
     cartomante: {
-      title: 'CARTOMANTE',
+      title: 'CARTOMANTE - FORTUNE TELLER',
       subtitle: 'DESVELA TU DESTINO',
       description: 'Un juego narrativo de cartas donde cada lectura moldea tu destino.',
     },

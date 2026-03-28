@@ -22,12 +22,12 @@ export const ja = {
   games: {
     heading: '私たちのゲーム',
     rhythmania: {
-      title: 'RHYTHMANIA',
+      title: 'リズマニア',
       subtitle: 'ワンボタンリズムをマスター',
       description: 'バイラルアーティストによるアニメーションとブラジル風オリジナルサウンドトラックのリズムチャレンジ。',
     },
     cartomante: {
-      title: 'CARTOMANTE',
+      title: 'CARTOMANTE - FORTUNE TELLER',
       subtitle: '運命を明かせ',
       description: 'すべてのリーディングがあなたの運命を形作るナラティブカードゲーム。',
     },

@@ -22,12 +22,12 @@ export const zh = {
   games: {
     heading: '我们的游戏',
     rhythmania: {
-      title: 'RHYTHMANIA',
+      title: '节奏曼狂',
       subtitle: '掌握一键节奏',
       description: '由网络热门艺术家制作动画，配以原创巴西风格原声音乐的节奏挑战。',
     },
     cartomante: {
-      title: 'CARTOMANTE',
+      title: 'CARTOMANTE - FORTUNE TELLER',
       subtitle: '揭示你的命运',
       description: '一款叙事卡牌游戏，每一次占卜都塑造你的命运。',
     },
