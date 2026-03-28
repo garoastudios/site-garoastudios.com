@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useLocale } from '@/i18n/useLocale';
+import { type Locale } from '@/i18n/config';
 import { getGameCapsule } from '@/i18n/assets';
 import { SteamIcon, ItchIcon, SpawndIcon } from '@/components/PlatformIcons';
 
