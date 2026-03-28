@@ -28,7 +28,7 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="snap-section flex flex-col items-center justify-center px-4 py-20">
+    <section id="stats" className="snap-section flex flex-col items-center justify-center px-4 py-20">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6">
           {t.stats.heading}
