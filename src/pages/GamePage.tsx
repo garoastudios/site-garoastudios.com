@@ -4,6 +4,7 @@ import { useLocale } from '@/i18n/useLocale';
 import { getGameCapsule } from '@/i18n/assets';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import rhythmaniaTrailer from '@/assets/games/rhythmania_microtrailer.webm';
 
 const SLUG_TO_ASSET: Record<string, string> = {
   'rhythmania': 'rhythmania',
