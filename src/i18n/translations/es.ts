@@ -23,28 +23,23 @@ export const es = {
     heading: 'NUESTROS JUEGOS',
     rhythmania: {
       title: 'RITMANÍA',
-      subtitle: 'DOMINA DESAFÍOS RÍTMICOS',
-      description: 'Desafíos animados por artistas virales con una banda sonora original inspirada en Brasil.',
+      description: '¡Una vibrante colección de minijuegos rítmicos de un solo botón, con arte colorido y una gran variedad de géneros musicales brasileños!',
     },
     cartomante: {
       title: 'CARTOMANTE - FORTUNE TELLER',
-      subtitle: 'DESVELA TU DESTINO',
-      description: 'Un juego narrativo de cartas donde cada lectura moldea tu destino.',
+      description: 'Una novela visual ramificada con múltiples finales sobre adivinación para clientes excéntricos con cartas de tarot.',
     },
     standByMe: {
       title: 'STAND BY ME',
-      subtitle: 'UN VIAJE DE AMISTAD',
-      description: 'Una aventura emocional sobre conexión y crecer.',
+      description: 'Un juego de física colorido y groovy sobre cuidar a tus amigos.',
     },
     catLeatherJackets: {
       title: 'CAT LEATHER JACKETS',
-      subtitle: 'FURIA FELINA',
-      description: 'Gatos en chaquetas de cuero causando caos — ¿qué más necesitas?',
+      description: 'Un juego de música/ritmo con estilo de novela gráfica sobre una banda adolescente de punk rock y ska punk.',
     },
     astroPig: {
       title: 'ASTRO PIG',
-      subtitle: 'CERDOS EN EL ESPACIO',
-      description: 'Una aventura cósmica con el cerdo más valiente de la galaxia.',
+      description: 'Un puzzle-platformer lo-fi de aventura inspirado en los 90 sobre un cerdito astronauta y su nave inteligente.',
     },
     learnMore: 'Saber Más',
     backToGames: 'Volver a Nuestros Juegos',

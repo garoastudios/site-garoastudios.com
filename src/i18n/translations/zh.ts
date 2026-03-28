@@ -23,28 +23,23 @@ export const zh = {
     heading: '我们的游戏',
     rhythmania: {
       title: '节奏曼狂',
-      subtitle: '掌握一键节奏',
-      description: '由网络热门艺术家制作动画，配以原创巴西风格原声音乐的节奏挑战。',
+      description: '一款充满活力的节奏类迷你游戏合集，采用单按钮操作，结合丰富多彩的美术风格和多样的巴西音乐流派！',
     },
     cartomante: {
       title: 'CARTOMANTE - FORTUNE TELLER',
-      subtitle: '揭示你的命运',
-      description: '一款叙事卡牌游戏，每一次占卜都塑造你的命运。',
+      description: '一款多结局分支视觉小说，为古怪的客户用塔罗牌占卜命运。',
     },
     standByMe: {
       title: 'STAND BY ME',
-      subtitle: '友谊之旅',
-      description: '一段关于联系与成长的情感冒险。',
+      description: '一款色彩缤纷、节奏感十足的物理益智游戏，主题是关心你的朋友。',
     },
     catLeatherJackets: {
       title: 'CAT LEATHER JACKETS',
-      subtitle: '猫咪狂怒',
-      description: '穿皮夹克的猫咪搞破坏——还需要什么？',
+      description: '一款漫画风格的音乐/节奏游戏，讲述一个青少年朋克摇滚和斯卡朋克乐队的故事。',
     },
     astroPig: {
       title: 'ASTRO PIG',
-      subtitle: '太空猪',
-      description: '银河系最勇敢的猪的宇宙冒险。',
+      description: '一款90年代风格的低保真冒险解谜平台游戏，讲述一只小猪宇航员和他的智能飞船的故事。',
     },
     learnMore: '了解更多',
     backToGames: '返回我们的游戏',

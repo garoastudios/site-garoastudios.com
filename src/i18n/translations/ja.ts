@@ -23,28 +23,23 @@ export const ja = {
     heading: '私たちのゲーム',
     rhythmania: {
       title: 'リズマニア',
-      subtitle: 'ワンボタンリズムをマスター',
-      description: 'バイラルアーティストによるアニメーションとブラジル風オリジナルサウンドトラックのリズムチャレンジ。',
+      description: '色鮮やかなビジュアルと多彩なブラジル音楽ジャンルが楽しめる、ワンボタン操作のリズムミニゲームコレクション！',
     },
     cartomante: {
       title: 'CARTOMANTE - FORTUNE TELLER',
-      subtitle: '運命を明かせ',
-      description: 'すべてのリーディングがあなたの運命を形作るナラティブカードゲーム。',
+      description: 'エキセントリックなクライアントにタロットカードで占いをする、マルチエンディングの分岐型ビジュアルノベル。',
     },
     standByMe: {
       title: 'STAND BY ME',
-      subtitle: '友情の旅',
-      description: 'つながりと成長についての感動的なアドベンチャー。',
+      description: '友達を大切にすることがテーマの、カラフルでグルーヴィーな物理パズルゲーム。',
     },
     catLeatherJackets: {
       title: 'CAT LEATHER JACKETS',
-      subtitle: 'フェライン・フューリー',
-      description: 'レザージャケットを着た猫が大暴れ — 他に何が必要？',
+      description: 'ティーンエイジャーのパンクロック＆スカパンクバンドを描いた、グラフィックノベル風の音楽・リズムゲーム。',
     },
     astroPig: {
       title: 'ASTRO PIG',
-      subtitle: '宇宙のブタ',
-      description: '銀河で最も勇敢なブタの宇宙冒険。',
+      description: '子豚の宇宙飛行士とその知的な宇宙船を描いた、90年代風ローファイアドベンチャーパズルプラットフォーマー。',
     },
     learnMore: '詳細を見る',
     backToGames: '私たちのゲームに戻る',

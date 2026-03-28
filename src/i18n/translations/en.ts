@@ -23,28 +23,23 @@ export const en = {
     heading: 'OUR GAMES',
     rhythmania: {
       title: 'RHYTHMANIA',
-      subtitle: 'MASTER ONE-BUTTON RHYTHM',
-      description: 'Challenges animated by viral artists and featuring an original Brazilian-inspired soundtrack.',
+      description: 'A vibrant rhythm anthology with one-button mini-games, colorful art, and a wide range of Brazilian musical styles!',
     },
     cartomante: {
       title: 'CARTOMANTE - FORTUNE TELLER',
-      subtitle: 'UNVEIL YOUR FATE',
-      description: 'A narrative card game where every reading shapes your destiny.',
+      description: 'A branching visual novel with multiple endings about fortune telling for eccentric clients with tarot cards.',
     },
     standByMe: {
       title: 'STAND BY ME',
-      subtitle: 'A JOURNEY OF FRIENDSHIP',
-      description: 'An emotional adventure about connection and growing up.',
+      description: 'A colorful and groovy physics game about caring for your friends.',
     },
     catLeatherJackets: {
       title: 'CAT LEATHER JACKETS',
-      subtitle: 'FELINE FURY',
-      description: 'Cats in leather jackets causing chaos — what more do you need?',
+      description: 'A graphic novel styled music/rhythm game about a teenage punk rock and ska punk band.',
     },
     astroPig: {
       title: 'ASTRO PIG',
-      subtitle: 'PIGS IN SPACE',
-      description: 'A cosmic adventure with the bravest pig in the galaxy.',
+      description: 'A 90-s inspired lo-fi adventure puzzle platformer about a piglet astronaut and his intelligent ship.',
     },
     learnMore: 'Learn More',
     backToGames: 'Back to Our Games',
