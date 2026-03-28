@@ -98,6 +98,10 @@ export const en = {
     download: 'Download',
     comingSoon: 'Full press kit coming soon. For press inquiries, contact us at press@garoastudios.com',
   },
+  jobs: {
+    heading: 'Jobs',
+    noOpenings: 'There are no current openings. Follow us on our socials to be notified as soon as we have new work opportunities!',
+  },
   footer: {
     trademark: '™ Garoa Studios 2018 — 2026',
   },
