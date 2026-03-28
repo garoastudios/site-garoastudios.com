@@ -21,6 +21,14 @@ const SLUG_TO_KEY: Record<string, string> = {
   'astro-pig': 'astroPig',
 };
 
+const STEAM_WIDGETS: Record<string, string> = {
+  'rhythmania': 'https://store.steampowered.com/widget/2322070/',
+  'cartomante': '', // no steam widget provided
+  'stand-by-me': 'https://store.steampowered.com/widget/1484600/',
+  'cat-leather-jackets': 'https://store.steampowered.com/widget/1673830/',
+  'astro-pig': 'https://store.steampowered.com/widget/1800390/',
+};
+
 export default function GamePage() {
   const { gameSlug } = useParams<{ gameSlug: string }>();
   const { locale, t } = useLocale();
@@ -28,6 +36,8 @@ export default function GamePage() {
   const key = SLUG_TO_KEY[gameSlug || ''] as keyof typeof t.games | undefined;
   const gameInfo = key ? (t.games[key] as { title: string; subtitle: string; description: string }) : null;
   const assetSlug = SLUG_TO_ASSET[gameSlug || ''];
+  const steamWidget = STEAM_WIDGETS[gameSlug || ''];
+  const isRhythmania = gameSlug === 'rhythmania';
 
   useEffect(() => {
     if (gameInfo) {
@@ -64,6 +74,38 @@ export default function GamePage() {
           <p className="text-foreground/90 text-lg leading-relaxed mb-8">
             {gameInfo.description}
           </p>
+
+          {/* Steam Widget */}
+          {steamWidget && (
+            <div className="mb-8 w-full max-w-[646px]">
+              <iframe
+                src={steamWidget}
+                frameBorder="0"
+                width="646"
+                height="190"
+                className="w-full rounded-lg"
+                title={`${gameInfo.title} on Steam`}
+              />
+            </div>
+          )}
+
+          {/* Spawnd Playable Embed (RhythMania only) */}
+          {isRhythmania && (
+            <div className="mb-8 w-full max-w-[640px]">
+              <iframe
+                src="https://www.spawnd.gg/-/games/embed/26?description=false"
+                width="640"
+                height="360"
+                frameBorder="0"
+                allow="autoplay; encrypted-media; clipboard-write; clipboard-read; web-share; cross-origin-isolated"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="w-full rounded-lg"
+                title="Play RhythMania on spawnd.gg"
+              />
+            </div>
+          )}
+
           <Link
             to={`/${locale}#games`}
             className="inline-block bg-accent text-accent-foreground font-display px-6 py-3 rounded-lg hover:bg-accent/90 transition-colors"
