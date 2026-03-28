@@ -17,6 +17,7 @@ export const en = {
     consistentCreation: 'Consistent innovative Creation - we launch!',
     awards: '30+ official Awards and festival selections',
     positiveRating: '> 95% Positive User Rating on steam',
+    followUs: 'See what we\'re up to',
   },
   games: {
     heading: 'OUR GAMES',
