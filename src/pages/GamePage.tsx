@@ -5,6 +5,18 @@ import { getGameCapsule } from '@/i18n/assets';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import rhythmaniaTrailer from '@/assets/games/rhythmania_microtrailer.webm';
+import astroPigTrailer from '@/assets/games/astro_pig_microtrailer.webm';
+import catLeatherJacketsTrailer from '@/assets/games/cat_leather_jackets_microtrailer.webm';
+import standByMeTrailer from '@/assets/games/stand_by_me_microtrailer.webm';
+import cartomanteTrailer from '@/assets/games/cartomante_microtrailer.webm';
+
+const SLUG_TO_TRAILER: Record<string, string> = {
+  'rhythmania': rhythmaniaTrailer,
+  'astro-pig': astroPigTrailer,
+  'cat-leather-jackets': catLeatherJacketsTrailer,
+  'stand-by-me': standByMeTrailer,
+  'cartomante': cartomanteTrailer,
+};
 
 const SLUG_TO_ASSET: Record<string, string> = {
   'rhythmania': 'rhythmania',
@@ -38,6 +50,7 @@ export default function GamePage() {
   const gameInfo = key ? (t.games[key] as { title: string; subtitle: string; description: string }) : null;
   const assetSlug = SLUG_TO_ASSET[gameSlug || ''];
   const steamWidget = STEAM_WIDGETS[gameSlug || ''];
+  const trailer = SLUG_TO_TRAILER[gameSlug || ''];
   const isRhythmania = gameSlug === 'rhythmania';
 
   useEffect(() => {
@@ -59,9 +72,9 @@ export default function GamePage() {
       <Header />
       <main className="pt-16">
         <div className="relative">
-          {isRhythmania ? (
+          {trailer ? (
             <video
-              src={rhythmaniaTrailer}
+              src={trailer}
               autoPlay
               muted
               loop
