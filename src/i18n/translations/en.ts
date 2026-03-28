@@ -27,7 +27,7 @@ export const en = {
       description: 'Challenges animated by viral artists and featuring an original Brazilian-inspired soundtrack.',
     },
     cartomante: {
-      title: 'CARTOMANTE',
+      title: 'CARTOMANTE - FORTUNE TELLER',
       subtitle: 'UNVEIL YOUR FATE',
       description: 'A narrative card game where every reading shapes your destiny.',
     },

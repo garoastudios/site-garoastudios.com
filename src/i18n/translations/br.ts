@@ -22,7 +22,7 @@ export const br = {
   games: {
     heading: 'NOSSOS JOGOS',
     rhythmania: {
-      title: 'RHYTHMANIA',
+      title: 'RITMANIA',
       subtitle: 'DOMINE DESAFIOS RÍTMICOS',
       description: 'Desafios animados por artistas virais com uma trilha sonora original inspirada no Brasil.',
     },

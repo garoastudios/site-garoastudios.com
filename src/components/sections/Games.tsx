@@ -44,7 +44,7 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
       timerRef.current = setTimeout(() => {
         setHovering(true);
         videoRef.current?.play();
-      }, 1500);
+      }, 1000);
     }
   };
 
@@ -58,7 +58,7 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
   };
 
   const imageBlock = (
-    <div className="relative w-56 sm:w-[308px] shrink-0 aspect-[460/215]">
+    <div className="relative w-[268px] sm:w-[370px] shrink-0 aspect-[460/215]">
       <img
         src={getGameCapsule(game.asset, locale)}
         alt={title}
@@ -93,7 +93,7 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
   return (
     <Link
       to={`/${locale}/games/${game.slug}`}
-      className="group flex bg-card border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-colors h-[134px] sm:h-[154px]"
+      className="group flex bg-card border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-colors h-[161px] sm:h-[185px]"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -112,7 +112,7 @@ export default function GamesSection() {
           {t.games.heading}
         </h2>
 
-        <div className="flex flex-col gap-4 max-w-2xl mx-auto">
+        <div className="flex flex-col gap-4 max-w-3xl mx-auto">
           {GAMES.map((game, i) => (
             <GameCard key={game.slug} game={game} locale={locale} title={t.games[game.key].title} reverse={i % 2 === 1} />
           ))}
