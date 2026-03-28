@@ -48,7 +48,7 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
       timerRef.current = setTimeout(() => {
         setHovering(true);
         videoRef.current?.play();
-      }, 1000);
+      }, 500);
     }
   };
 

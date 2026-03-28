@@ -23,28 +23,23 @@ export const br = {
     heading: 'NOSSOS JOGOS',
     rhythmania: {
       title: 'RITMANIA',
-      subtitle: 'DOMINE DESAFIOS RÍTMICOS',
-      description: 'Desafios animados por artistas virais com uma trilha sonora original inspirada no Brasil.',
+      description: 'Uma coletânea vibrante de minigames rítmicos de um botão só, com uma grande variedade de estilos de arte e gêneros musicais brasileiros!',
     },
     cartomante: {
       title: 'CARTOMANTE',
-      subtitle: 'DESVENDE SEU DESTINO',
-      description: 'Um jogo narrativo de cartas onde cada leitura molda seu destino.',
+      description: 'Uma visual novel de múltiplos finais sobre adivinhação para clientes excêntricos com cartas de tarô.',
     },
     standByMe: {
       title: 'STAND BY ME',
-      subtitle: 'UMA JORNADA DE AMIZADE',
-      description: 'Uma aventura emocional sobre conexão e amadurecimento.',
+      description: 'Um puzzle colorido e groovy baseado em física sobre cuidar dos seus amigos.',
     },
     catLeatherJackets: {
       title: 'CAT LEATHER JACKETS',
-      subtitle: 'FÚRIA FELINA',
-      description: 'Gatos em jaquetas de couro causando caos — o que mais você precisa?',
+      description: 'Um jogo com estilo graphic novel de música/ritmo sobre uma banda adolescente de punk rock e ska punk.',
     },
     astroPig: {
       title: 'ASTRO PIG',
-      subtitle: 'PORCOS NO ESPAÇO',
-      description: 'Uma aventura cósmica com o porco mais corajoso da galáxia.',
+      description: 'Um puzzle-platformer lo-fi de aventura com estética anos 90 sobre um porquinho astronauta e sua nave inteligente.',
     },
     learnMore: 'Saiba Mais',
     backToGames: 'Voltar para Nossos Jogos',

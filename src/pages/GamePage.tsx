@@ -47,7 +47,7 @@ export default function GamePage() {
   const { locale, t } = useLocale();
 
   const key = SLUG_TO_KEY[gameSlug || ''] as keyof typeof t.games | undefined;
-  const gameInfo = key ? (t.games[key] as { title: string; subtitle: string; description: string }) : null;
+  const gameInfo = key ? (t.games[key] as { title: string; description: string }) : null;
   const assetSlug = SLUG_TO_ASSET[gameSlug || ''];
   const steamWidget = STEAM_WIDGETS[gameSlug || ''];
   const trailer = SLUG_TO_TRAILER[gameSlug || ''];
@@ -92,10 +92,9 @@ export default function GamePage() {
         </div>
 
         <div className="max-w-3xl mx-auto px-4 -mt-20 relative z-10 pb-20">
-          <h1 className="font-display text-4xl sm:text-5xl text-foreground mb-2">
+          <h1 className="font-display text-4xl sm:text-5xl text-foreground mb-6">
             {gameInfo.title}
           </h1>
-          <p className="font-display text-accent text-lg mb-6">{gameInfo.subtitle}</p>
           <p className="text-foreground/90 text-lg leading-relaxed mb-8">
             {gameInfo.description}
           </p>
