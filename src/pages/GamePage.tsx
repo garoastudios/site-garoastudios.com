@@ -23,7 +23,7 @@ const SLUG_TO_KEY: Record<string, string> = {
 
 const STEAM_WIDGETS: Record<string, string> = {
   'rhythmania': 'https://store.steampowered.com/widget/2322070/',
-  'cartomante': '', // no steam widget provided
+  'cartomante': 'https://store.steampowered.com/widget/1361760/',
   'stand-by-me': 'https://store.steampowered.com/widget/1484600/',
   'cat-leather-jackets': 'https://store.steampowered.com/widget/1673830/',
   'astro-pig': 'https://store.steampowered.com/widget/1800390/',
@@ -110,7 +110,7 @@ export default function GamePage() {
             to={`/${locale}#games`}
             className="inline-block bg-accent text-accent-foreground font-display px-6 py-3 rounded-lg hover:bg-accent/90 transition-colors"
           >
-            ← {t.games.heading}
+            ← {t.games.backToGames}
           </Link>
         </div>
       </main>
