@@ -16,7 +16,7 @@ export default function StatsSection() {
         <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6">
           {t.stats.heading}
         </h2>
-        <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-12">
+        <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-12 whitespace-pre-line">
           {t.stats.subtitle}
         </p>
 
