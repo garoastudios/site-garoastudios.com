@@ -4,6 +4,10 @@ import { useLocale } from '@/i18n/useLocale';
 import { type Locale } from '@/i18n/config';
 import { getGameCapsule } from '@/i18n/assets';
 import rhythmaniaTrailer from '@/assets/games/rhythmania_microtrailer.webm';
+import astroPigTrailer from '@/assets/games/astro_pig_microtrailer.webm';
+import catLeatherJacketsTrailer from '@/assets/games/cat_leather_jackets_microtrailer.webm';
+import standByMeTrailer from '@/assets/games/stand_by_me_microtrailer.webm';
+import cartomanteTrailer from '@/assets/games/cartomante_microtrailer.webm';
 import { SteamIcon, ItchIcon, SpawndIcon } from '@/components/PlatformIcons';
 
 type Platform = 'steam' | 'itch' | 'spawnd';
@@ -19,10 +23,10 @@ interface GameDef {
 
 const GAMES: GameDef[] = [
   { slug: 'rhythmania', key: 'rhythmania', asset: 'rhythmania', year: 'Coming Soon', platforms: ['steam', 'itch', 'spawnd'], trailerWebm: rhythmaniaTrailer },
-  { slug: 'astro-pig', key: 'astroPig', asset: 'astro_pig', year: '2024', platforms: ['steam', 'itch'] },
-  { slug: 'cat-leather-jackets', key: 'catLeatherJackets', asset: 'cat_leather_jackets', year: '2023', platforms: ['steam', 'itch'] },
-  { slug: 'stand-by-me', key: 'standByMe', asset: 'stand_by_me', year: '2021', platforms: ['steam', 'itch'] },
-  { slug: 'cartomante', key: 'cartomante', asset: 'cartomante', year: '2020', platforms: ['steam', 'itch'] },
+  { slug: 'astro-pig', key: 'astroPig', asset: 'astro_pig', year: '2024', platforms: ['steam', 'itch'], trailerWebm: astroPigTrailer },
+  { slug: 'cat-leather-jackets', key: 'catLeatherJackets', asset: 'cat_leather_jackets', year: '2023', platforms: ['steam', 'itch'], trailerWebm: catLeatherJacketsTrailer },
+  { slug: 'stand-by-me', key: 'standByMe', asset: 'stand_by_me', year: '2021', platforms: ['steam', 'itch'], trailerWebm: standByMeTrailer },
+  { slug: 'cartomante', key: 'cartomante', asset: 'cartomante', year: '2020', platforms: ['steam', 'itch'], trailerWebm: cartomanteTrailer },
 ];
 
 const PlatformIcon = ({ platform }: { platform: Platform }) => {

@@ -5,6 +5,18 @@ import { getGameCapsule } from '@/i18n/assets';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import rhythmaniaTrailer from '@/assets/games/rhythmania_microtrailer.webm';
+import astroPigTrailer from '@/assets/games/astro_pig_microtrailer.webm';
+import catLeatherJacketsTrailer from '@/assets/games/cat_leather_jackets_microtrailer.webm';
+import standByMeTrailer from '@/assets/games/stand_by_me_microtrailer.webm';
+import cartomanteTrailer from '@/assets/games/cartomante_microtrailer.webm';
+
+const SLUG_TO_TRAILER: Record<string, string> = {
+  'rhythmania': rhythmaniaTrailer,
+  'astro-pig': astroPigTrailer,
+  'cat-leather-jackets': catLeatherJacketsTrailer,
+  'stand-by-me': standByMeTrailer,
+  'cartomante': cartomanteTrailer,
+};
 
 const SLUG_TO_ASSET: Record<string, string> = {
   'rhythmania': 'rhythmania',
