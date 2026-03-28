@@ -33,7 +33,7 @@ const PlatformIcon = ({ platform }: { platform: Platform }) => {
   }
 };
 
-function GameCard({ game, locale, title }: { game: GameDef; locale: Locale; title: string }) {
+function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Locale; title: string; reverse?: boolean }) {
   const [hovering, setHovering] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -56,6 +56,41 @@ function GameCard({ game, locale, title }: { game: GameDef; locale: Locale; titl
     }
   };
 
+  const imageBlock = (
+    <div className="relative w-48 sm:w-64 shrink-0 aspect-[460/215]">
+      <img
+        src={getGameCapsule(game.asset, locale)}
+        alt={title}
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${hovering ? 'opacity-0' : 'opacity-100'}`}
+        loading="lazy"
+      />
+      {game.trailerWebm && (
+        <video
+          ref={videoRef}
+          src={game.trailerWebm}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${hovering ? 'opacity-100' : 'opacity-0'}`}
+          muted
+          loop
+          playsInline
+        />
+      )}
+    </div>
+  );
+
+  const textBlock = (
+    <div className={`flex-1 p-4 flex flex-col justify-center gap-2 ${reverse ? 'items-end text-right' : ''}`}>
+      <h3 className="font-display text-base sm:text-lg text-foreground">{title}</h3>
+      <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1.5 text-foreground/70">
+          {game.platforms.map((p) => (
+            <PlatformIcon key={p} platform={p} />
+          ))}
+        </div>
+        <span className="font-display text-sm text-muted-foreground">{game.year}</span>
+      </div>
+    </div>
+  );
+
   return (
     <Link
       to={`/${locale}/games/${game.slug}`}
@@ -63,35 +98,7 @@ function GameCard({ game, locale, title }: { game: GameDef; locale: Locale; titl
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="relative w-48 sm:w-64 shrink-0 aspect-[460/215]">
-        <img
-          src={getGameCapsule(game.asset, locale)}
-          alt={title}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${hovering ? 'opacity-0' : 'opacity-100'}`}
-          loading="lazy"
-        />
-        {game.trailerWebm && (
-          <video
-            ref={videoRef}
-            src={game.trailerWebm}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${hovering ? 'opacity-100' : 'opacity-0'}`}
-            muted
-            loop
-            playsInline
-          />
-        )}
-      </div>
-      <div className="flex-1 p-4 flex flex-col justify-center gap-2">
-        <h3 className="font-display text-base sm:text-lg text-foreground">{title}</h3>
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-1.5 text-foreground/70">
-            {game.platforms.map((p) => (
-              <PlatformIcon key={p} platform={p} />
-            ))}
-          </div>
-          <span className="font-display text-sm text-muted-foreground">{game.year}</span>
-        </div>
-      </div>
+      {reverse ? <>{textBlock}{imageBlock}</> : <>{imageBlock}{textBlock}</>}
     </Link>
   );
 }
@@ -107,8 +114,8 @@ export default function GamesSection() {
         </h2>
 
         <div className="flex flex-col gap-4 max-w-3xl mx-auto">
-          {GAMES.map((game) => (
-            <GameCard key={game.slug} game={game} locale={locale} title={t.games[game.key].title} />
+          {GAMES.map((game, i) => (
+            <GameCard key={game.slug} game={game} locale={locale} title={t.games[game.key].title} reverse={i % 2 === 1} />
           ))}
         </div>
       </div>
