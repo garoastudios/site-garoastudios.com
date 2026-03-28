@@ -114,8 +114,8 @@ export default function GamesSection() {
         </h2>
 
         <div className="flex flex-col gap-4 max-w-3xl mx-auto">
-          {GAMES.map((game) => (
-            <GameCard key={game.slug} game={game} locale={locale} title={t.games[game.key].title} />
+          {GAMES.map((game, i) => (
+            <GameCard key={game.slug} game={game} locale={locale} title={t.games[game.key].title} reverse={i % 2 === 1} />
           ))}
         </div>
       </div>
