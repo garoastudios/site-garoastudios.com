@@ -10,10 +10,23 @@ import sbgamesBestAudio from '@/assets/awards/sbgames_bestaudio_2025.avif';
 import indiexMostFun from '@/assets/awards/indiex2025_mostfun.avif';
 import ecraWhite from '@/assets/awards/7ecra_en_white.png';
 import big19Bizzart from '@/assets/awards/big19_bizzart_white.png';
+import sbgamesWhite from '@/assets/awards/sbgames_white.png';
+import sjeecWhite from '@/assets/awards/sjeec_white.png';
+import strWhite from '@/assets/awards/str_white.png';
+import big24White from '@/assets/awards/big24_white.png';
+import dropsWhite from '@/assets/awards/drops_white.png';
+import finalistLaurel2024 from '@/assets/awards/finalist_laurel_2024.png';
+import gamescomLatam24Gold from '@/assets/awards/gamescomlatam24_gold.png';
+import gamethonWhite from '@/assets/awards/gamethon_white.png';
+import jogatorioWhite from '@/assets/awards/jogatorio_white.png';
+import perifaconWhite from '@/assets/awards/perifacon_white.png';
 
 const LAURELS = [
   big24BrazilGold,
   big24FinalistSound,
+  gamescomLatam24Gold,
+  finalistLaurel2024,
+  perifaconWhite,
   ecraSelection,
   brasilDirectFinalist,
   gamescomLatam,
@@ -22,6 +35,13 @@ const LAURELS = [
   indiexMostFun,
   ecraWhite,
   big19Bizzart,
+  sbgamesWhite,
+  sjeecWhite,
+  strWhite,
+  big24White,
+  dropsWhite,
+  gamethonWhite,
+  jogatorioWhite,
 ];
 
 export default function AwardsSection() {
