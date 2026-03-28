@@ -1,18 +1,25 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useLocale } from '@/i18n/useLocale';
-import { LOCALES, LOCALE_LABELS, type Locale } from '@/i18n/config';
+import { LOCALES, LOCALE_LABELS } from '@/i18n/config';
 
 export default function Header() {
   const { locale, t, getLogo, switchLocale } = useLocale();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
+
+  const isLandingPage = location.pathname === `/${locale}` || location.pathname === `/${locale}/`;
+
+  // If on landing page, use anchor links. Otherwise, navigate to landing page with hash.
+  const anchorHref = (hash: string) => isLandingPage ? `#${hash}` : `/${locale}#${hash}`;
 
   const navLinks = [
-    { label: t.nav.games, href: `#games` },
-    { label: t.nav.aboutUs, href: `#about` },
-    { label: t.nav.press, href: `/${locale}/press` },
-    { label: t.nav.contact, href: `#contact` },
+    { label: t.nav.games, href: anchorHref('games'), isAnchor: true },
+    { label: t.nav.aboutUs, href: anchorHref('about'), isAnchor: true },
+    { label: t.nav.press, href: `/${locale}/press`, isAnchor: false },
+    { label: t.nav.jobs, href: `/${locale}/jobs`, isAnchor: false },
+    { label: t.nav.contact, href: anchorHref('contact'), isAnchor: true },
   ];
 
   return (
@@ -25,7 +32,7 @@ export default function Header() {
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
-            link.href.startsWith('#') ? (
+            link.isAnchor && isLandingPage ? (
               <a
                 key={link.label}
                 href={link.href}
@@ -77,7 +84,7 @@ export default function Header() {
         <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border">
           <nav className="flex flex-col px-4 py-4 gap-3">
             {navLinks.map((link) => (
-              link.href.startsWith('#') ? (
+              link.isAnchor && isLandingPage ? (
                 <a
                   key={link.label}
                   href={link.href}

@@ -3,6 +3,7 @@ export const zh = {
     games: '游戏',
     aboutUs: '关于我们',
     press: '媒体',
+    jobs: '招聘',
     workWithUs: '加入我们',
     contact: '联系',
   },
@@ -96,6 +97,10 @@ export const zh = {
     mediaMentions: '媒体报道',
     download: '下载',
     comingSoon: '完整新闻资料包即将推出。如有媒体咨询，请联系 press@garoastudios.com',
+  },
+  jobs: {
+    heading: '招聘',
+    noOpenings: '目前没有空缺职位。请关注我们的社交媒体，以便在有新机会时第一时间获得通知！',
   },
   footer: {
     trademark: '™ 细雨工作室 2018 — 2026',
