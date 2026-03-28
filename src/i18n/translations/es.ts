@@ -98,6 +98,10 @@ export const es = {
     download: 'Descargar',
     comingSoon: 'Press kit completo próximamente. Para consultas de prensa, contáctanos en press@garoastudios.com',
   },
+  jobs: {
+    heading: 'Empleo',
+    noOpenings: 'No hay vacantes disponibles en este momento. ¡Síguenos en nuestras redes sociales para enterarte cuando tengamos nuevas oportunidades!',
+  },
   footer: {
     trademark: '™ Garoa Studios 2018 — 2026',
   },

@@ -98,6 +98,10 @@ export const ja = {
     download: 'ダウンロード',
     comingSoon: '完全なプレスキットは近日公開。プレスに関するお問い合わせは press@garoastudios.com まで。',
   },
+  jobs: {
+    heading: '採用',
+    noOpenings: '現在、募集中のポジションはありません。新しい機会が発生した際にお知らせできるよう、ぜひソーシャルメディアをフォローしてください！',
+  },
   footer: {
     trademark: '™ ガロア 2018 — 2026',
   },
