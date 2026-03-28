@@ -3,6 +3,7 @@ export const en = {
     games: 'GAMES',
     aboutUs: 'ABOUT US',
     press: 'PRESS',
+    jobs: 'JOBS',
     workWithUs: 'WORK WITH US',
     contact: 'CONTACT',
   },
