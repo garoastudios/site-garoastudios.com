@@ -46,6 +46,7 @@ export const en = {
       description: 'A cosmic adventure with the bravest pig in the galaxy.',
     },
     learnMore: 'Learn More',
+    backToGames: 'Back to Our Games',
   },
   about: {
     heading: 'About Us',
