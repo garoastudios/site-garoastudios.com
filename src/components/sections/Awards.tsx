@@ -95,7 +95,7 @@ export default function AwardsSection() {
         <div className="absolute right-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-l from-background to-transparent pointer-events-none" />
         <div className="awards-scroll-track flex items-center gap-12 w-max">
           {[...ROW1, ...ROW1].map((src, i) => (
-            <img key={i} src={src} alt="Award laurel" className="h-24 sm:h-28 w-auto object-contain shrink-0" loading="lazy" />
+            <img key={i} src={src} alt="Award laurel" className="h-28 sm:h-32 w-auto object-contain shrink-0" loading="lazy" />
           ))}
         </div>
       </div>
@@ -106,7 +106,7 @@ export default function AwardsSection() {
         <div className="absolute right-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-l from-background to-transparent pointer-events-none" />
         <div className="awards-scroll-track-reverse flex items-center gap-12 w-max">
           {[...ROW2, ...ROW2].map((src, i) => (
-            <img key={i} src={src} alt="Award laurel" className="h-24 sm:h-28 w-auto object-contain shrink-0" loading="lazy" />
+            <img key={i} src={src} alt="Award laurel" className="h-28 sm:h-32 w-auto object-contain shrink-0" loading="lazy" />
           ))}
         </div>
       </div>
