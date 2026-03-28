@@ -13,7 +13,7 @@ interface GameDef {
   asset: string;
   year: string;
   platforms: Platform[];
-  trailerWebm?: string; // future: path to webm micro-trailer
+  trailerWebm?: string;
 }
 
 const GAMES: GameDef[] = [
@@ -25,7 +25,7 @@ const GAMES: GameDef[] = [
 ];
 
 const PlatformIcon = ({ platform }: { platform: Platform }) => {
-  const cls = "w-6 h-6";
+  const cls = "w-7 h-7";
   switch (platform) {
     case 'steam': return <SteamIcon className={cls} />;
     case 'itch': return <ItchIcon className={cls} />;
@@ -57,7 +57,7 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
   };
 
   const imageBlock = (
-    <div className="relative w-48 sm:w-64 shrink-0 aspect-[460/215]">
+    <div className="relative w-56 sm:w-[308px] shrink-0 aspect-[460/215]">
       <img
         src={getGameCapsule(game.asset, locale)}
         alt={title}
@@ -78,15 +78,13 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
   );
 
   const textBlock = (
-    <div className={`flex-1 p-4 flex flex-col justify-center gap-2 ${reverse ? 'items-end text-right' : ''}`}>
-      <h3 className="font-display text-base sm:text-lg text-foreground">{title}</h3>
-      <div className="flex items-center gap-3">
-        <div className="flex items-center gap-1.5 text-foreground/70">
-          {game.platforms.map((p) => (
-            <PlatformIcon key={p} platform={p} />
-          ))}
-        </div>
-        <span className="font-display text-sm text-muted-foreground">{game.year}</span>
+    <div className={`flex-1 p-5 flex flex-col justify-center gap-1.5 ${reverse ? 'items-end text-right' : ''}`}>
+      <h3 className="font-display text-lg sm:text-xl text-foreground">{title}</h3>
+      <span className="font-display text-sm text-muted-foreground">{game.year}</span>
+      <div className="flex items-center gap-2 text-foreground/70 mt-1">
+        {game.platforms.map((p) => (
+          <PlatformIcon key={p} platform={p} />
+        ))}
       </div>
     </div>
   );
@@ -94,7 +92,7 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
   return (
     <Link
       to={`/${locale}/games/${game.slug}`}
-      className="group flex bg-card border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-colors h-28 sm:h-32"
+      className="group flex bg-card border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-colors h-[134px] sm:h-[154px]"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -113,7 +111,7 @@ export default function GamesSection() {
           {t.games.heading}
         </h2>
 
-        <div className="flex flex-col gap-4 max-w-xl mx-auto">
+        <div className="flex flex-col gap-4 max-w-2xl mx-auto">
           {GAMES.map((game, i) => (
             <GameCard key={game.slug} game={game} locale={locale} title={t.games[game.key].title} reverse={i % 2 === 1} />
           ))}

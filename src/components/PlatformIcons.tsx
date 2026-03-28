@@ -1,5 +1,4 @@
 import React from 'react';
-import spawndLogo from '@/assets/platforms/spawnd.png';
 import itchLogo from '@/assets/platforms/itch.png';
 
 interface IconProps {
@@ -17,5 +16,7 @@ export const ItchIcon: React.FC<IconProps> = ({ className }) => (
 );
 
 export const SpawndIcon: React.FC<IconProps> = ({ className }) => (
-  <img src={spawndLogo} alt="spawnd.gg" className={className} style={{ opacity: 0.85 }} />
+  <svg className={className} viewBox="0 0 256 359" fill="currentColor" style={{ opacity: 0.85 }}>
+    <path d="M0,97l25.4-17.8L122.4,147.3l-26.2,18.4L30.1,119.3v218.3L0,358.8V97ZM53.2,280.5l29.1,20.4L255.4,179.4l-26.2-18.4L83.3,263.5V183.6L53.2,162.5v118ZM158,147.8l-52.4,36.8v36.8l78.6-55.2V129.4L0,0v36.8L158,147.8Z" />
+  </svg>
 );
