@@ -13,10 +13,10 @@ export const ja = {
   },
   stats: {
     heading: '心と魂を込めてゲームを作る',
-    subtitle: 'ガロアは2018年に設立された開発・エンターテインメントスタジオです。次世代のゲーム体験を創造することが私たちの目標です。',
-    consistentCreation: '継続的な創作',
-    awards: '10以上の受賞',
-    positiveRating: '95%の好評価',
+    subtitle: 'リオを拠点とする多数受賞のゲームスタジオです。ゲームプレイとストーリーテリングにおける実験的かつ芸術的なアプローチに注力しています。\n\n\n音楽と紫色が大好きです。',
+    consistentCreation: '一貫した革新的創作 — 私たちはリリースします！',
+    awards: '30以上の公式受賞・フェスティバル選出',
+    positiveRating: '> 95% Steamでの好評価',
   },
   games: {
     heading: '私たちのゲーム',

@@ -13,10 +13,10 @@ export const es = {
   },
   stats: {
     heading: 'HACEMOS JUEGOS CON CORAZÓN Y ALMA',
-    subtitle: 'Garoa Studios es un estudio de Desarrollo y Entretenimiento fundado en 2018. Nuestro objetivo es crear la próxima generación de experiencias de juego.',
-    consistentCreation: 'Creación Consistente',
-    awards: '10+ Premios',
-    positiveRating: '95% Valoraciones Positivas',
+    subtitle: 'Somos un estudio de juegos multi-premiado con sede en Río, enfocado en enfoques experimentales y artísticos para el gameplay y la narrativa.\n\n\nAmamos la música y el color púrpura.',
+    consistentCreation: 'Creación innovadora y consistente - ¡lanzamos!',
+    awards: '30+ Premios oficiales y selecciones en festivales',
+    positiveRating: '> 95% Valoraciones Positivas en Steam',
   },
   games: {
     heading: 'NUESTROS JUEGOS',
