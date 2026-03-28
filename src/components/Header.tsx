@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useLocale } from '@/i18n/useLocale';
-import { LOCALES, LOCALE_LABELS } from '@/i18n/config';
+import { LOCALE_ORDER, LOCALE_LABELS } from '@/i18n/config';
 
 export default function Header() {
   const { locale, t, getLogo, switchLocale } = useLocale();
@@ -54,7 +54,7 @@ export default function Header() {
 
         {/* Language switcher */}
         <div className="hidden md:flex items-center gap-1">
-          {LOCALES.map((loc) => (
+          {LOCALE_ORDER.map((loc) => (
             <button
               key={loc}
               onClick={() => switchLocale(loc)}
@@ -106,7 +106,7 @@ export default function Header() {
             ))}
           </nav>
           <div className="flex items-center gap-1 px-4 pb-4">
-            {LOCALES.map((loc) => (
+            {LOCALE_ORDER.map((loc) => (
               <button
                 key={loc}
                 onClick={() => { switchLocale(loc); setMobileOpen(false); }}
