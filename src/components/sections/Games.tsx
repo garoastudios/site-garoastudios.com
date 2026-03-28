@@ -18,14 +18,14 @@ interface GameDef {
 
 const GAMES: GameDef[] = [
   { slug: 'rhythmania', key: 'rhythmania', asset: 'rhythmania', year: 'Coming Soon', platforms: ['steam', 'itch', 'spawnd'] },
-  { slug: 'cartomante', key: 'cartomante', asset: 'cartomante', year: '2020', platforms: ['steam', 'itch'] },
-  { slug: 'stand-by-me', key: 'standByMe', asset: 'stand_by_me', year: '2021', platforms: ['steam', 'itch'] },
-  { slug: 'cat-leather-jackets', key: 'catLeatherJackets', asset: 'cat_leather_jackets', year: '2023', platforms: ['steam', 'itch'] },
   { slug: 'astro-pig', key: 'astroPig', asset: 'astro_pig', year: '2024', platforms: ['steam', 'itch'] },
+  { slug: 'cat-leather-jackets', key: 'catLeatherJackets', asset: 'cat_leather_jackets', year: '2023', platforms: ['steam', 'itch'] },
+  { slug: 'stand-by-me', key: 'standByMe', asset: 'stand_by_me', year: '2021', platforms: ['steam', 'itch'] },
+  { slug: 'cartomante', key: 'cartomante', asset: 'cartomante', year: '2020', platforms: ['steam', 'itch'] },
 ];
 
 const PlatformIcon = ({ platform }: { platform: Platform }) => {
-  const cls = "w-4 h-4";
+  const cls = "w-5 h-5";
   switch (platform) {
     case 'steam': return <SteamIcon className={cls} />;
     case 'itch': return <ItchIcon className={cls} />;
@@ -106,14 +106,8 @@ export default function GamesSection() {
           {t.games.heading}
         </h2>
 
-        {/* Featured game (first) */}
-        <div className="mb-8">
-          <GameCard game={GAMES[0]} locale={locale} title={t.games[GAMES[0].key].title} />
-        </div>
-
-        {/* Game grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {GAMES.slice(1).map((game) => (
+        <div className="flex flex-col gap-6">
+          {GAMES.map((game) => (
             <GameCard key={game.slug} game={game} locale={locale} title={t.games[game.key].title} />
           ))}
         </div>
