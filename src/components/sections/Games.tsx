@@ -25,7 +25,7 @@ const GAMES: GameDef[] = [
 ];
 
 const PlatformIcon = ({ platform }: { platform: Platform }) => {
-  const cls = "w-5 h-5";
+  const cls = "w-6 h-6";
   switch (platform) {
     case 'steam': return <SteamIcon className={cls} />;
     case 'itch': return <ItchIcon className={cls} />;
@@ -113,7 +113,7 @@ export default function GamesSection() {
           {t.games.heading}
         </h2>
 
-        <div className="flex flex-col gap-4 max-w-3xl mx-auto">
+        <div className="flex flex-col gap-4 max-w-xl mx-auto">
           {GAMES.map((game, i) => (
             <GameCard key={game.slug} game={game} locale={locale} title={t.games[game.key].title} reverse={i % 2 === 1} />
           ))}
