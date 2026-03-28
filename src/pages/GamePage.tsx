@@ -4,6 +4,7 @@ import { useLocale } from '@/i18n/useLocale';
 import { getGameCapsule } from '@/i18n/assets';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import rhythmaniaTrailer from '@/assets/games/rhythmania_microtrailer.webm';
 
 const SLUG_TO_ASSET: Record<string, string> = {
   'rhythmania': 'rhythmania',
@@ -58,11 +59,22 @@ export default function GamePage() {
       <Header />
       <main className="pt-16">
         <div className="relative">
-          <img
-            src={getGameCapsule(assetSlug, locale)}
-            alt={gameInfo.title}
-            className="w-full h-[50vh] object-cover"
-          />
+          {isRhythmania ? (
+            <video
+              src={rhythmaniaTrailer}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-[50vh] object-cover"
+            />
+          ) : (
+            <img
+              src={getGameCapsule(assetSlug, locale)}
+              alt={gameInfo.title}
+              className="w-full h-[50vh] object-cover"
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
         </div>
 

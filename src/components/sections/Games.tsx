@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLocale } from '@/i18n/useLocale';
 import { type Locale } from '@/i18n/config';
 import { getGameCapsule } from '@/i18n/assets';
+import rhythmaniaTrailer from '@/assets/games/rhythmania_microtrailer.webm';
 import { SteamIcon, ItchIcon, SpawndIcon } from '@/components/PlatformIcons';
 
 type Platform = 'steam' | 'itch' | 'spawnd';
@@ -17,7 +18,7 @@ interface GameDef {
 }
 
 const GAMES: GameDef[] = [
-  { slug: 'rhythmania', key: 'rhythmania', asset: 'rhythmania', year: 'Coming Soon', platforms: ['steam', 'itch', 'spawnd'] },
+  { slug: 'rhythmania', key: 'rhythmania', asset: 'rhythmania', year: 'Coming Soon', platforms: ['steam', 'itch', 'spawnd'], trailerWebm: rhythmaniaTrailer },
   { slug: 'astro-pig', key: 'astroPig', asset: 'astro_pig', year: '2024', platforms: ['steam', 'itch'] },
   { slug: 'cat-leather-jackets', key: 'catLeatherJackets', asset: 'cat_leather_jackets', year: '2023', platforms: ['steam', 'itch'] },
   { slug: 'stand-by-me', key: 'standByMe', asset: 'stand_by_me', year: '2021', platforms: ['steam', 'itch'] },
