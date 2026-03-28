@@ -114,9 +114,9 @@
 }
 
 .awards-scroll-track {
-  animation: awards-scroll 52s linear infinite;
+  animation: awards-scroll 65s linear infinite;
 }
 
 .awards-scroll-track-reverse {
-  animation: awards-scroll-reverse 52s linear infinite;
+  animation: awards-scroll-reverse 65s linear infinite;
 }
