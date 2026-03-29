@@ -1,5 +1,6 @@
 import React from 'react';
 import itchLogo from '@/assets/platforms/itch.png';
+import nuuvemLogo from '@/assets/platforms/nuuvem.svg';
 
 interface IconProps {
   className?: string;
@@ -13,6 +14,10 @@ export const SteamIcon: React.FC<IconProps> = ({ className }) => (
 
 export const ItchIcon: React.FC<IconProps> = ({ className }) => (
   <img src={itchLogo} alt="itch.io" className={className} />
+);
+
+export const NuuvemIcon: React.FC<IconProps> = ({ className }) => (
+  <img src={nuuvemLogo} alt="Nuuvem" className={className} />
 );
 
 export const SpawndIcon: React.FC<IconProps> = ({ className }) => (
