@@ -63,7 +63,7 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
   };
 
   const imageBlock = (
-    <div className="relative w-[268px] sm:w-[370px] shrink-0 aspect-[460/215]">
+    <div className="relative w-[322px] sm:w-[444px] shrink-0 aspect-[460/215]">
       <img
         src={getGameCapsule(game.asset, locale)}
         alt={title}
@@ -98,7 +98,7 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
   return (
     <Link
       to={`/${locale}/games/${game.slug}`}
-      className="group flex bg-transparent border border-transparent overflow-hidden hover:bg-card hover:border-border transition-all duration-500 h-[161px] sm:h-[185px]"
+      className="group flex bg-transparent border border-transparent overflow-hidden hover:bg-card hover:border-border transition-all duration-500 h-[193px] sm:h-[222px]"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
