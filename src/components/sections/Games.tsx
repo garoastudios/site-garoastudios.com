@@ -30,7 +30,7 @@ const GAMES: GameDef[] = [
 ];
 
 const PlatformIcon = ({ platform }: { platform: Platform }) => {
-  const cls = "w-7 h-7";
+  const cls = platform === 'nuuvem' ? "w-[38px] h-[38px]" : "w-7 h-7";
   switch (platform) {
     case 'steam': return <SteamIcon className={cls} />;
     case 'itch': return <ItchIcon className={cls} />;
