@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useLocale } from '@/i18n/useLocale';
 import { LOCALE_ORDER, LOCALE_LABELS } from '@/i18n/config';
+import garoaLogoIcon from '@/assets/logos/garoa_logo_icon.png';
 
 export default function Header() {
   const { locale, t, getLogo, switchLocale } = useLocale();
@@ -25,8 +26,8 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        <Link to={`/${locale}`} className="flex-shrink-0">
-          <img src={getLogo()} alt="Garoa Studios" className="h-8 sm:h-10" />
+        <Link to={`/${locale}`} className="flex-shrink-0 relative">
+          <img src={garoaLogoIcon} alt="Garoa Studios" className="h-[60px] sm:h-[72px] absolute top-0" />
         </Link>
 
         {/* Desktop nav */}
