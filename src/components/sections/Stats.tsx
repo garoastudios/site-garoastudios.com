@@ -28,7 +28,7 @@ export default function StatsSection() {
   ];
 
   return (
-    <section id="stats" className="snap-section flex flex-col items-center justify-center px-4 py-14">
+    <section id="stats" className="snap-section flex flex-col items-center justify-center px-4 py-7">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6">
           {t.stats.heading}
@@ -52,7 +52,7 @@ export default function StatsSection() {
         <h3 className="font-display text-xl sm:text-2xl text-muted-foreground mb-4">
           {t.stats.followUs}
         </h3>
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-6">
           {socials.map(({ Icon, url, label }) => (
             <a
               key={label}
@@ -62,7 +62,7 @@ export default function StatsSection() {
               aria-label={label}
               className="text-muted-foreground hover:text-accent transition-colors"
             >
-              <Icon className="w-6 h-6" />
+              <Icon className="w-9 h-9" />
             </a>
           ))}
         </div>
