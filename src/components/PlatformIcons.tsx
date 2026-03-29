@@ -1,5 +1,6 @@
 import React from 'react';
 import itchLogo from '@/assets/platforms/itch.png';
+import nuuvemLogo from '@/assets/platforms/nuuvem.svg';
 
 interface IconProps {
   className?: string;

@@ -8,9 +8,9 @@ import astroPigTrailer from '@/assets/games/astro_pig_microtrailer.webm';
 import catLeatherJacketsTrailer from '@/assets/games/cat_leather_jackets_microtrailer.webm';
 import standByMeTrailer from '@/assets/games/stand_by_me_microtrailer.webm';
 import cartomanteTrailer from '@/assets/games/cartomante_microtrailer.webm';
-import { SteamIcon, ItchIcon, SpawndIcon } from '@/components/PlatformIcons';
+import { SteamIcon, ItchIcon, NuuvemIcon, SpawndIcon } from '@/components/PlatformIcons';
 
-type Platform = 'steam' | 'itch' | 'spawnd';
+type Platform = 'steam' | 'itch' | 'nuuvem' | 'spawnd';
 
 interface GameDef {
   slug: string;
@@ -22,11 +22,11 @@ interface GameDef {
 }
 
 const GAMES: GameDef[] = [
-  { slug: 'rhythmania', key: 'rhythmania', asset: 'rhythmania', year: 'Coming Soon', platforms: ['steam', 'itch', 'spawnd'], trailerWebm: rhythmaniaTrailer },
-  { slug: 'astro-pig', key: 'astroPig', asset: 'astro_pig', year: '2024', platforms: ['steam', 'itch'], trailerWebm: astroPigTrailer },
-  { slug: 'cat-leather-jackets', key: 'catLeatherJackets', asset: 'cat_leather_jackets', year: '2023', platforms: ['steam', 'itch'], trailerWebm: catLeatherJacketsTrailer },
-  { slug: 'stand-by-me', key: 'standByMe', asset: 'stand_by_me', year: '2021', platforms: ['steam', 'itch'], trailerWebm: standByMeTrailer },
-  { slug: 'cartomante', key: 'cartomante', asset: 'cartomante', year: '2020', platforms: ['steam', 'itch'], trailerWebm: cartomanteTrailer },
+  { slug: 'rhythmania', key: 'rhythmania', asset: 'rhythmania', year: 'Coming Soon', platforms: ['steam', 'itch', 'nuuvem', 'spawnd'], trailerWebm: rhythmaniaTrailer },
+  { slug: 'astro-pig', key: 'astroPig', asset: 'astro_pig', year: '2024', platforms: ['steam', 'itch', 'nuuvem'], trailerWebm: astroPigTrailer },
+  { slug: 'cat-leather-jackets', key: 'catLeatherJackets', asset: 'cat_leather_jackets', year: '2023', platforms: ['steam', 'itch', 'nuuvem'], trailerWebm: catLeatherJacketsTrailer },
+  { slug: 'stand-by-me', key: 'standByMe', asset: 'stand_by_me', year: '2021', platforms: ['steam', 'itch', 'nuuvem'], trailerWebm: standByMeTrailer },
+  { slug: 'cartomante', key: 'cartomante', asset: 'cartomante', year: '2020', platforms: ['steam', 'itch', 'nuuvem'], trailerWebm: cartomanteTrailer },
 ];
 
 const PlatformIcon = ({ platform }: { platform: Platform }) => {
@@ -34,6 +34,7 @@ const PlatformIcon = ({ platform }: { platform: Platform }) => {
   switch (platform) {
     case 'steam': return <SteamIcon className={cls} />;
     case 'itch': return <ItchIcon className={cls} />;
+    case 'nuuvem': return <NuuvemIcon className={cls} />;
     case 'spawnd': return <SpawndIcon className={cls} />;
   }
 };
