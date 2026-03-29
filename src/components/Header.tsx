@@ -26,8 +26,8 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        <Link to={`/${locale}`} className="flex-shrink-0 relative">
-          <img src={garoaLogoIcon} alt="Garoa Studios" className="h-[60px] sm:h-[72px] absolute top-0" />
+        <Link to={`/${locale}`} className="flex-shrink-0 w-[60px] sm:w-[72px]">
+          <img src={garoaLogoIcon} alt="Garoa Studios" className="h-[60px] sm:h-[72px] rounded-b-lg" />
         </Link>
 
         {/* Desktop nav */}
