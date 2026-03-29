@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useLocale } from '@/i18n/useLocale';
 import { LOCALE_ORDER, LOCALE_LABELS } from '@/i18n/config';
+import garoaLogoIcon from '@/assets/logos/garoa_logo_icon.png';
 
 export default function Header() {
   const { locale, t, getLogo, switchLocale } = useLocale();
