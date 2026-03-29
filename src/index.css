@@ -68,7 +68,8 @@
   }
 
   a, button, [role="button"], input[type="submit"], input[type="button"],
-  select, label, summary, [tabindex]:not([tabindex="-1"]) {
+  select, label, summary, [tabindex]:not([tabindex="-1"]),
+  a *, button *, [role="button"] * {
     cursor: url('/cursors/pointer.png'), pointer;
   }
 
