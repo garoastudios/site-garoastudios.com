@@ -111,13 +111,13 @@ export default function GamesSection() {
   const { locale, t } = useLocale();
 
   return (
-    <section id="games" className="snap-section flex flex-col justify-center px-4 py-20">
+    <section id="games" className="snap-section flex flex-col justify-center px-4 py-14">
       <div className="max-w-7xl mx-auto w-full">
         <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-foreground mb-10 text-center">
           {t.games.heading}
         </h2>
 
-        <div className="flex flex-col gap-4 max-w-3xl mx-auto">
+        <div className="flex flex-col gap-5 max-w-3xl mx-auto">
           {GAMES.map((game, i) => (
             <GameCard key={game.slug} game={game} locale={locale} title={t.games[game.key].title} reverse={i % 2 === 1} />
           ))}

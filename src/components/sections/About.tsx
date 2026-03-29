@@ -16,7 +16,7 @@ export default function AboutSection() {
   const { locale, t } = useLocale();
 
   return (
-    <section id="about" className="snap-section flex flex-col justify-center px-4 py-20">
+    <section id="about" className="snap-section flex flex-col justify-center px-4 py-14">
       <div className="max-w-5xl mx-auto w-full">
         <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-foreground mb-4 text-center">
           {t.about.heading}
