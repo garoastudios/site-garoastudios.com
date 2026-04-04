@@ -66,7 +66,7 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
   };
 
   const imageBlock = (
-    <div className="relative w-[322px] sm:w-[444px] shrink-0 aspect-[460/215]">
+    <div className="relative w-full sm:w-[444px] shrink-0 aspect-[460/215]">
       <img
         src={getGameCapsule(game.asset, locale)}
         alt={title}
@@ -88,15 +88,17 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
 
   const textBlock = (
     <div
-      className={`relative flex-1 p-5 flex flex-col justify-center gap-1.5 z-[2] ${reverse ? 'items-end text-right' : ''}`}
+      className={`relative flex-1 p-5 flex flex-col justify-center gap-1.5 z-[2] ${reverse ? 'sm:items-end sm:text-right' : ''}`}
       style={{
-        background: reverse
-          ? 'linear-gradient(to left, hsl(250 55% 6%), hsl(250 55% 6%) 70%, transparent)'
-          : 'linear-gradient(to right, hsl(250 55% 6%), hsl(250 55% 6%) 70%, transparent)',
-        marginLeft: reverse ? undefined : '-2.4rem',
-        paddingLeft: reverse ? undefined : 'calc(1.25rem + 2.4rem)',
-        marginRight: reverse ? '-2.4rem' : undefined,
-        paddingRight: reverse ? 'calc(1.25rem + 2.4rem)' : undefined,
+        background: window.innerWidth < 640
+          ? undefined
+          : reverse
+            ? 'linear-gradient(to left, hsl(250 55% 6%), hsl(250 55% 6%) 70%, transparent)'
+            : 'linear-gradient(to right, hsl(250 55% 6%), hsl(250 55% 6%) 70%, transparent)',
+        marginLeft: window.innerWidth < 640 ? undefined : (reverse ? undefined : '-2.4rem'),
+        paddingLeft: window.innerWidth < 640 ? undefined : (reverse ? undefined : 'calc(1.25rem + 2.4rem)'),
+        marginRight: window.innerWidth < 640 ? undefined : (reverse ? '-2.4rem' : undefined),
+        paddingRight: window.innerWidth < 640 ? undefined : (reverse ? 'calc(1.25rem + 2.4rem)' : undefined),
       }}
     >
       <div className="relative z-10">
@@ -115,11 +117,18 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
   return (
     <Link
       to={`/${locale}/games/${game.slug}`}
-      className="hover-grow group relative flex overflow-hidden transition-all duration-500 h-[193px] sm:h-[222px] cursor-pointer"
+      className="hover-grow group relative flex flex-col sm:flex-row overflow-hidden transition-all duration-500 sm:h-[222px] cursor-pointer"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {reverse ? <>{textBlock}{imageBlock}</> : <>{imageBlock}{textBlock}</>}
+      {/* On mobile, always image on top. On desktop, alternate. */}
+      <div className="block sm:hidden">
+        {imageBlock}
+        {textBlock}
+      </div>
+      <div className="hidden sm:contents">
+        {reverse ? <>{textBlock}{imageBlock}</> : <>{imageBlock}{textBlock}</>}
+      </div>
     </Link>
   );
 }
