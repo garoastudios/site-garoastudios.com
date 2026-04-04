@@ -64,7 +64,7 @@ export default function ContactSection() {
           />
           <button
             type="submit"
-            className="bg-accent text-accent-foreground font-display text-lg py-3 rounded-lg hover:bg-accent/90 transition-colors"
+            className="hover-grow bg-accent text-accent-foreground font-display text-lg py-3 rounded-lg hover:bg-accent/90 transition-colors"
           >
             {t.contact.send}
           </button>
