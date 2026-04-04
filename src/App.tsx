@@ -19,6 +19,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Navigate to="/en" replace />} />
           <Route path="/:locale" element={<LandingPage />} />
+          <Route path="/:locale/games" element={<GamesCatalogPage />} />
           <Route path="/:locale/games/:gameSlug" element={<GamePage />} />
           <Route path="/:locale/press" element={<PressPage />} />
           <Route path="/:locale/jobs" element={<JobsPage />} />

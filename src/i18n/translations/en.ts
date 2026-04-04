@@ -43,7 +43,8 @@ export const en = {
       description: 'A 90-s inspired lo-fi adventure puzzle platformer about a piglet astronaut and his intelligent ship.',
     },
     learnMore: 'Learn More',
-    backToGames: 'Back to Our Games',
+    backToGames: 'All Our Games',
+    backToHome: 'Back to Home',
   },
   about: {
     heading: 'About Us',

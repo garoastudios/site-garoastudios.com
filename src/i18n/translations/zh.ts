@@ -43,7 +43,8 @@ export const zh = {
       description: '一款90年代风格的低保真冒险解谜平台游戏，讲述一只小猪宇航员和他的智能飞船的故事。',
     },
     learnMore: '了解更多',
-    backToGames: '返回我们的游戏',
+    backToGames: '所有游戏',
+    backToHome: '返回首页',
   },
   about: {
     heading: '关于我们',

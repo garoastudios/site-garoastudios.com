@@ -43,7 +43,8 @@ export const br = {
       description: 'Um puzzle-platformer lo-fi de aventura com estética anos 90 sobre um porquinho astronauta e sua nave inteligente.',
     },
     learnMore: 'Saiba Mais',
-    backToGames: 'Voltar para Nossos Jogos',
+    backToGames: 'Todos os Nossos Jogos',
+    backToHome: 'Voltar para o Início',
   },
   about: {
     heading: 'Sobre Nós',
