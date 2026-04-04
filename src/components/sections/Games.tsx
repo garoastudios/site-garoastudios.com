@@ -87,7 +87,10 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
   );
 
   const textBlock = (
-    <div className={`relative flex-1 p-5 flex flex-col justify-center gap-1.5 ${reverse ? 'items-end text-right' : ''}`}>
+    <div
+      className={`relative flex-1 p-5 flex flex-col justify-center gap-1.5 z-[2] ${reverse ? 'items-end text-right' : ''}`}
+      style={{ background: 'hsl(250 55% 6%)' }}
+    >
       <div className="relative z-10">
         <h3 className={`font-display text-lg sm:text-xl transition-colors duration-300 ${hovering ? 'text-[#fabd4b]' : 'text-foreground'}`}>{title}</h3>
         <span className="font-display text-sm text-muted-foreground">{game.year}</span>
@@ -100,6 +103,19 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
     </div>
   );
 
+  // Gradient fade overlay that sits between image and text
+  const gradientOverlay = (
+    <div
+      className="absolute top-0 bottom-0 w-32 z-[3] pointer-events-none"
+      style={{
+        ...(reverse
+          ? { right: 'calc(100% - 444px)', background: 'linear-gradient(to right, hsl(250 55% 6%), transparent)' }
+          : { left: 'calc(100% - 444px)', background: 'linear-gradient(to left, hsl(250 55% 6%), transparent)' }
+        ),
+      }}
+    />
+  );
+
   return (
     <Link
       to={`/${locale}/games/${game.slug}`}
@@ -107,14 +123,6 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div
-        className="absolute inset-0 z-[5] pointer-events-none"
-        style={{
-          background: reverse
-            ? 'linear-gradient(to left, transparent 25%, red 60%)'
-            : 'linear-gradient(to right, transparent 25%, red 60%)',
-        }}
-      />
       {reverse ? <>{textBlock}{imageBlock}</> : <>{imageBlock}{textBlock}</>}
     </Link>
   );
