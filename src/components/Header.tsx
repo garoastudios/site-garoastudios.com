@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { useLocale } from '@/i18n/useLocale';
 import { LOCALE_ORDER, LOCALE_LABELS } from '@/i18n/config';
 import garoaLogoIcon from '@/assets/logos/garoa_logo_icon.png';
+import garoaLogoHorizontal from '@/assets/logos/garoa_logo_horizontal.png';
 import { SteamIcon, ItchIcon, NuuvemIcon } from '@/components/PlatformIcons';
 
 const headerStores = [
@@ -19,7 +20,6 @@ export default function Header() {
 
   const isLandingPage = location.pathname === `/${locale}` || location.pathname === `/${locale}/`;
 
-  // If on landing page, use anchor links. Otherwise, navigate to landing page with hash.
   const anchorHref = (hash: string) => isLandingPage ? `#${hash}` : `/${locale}#${hash}`;
 
   const navLinks = [
@@ -34,10 +34,16 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50 overflow-visible">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         <div className="flex items-center gap-3">
-          <Link to={`/${locale}`} className="flex-shrink-0 w-[60px] sm:w-[72px]">
-            <img src={garoaLogoIcon} alt="Garoa Studios" className="h-[60px] sm:h-[72px] rounded-b-lg" />
+          {/* Desktop logo: icon version */}
+          <Link to={`/${locale}`} className="hidden lg:block flex-shrink-0 w-[72px]">
+            <img src={garoaLogoIcon} alt="Garoa Studios" className="h-[72px] rounded-b-lg" />
           </Link>
-          <div className="hidden sm:flex items-center gap-2">
+          {/* Mobile/Tablet logo: horizontal version */}
+          <Link to={`/${locale}`} className="lg:hidden flex-shrink-0">
+            <img src={garoaLogoHorizontal} alt="Garoa Studios" className="h-[36px] w-auto" />
+          </Link>
+          {/* Desktop store icons */}
+          <div className="hidden lg:flex items-center gap-2">
             {headerStores.map(({ Icon, url, label }) => (
               <a
                 key={label}
@@ -54,7 +60,7 @@ export default function Header() {
         </div>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             link.isAnchor && isLandingPage ? (
               <a
@@ -76,8 +82,8 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Language switcher */}
-        <div className="hidden md:flex items-center gap-1">
+        {/* Desktop language switcher */}
+        <div className="hidden lg:flex items-center gap-1">
           {LOCALE_ORDER.map((loc) => (
             <button
               key={loc}
@@ -93,20 +99,54 @@ export default function Header() {
           ))}
         </div>
 
-        {/* Mobile hamburger */}
+        {/* Mobile/Tablet hamburger */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2 text-foreground"
+          className="lg:hidden p-2 text-foreground"
           aria-label="Toggle menu"
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile/Tablet shelf menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border">
-          <nav className="flex flex-col px-4 py-4 gap-3">
+        <div className="lg:hidden bg-background/95 backdrop-blur-md border-b border-border">
+          {/* Language selectors */}
+          <div className="flex items-center gap-1 px-4 pt-4 pb-2">
+            {LOCALE_ORDER.map((loc) => (
+              <button
+                key={loc}
+                onClick={() => { switchLocale(loc); setMobileOpen(false); }}
+                className={`hover-grow px-2 py-1 text-xs font-bold rounded transition-colors ${
+                  loc === locale
+                    ? 'bg-accent text-accent-foreground'
+                    : 'text-foreground/60 hover:text-foreground'
+                }`}
+              >
+                {LOCALE_LABELS[loc]}
+              </button>
+            ))}
+          </div>
+
+          {/* Store icons */}
+          <div className="flex items-center gap-3 px-4 pb-3">
+            {headerStores.map(({ Icon, url, label }) => (
+              <a
+                key={label}
+                href={`${url}?utm_source=garoastudios.com`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="hover-grow text-muted-foreground hover:text-accent transition-colors"
+              >
+                <Icon className={label === 'Nuuvem' ? 'w-6 h-6' : 'w-5 h-5'} />
+              </a>
+            ))}
+          </div>
+
+          {/* Navigation links */}
+          <nav className="flex flex-col px-4 pb-4 gap-3">
             {navLinks.map((link) => (
               link.isAnchor && isLandingPage ? (
                 <a
@@ -129,21 +169,6 @@ export default function Header() {
               )
             ))}
           </nav>
-          <div className="flex items-center gap-1 px-4 pb-4">
-            {LOCALE_ORDER.map((loc) => (
-              <button
-                key={loc}
-                onClick={() => { switchLocale(loc); setMobileOpen(false); }}
-                className={`hover-grow px-2 py-1 text-xs font-bold rounded transition-colors ${
-                  loc === locale
-                    ? 'bg-accent text-accent-foreground'
-                    : 'text-foreground/60 hover:text-foreground'
-                }`}
-              >
-                {LOCALE_LABELS[loc]}
-              </button>
-            ))}
-          </div>
         </div>
       )}
     </header>
