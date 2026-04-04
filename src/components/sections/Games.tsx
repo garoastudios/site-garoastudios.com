@@ -93,10 +93,10 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
         background: reverse
           ? 'linear-gradient(to left, hsl(250 55% 6%), hsl(250 55% 6%) 70%, transparent)'
           : 'linear-gradient(to right, hsl(250 55% 6%), hsl(250 55% 6%) 70%, transparent)',
-        marginLeft: reverse ? undefined : '-2rem',
-        paddingLeft: reverse ? undefined : 'calc(1.25rem + 2rem)',
-        marginRight: reverse ? '-2rem' : undefined,
-        paddingRight: reverse ? 'calc(1.25rem + 2rem)' : undefined,
+        marginLeft: reverse ? undefined : '-2.4rem',
+        paddingLeft: reverse ? undefined : 'calc(1.25rem + 2.4rem)',
+        marginRight: reverse ? '-2.4rem' : undefined,
+        paddingRight: reverse ? 'calc(1.25rem + 2.4rem)' : undefined,
       }}
     >
       <div className="relative z-10">
@@ -134,7 +134,7 @@ export default function GamesSection() {
           {t.games.heading}
         </h2>
 
-        <div className="flex flex-col gap-5 max-w-3xl mx-auto">
+        <div className="flex flex-col gap-[34px] max-w-3xl mx-auto">
           {GAMES.map((game, i) => (
             <GameCard key={game.slug} game={game} locale={locale} title={t.games[game.key].title} reverse={i % 2 === 1} />
           ))}
