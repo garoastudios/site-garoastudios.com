@@ -43,7 +43,8 @@ export const ja = {
       description: '子豚の宇宙飛行士とその知的な宇宙船を描いた、90年代風ローファイアドベンチャーパズルプラットフォーマー。',
     },
     learnMore: '詳細を見る',
-    backToGames: '私たちのゲームに戻る',
+    backToGames: 'すべてのゲーム',
+    backToHome: 'ホームに戻る',
   },
   about: {
     heading: '会社概要',

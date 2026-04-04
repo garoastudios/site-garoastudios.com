@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import LandingPage from "./pages/LandingPage";
 import GamePage from "./pages/GamePage";
+import GamesCatalogPage from "./pages/GamesCatalogPage";
 import PressPage from "./pages/PressPage";
 import JobsPage from "./pages/JobsPage";
 import NotFound from "./pages/NotFound";
@@ -18,6 +19,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Navigate to="/en" replace />} />
           <Route path="/:locale" element={<LandingPage />} />
+          <Route path="/:locale/games" element={<GamesCatalogPage />} />
           <Route path="/:locale/games/:gameSlug" element={<GamePage />} />
           <Route path="/:locale/press" element={<PressPage />} />
           <Route path="/:locale/jobs" element={<JobsPage />} />

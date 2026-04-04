@@ -23,7 +23,7 @@ export default function Header() {
   const anchorHref = (hash: string) => isLandingPage ? `#${hash}` : `/${locale}#${hash}`;
 
   const navLinks = [
-    { label: t.nav.games, href: anchorHref('games'), isAnchor: true },
+    { label: t.nav.games, href: isLandingPage ? anchorHref('games') : `/${locale}/games`, isAnchor: isLandingPage },
     { label: t.nav.aboutUs, href: anchorHref('about'), isAnchor: true },
     { label: t.nav.press, href: `/${locale}/press`, isAnchor: false },
     { label: t.nav.jobs, href: `/${locale}/jobs`, isAnchor: false },

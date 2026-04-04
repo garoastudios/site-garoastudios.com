@@ -131,7 +131,7 @@ export default function GamePage() {
           )}
 
           <Link
-            to={`/${locale}#games`}
+            to={`/${locale}/games`}
             className="hover-grow inline-block bg-accent text-accent-foreground font-display px-6 py-3 rounded-lg hover:bg-accent/90 transition-colors"
           >
             ← {t.games.backToGames}
