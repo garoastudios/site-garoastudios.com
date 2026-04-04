@@ -17,6 +17,7 @@ export const zh = {
     consistentCreation: '持续创新创作——我们发布！',
     awards: '30+ 官方奖项和节展入选',
     positiveRating: '> 95% Steam好评率',
+    wishlist: '加入愿望单并购买我们的游戏',
     followUs: '看看我们在做什么',
   },
   games: {

@@ -4,6 +4,13 @@ import { Menu, X } from 'lucide-react';
 import { useLocale } from '@/i18n/useLocale';
 import { LOCALE_ORDER, LOCALE_LABELS } from '@/i18n/config';
 import garoaLogoIcon from '@/assets/logos/garoa_logo_icon.png';
+import { SteamIcon, ItchIcon, NuuvemIcon } from '@/components/PlatformIcons';
+
+const headerStores = [
+  { Icon: SteamIcon, url: 'https://store.steampowered.com/publisher/garoastudios', label: 'Steam' },
+  { Icon: ItchIcon, url: 'https://garoa.itch.io/', label: 'itch.io' },
+  { Icon: NuuvemIcon, url: 'https://www.nuuvem.com/br-pt/catalog/publishers/garoa-studios', label: 'Nuuvem' },
+];
 
 export default function Header() {
   const { locale, t, getLogo, switchLocale } = useLocale();
@@ -26,9 +33,25 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50 overflow-visible">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        <Link to={`/${locale}`} className="flex-shrink-0 w-[60px] sm:w-[72px]">
-          <img src={garoaLogoIcon} alt="Garoa Studios" className="h-[60px] sm:h-[72px] rounded-b-lg" />
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link to={`/${locale}`} className="flex-shrink-0 w-[60px] sm:w-[72px]">
+            <img src={garoaLogoIcon} alt="Garoa Studios" className="h-[60px] sm:h-[72px] rounded-b-lg" />
+          </Link>
+          <div className="hidden sm:flex items-center gap-2">
+            {headerStores.map(({ Icon, url, label }) => (
+              <a
+                key={label}
+                href={`${url}?utm_source=garoastudios.com`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="hover-grow text-muted-foreground hover:text-accent transition-colors"
+              >
+                <Icon className={label === 'Nuuvem' ? 'w-6 h-6' : 'w-5 h-5'} />
+              </a>
+            ))}
+          </div>
+        </div>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6">

@@ -17,6 +17,7 @@ export const br = {
     consistentCreation: 'Criação inovadora e consistente - nós lançamos!',
     awards: '30+ Prêmios oficiais e seleções em festivais',
     positiveRating: '> 95% Avaliações Positivas no Steam',
+    wishlist: 'Adicione à lista de desejos e compre nossos jogos em',
     followUs: 'Veja o que estamos aprontando',
   },
   games: {

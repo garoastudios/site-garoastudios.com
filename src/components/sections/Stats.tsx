@@ -4,6 +4,13 @@ import {
   SiBluesky, SiDiscord, SiFacebook, SiInstagram,
   SiLinkedin, SiTelegram, SiTiktok, SiTwitch, SiX, SiYoutube,
 } from '@/components/SocialIcons';
+import { SteamIcon, ItchIcon, NuuvemIcon } from '@/components/PlatformIcons';
+
+const storeLinks = [
+  { Icon: SteamIcon, url: 'https://store.steampowered.com/publisher/garoastudios', label: 'Steam' },
+  { Icon: ItchIcon, url: 'https://garoa.itch.io/', label: 'itch.io' },
+  { Icon: NuuvemIcon, url: 'https://www.nuuvem.com/br-pt/catalog/publishers/garoa-studios', label: 'Nuuvem' },
+];
 
 const socials = [
   { Icon: SiBluesky, url: 'https://bsky.app/profile/garoastudios.com', label: 'Bluesky' },
@@ -46,6 +53,24 @@ export default function StatsSection() {
               {stat.icon}
               <span className="font-display text-lg text-foreground">{stat.label}</span>
             </div>
+          ))}
+        </div>
+
+        <h3 className="font-display text-xl sm:text-2xl text-muted-foreground mb-4">
+          {t.stats.wishlist}
+        </h3>
+        <div className="flex flex-wrap justify-center items-center gap-8 mb-12">
+          {storeLinks.map(({ Icon, url, label }) => (
+            <a
+              key={label}
+              href={`${url}?utm_source=garoastudios.com`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="hover-grow text-muted-foreground hover:text-accent transition-colors"
+            >
+              <Icon className={label === 'Nuuvem' ? 'w-[57px] h-[57px]' : 'w-[54px] h-[54px]'} />
+            </a>
           ))}
         </div>
 

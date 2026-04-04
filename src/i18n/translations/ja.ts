@@ -17,6 +17,7 @@ export const ja = {
     consistentCreation: '一貫した革新的創作 — 私たちはリリースします！',
     awards: '30以上の公式受賞・フェスティバル選出',
     positiveRating: '> 95% Steamでの好評価',
+    wishlist: 'ウィッシュリストに追加＆ゲームを購入',
     followUs: '最新情報をチェック',
   },
   games: {
