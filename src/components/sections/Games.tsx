@@ -128,7 +128,7 @@ export default function GamesSection() {
   const { locale, t } = useLocale();
 
   return (
-    <section id="games" className="snap-section flex flex-col justify-center px-4 py-14">
+    <section id="games" className="snap-section flex flex-col justify-center px-4 pt-7 pb-14">
       <div className="max-w-7xl mx-auto w-full">
         <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-foreground mb-10 text-center">
           {t.games.heading}
