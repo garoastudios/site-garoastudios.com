@@ -4,6 +4,13 @@ import {
   SiBluesky, SiDiscord, SiFacebook, SiInstagram,
   SiLinkedin, SiTelegram, SiTiktok, SiTwitch, SiX, SiYoutube,
 } from '@/components/SocialIcons';
+import { SteamIcon, ItchIcon, NuuvemIcon } from '@/components/PlatformIcons';
+
+const storeLinks = [
+  { Icon: SteamIcon, url: 'https://store.steampowered.com/publisher/garoastudios', label: 'Steam' },
+  { Icon: ItchIcon, url: 'https://garoa.itch.io/', label: 'itch.io' },
+  { Icon: NuuvemIcon, url: 'https://www.nuuvem.com/br-pt/catalog/publishers/garoa-studios', label: 'Nuuvem' },
+];
 
 const socials = [
   { Icon: SiBluesky, url: 'https://bsky.app/profile/garoastudios.com', label: 'Bluesky' },
