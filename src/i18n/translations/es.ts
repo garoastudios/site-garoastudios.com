@@ -52,25 +52,25 @@ export const es = {
   },
   values: {
     heading: 'Nuestros Valores',
-    transparency: {
-      title: 'Transparencia e Integridad',
-      description: 'Operamos con honestidad respecto a nuestros hitos, presupuestos y desafíos, construyendo confianza con socios y jugadores.',
+    visionFirst: {
+      title: 'Visión Primero',
+      description: 'No seguimos tendencias. Sabemos que trabajaremos en un número finito de juegos en nuestra vida. Necesitamos estar completamente entusiasmados con nuestra visión creativa si vamos a invertir tiempo irremplazable en ella.',
     },
-    community: {
-      title: 'Co-Creación Comunitaria',
-      description: 'Vemos a nuestros jugadores no solo como consumidores, sino como socios. Escuchamos feedback y construimos comunidades.',
+    quality: {
+      title: 'Ojo por la Calidad',
+      description: 'Lo divino está en los detalles. Sabemos que hay un abismo enorme entre \'bueno\' y \'excelente\', y no nos da miedo perseguirlo, sin importar cuánto tiempo tome. Siempre nos preguntamos - "¿estamos dispuestos a lanzar esto tal como está?".',
+    },
+    transparency: {
+      title: 'Transparencia Radical',
+      description: 'Creemos en la honestidad completa y brutal respecto a nuestros hitos, presupuestos y desafíos. Discutimos abiertamente temas sensibles como remuneración, bloqueos de producción, calidad del trabajo y bienestar. Un ambiente creativo necesita confianza total para florecer.',
     },
     global: {
       title: 'Ambición Global',
-      description: 'Arraigados en Río, construimos nuestros juegos para una audiencia mundial, considerando relevancia cultural y tendencias globales.',
+      description: 'Amamos nuestro país y nuestra ciudad natal, Río – verás muchas referencias al folclore urbano en nuestro trabajo. Pero hablamos a una comunidad global de jugadores, y no nos conformaremos con llegar solo a una audiencia local. Buscamos accesibilidad, soporte extensivo de idiomas y precios localizados realistas. Queremos que el mundo entero vea, toque y se divierta con nuestros juegos; no solo unos pocos privilegiados.',
     },
-    dataInformed: {
-      title: 'Creatividad Informada por Datos',
-      description: 'Equilibramos intuición artística con insights de mercado y analytics para reducir riesgos y maximizar engagement.',
-    },
-    scalable: {
-      title: 'Artesanía Escalable',
-      description: 'Perseguimos calidad sin compromiso a través de procesos inteligentes, entregando pulido consistente y sostenible.',
+    community: {
+      title: 'Posicionamiento Comunitario',
+      description: 'Nos encanta interactuar, mostrar nuestro trabajo cara a cara y escuchar feedback y opiniones de los jugadores. Ningún evento local con menos de cien asistentes es "demasiado insignificante" – estaremos ahí. También nos esforzamos por construir una presencia digital clara y accesible, hablando con los jugadores sin jerga corporativa. Respetamos la inteligencia de nuestra audiencia.',
     },
   },
   awards: {

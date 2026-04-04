@@ -52,25 +52,25 @@ export const en = {
   },
   values: {
     heading: 'Our Values',
-    transparency: {
-      title: 'Transparency & Integrity',
-      description: 'We operate with honesty regarding our milestones, driving budgets, and challenges, building trust with partners and players alike.',
+    visionFirst: {
+      title: 'Vision-First',
+      description: "We aren't trend-chasers. We know we will work on a finite number of games in our lifetime. We need to be fully excited about our creative vision if we're going to spend irreplaceable time on it.",
     },
-    community: {
-      title: 'Community Co-Creation',
-      description: 'We view our players not just as consumers, but as partners. We listen to feedback and build communities that champion our work.',
+    quality: {
+      title: 'An Eye for Quality',
+      description: 'The divine is in the details. We know there\'s a huge chasm between \'good\' and \'excellent\', and we don\'t shy away from pursuing it, no matter how long it takes. We always ask ourselves - "are we willing to launch this as it is?".',
+    },
+    transparency: {
+      title: 'Radical Transparency',
+      description: 'We believe in complete and brutal honesty regarding our milestones, budgets, and challenges. We openly discuss sensitive topics such as remuneration, production blockers, work quality, and well-being. A creative environment needs complete trust to flourish.',
     },
     global: {
       title: 'Global Ambition',
-      description: 'While rooted in Rio, we build our games for a worldwide audience, considering cultural relevance and global market trends.',
+      description: "We love our home country and our hometown of Rio – you'll see a lot of urban folklore references in our work. But we speak to a global community of players, and we won't be satisfied with reaching only a local audience. We strive for accessibility, extensive language support, and realistic localized pricing. We want the whole world to see, touch, and have fun with our games; not only a privileged few.",
     },
-    dataInformed: {
-      title: 'Data-Informed Creativity',
-      description: 'We balance artistic intuition with market insights and analytics to de-risk development and maximize engagement.',
-    },
-    scalable: {
-      title: 'Scalable Craftsmanship',
-      description: 'We pursue uncompromising quality through intelligent processes. By building efficient workflows, we deliver high-end polish consistently and sustainably.',
+    community: {
+      title: 'Community Positioning',
+      description: 'We love to engage, showcase our work face to face, and listen to player feedback and opinions. No local showcase with fewer than a hundred attendees is "too insignificant" – we\'ll be there. We also strive to build a clear and approachable digital presence, speaking to players without corporate fluff. We respect our audience\'s intelligence.',
     },
   },
   awards: {
