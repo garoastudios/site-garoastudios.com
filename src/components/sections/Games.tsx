@@ -98,7 +98,7 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
   return (
     <Link
       to={`/${locale}/games/${game.slug}`}
-      className="group flex bg-transparent border border-transparent overflow-hidden hover:bg-card hover:border-border transition-all duration-500 h-[193px] sm:h-[222px]"
+      className="hover-grow group flex bg-transparent border border-transparent overflow-hidden hover:bg-card hover:border-border transition-all duration-500 h-[193px] sm:h-[222px]"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

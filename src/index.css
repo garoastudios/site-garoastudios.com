@@ -73,6 +73,14 @@
     cursor: url('/cursors/pointer.png'), pointer;
   }
 
+  .hover-grow {
+    transition: transform 0.3s ease;
+    will-change: transform;
+  }
+  .hover-grow:hover {
+    transform: scale(1.15);
+  }
+
   body {
     @apply text-foreground;
     background: url('/images/garoa_starry_bg.png') no-repeat center center fixed;
