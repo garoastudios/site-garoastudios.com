@@ -121,18 +121,18 @@
     scroll-snap-align: start;
     min-height: auto;
   }
+}
 
-  @media (max-width: 767px) {
-    .snap-container {
-      height: auto;
-      overflow-y: visible;
-    }
-    .snap-section {
-      min-height: auto;
-    }
-    .snap-section-hero {
-      min-height: 50vh;
-    }
+@media (max-width: 767px) {
+  .snap-container {
+    height: auto !important;
+    overflow-y: visible !important;
+  }
+  .snap-section {
+    min-height: auto !important;
+  }
+  .snap-section-hero {
+    min-height: 50vh !important;
   }
 }
 
