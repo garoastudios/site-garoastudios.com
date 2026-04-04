@@ -103,18 +103,6 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
     </div>
   );
 
-  // Gradient fade overlay that sits between image and text
-  const gradientOverlay = (
-    <div
-      className="absolute top-0 bottom-0 w-32 z-[3] pointer-events-none"
-      style={{
-        ...(reverse
-          ? { right: 'calc(100% - 444px)', background: 'linear-gradient(to right, hsl(250 55% 6%), transparent)' }
-          : { left: 'calc(100% - 444px)', background: 'linear-gradient(to left, hsl(250 55% 6%), transparent)' }
-        ),
-      }}
-    />
-  );
 
   return (
     <Link
