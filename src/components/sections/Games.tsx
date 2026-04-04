@@ -120,17 +120,7 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
     </Link>
   );
 }
-  return (
-    <Link
-      to={`/${locale}/games/${game.slug}`}
-      className="hover-grow group relative flex overflow-hidden transition-all duration-500 h-[222px] cursor-pointer"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      {reverse ? <>{textBlock}{imageBlock}</> : <>{imageBlock}{textBlock}</>}
-    </Link>
-  );
-}
+
 export default function GamesSection() {
   const { locale, t } = useLocale();
 
