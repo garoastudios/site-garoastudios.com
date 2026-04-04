@@ -45,6 +45,7 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
   const [videoPlaying, setVideoPlaying] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const isMobile = useIsMobile();
 
   const handleMouseEnter = () => {
     setHovering(true);
@@ -89,21 +90,19 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
 
   const textBlock = (
     <div
-      className={`relative flex-1 p-5 flex flex-col justify-center gap-1.5 z-[2] ${reverse ? 'sm:items-end sm:text-right' : ''}`}
-      style={{
-        background: window.innerWidth < 640
-          ? undefined
-          : reverse
-            ? 'linear-gradient(to left, hsl(250 55% 6%), hsl(250 55% 6%) 70%, transparent)'
-            : 'linear-gradient(to right, hsl(250 55% 6%), hsl(250 55% 6%) 70%, transparent)',
-        marginLeft: window.innerWidth < 640 ? undefined : (reverse ? undefined : '-2.4rem'),
-        paddingLeft: window.innerWidth < 640 ? undefined : (reverse ? undefined : 'calc(1.25rem + 2.4rem)'),
-        marginRight: window.innerWidth < 640 ? undefined : (reverse ? '-2.4rem' : undefined),
-        paddingRight: window.innerWidth < 640 ? undefined : (reverse ? 'calc(1.25rem + 2.4rem)' : undefined),
+      className={`relative flex-1 p-4 sm:p-5 flex flex-col justify-center gap-1.5 z-[2] ${!isMobile && reverse ? 'items-end text-right' : ''}`}
+      style={isMobile ? undefined : {
+        background: reverse
+          ? 'linear-gradient(to left, hsl(250 55% 6%), hsl(250 55% 6%) 70%, transparent)'
+          : 'linear-gradient(to right, hsl(250 55% 6%), hsl(250 55% 6%) 70%, transparent)',
+        marginLeft: reverse ? undefined : '-2.4rem',
+        paddingLeft: reverse ? undefined : 'calc(1.25rem + 2.4rem)',
+        marginRight: reverse ? '-2.4rem' : undefined,
+        paddingRight: reverse ? 'calc(1.25rem + 2.4rem)' : undefined,
       }}
     >
       <div className="relative z-10">
-        <h3 className={`font-display text-lg sm:text-xl transition-colors duration-300 ${hovering ? 'text-[#fabd4b]' : 'text-foreground'}`}>{title}</h3>
+        <h3 className={`font-display text-lg sm:text-xl transition-colors duration-300 ${hovering ? 'text-accent' : 'text-foreground'}`}>{title}</h3>
         <span className="font-display text-sm text-muted-foreground">{game.year}</span>
         <div className="flex items-center gap-2 text-foreground/70 mt-1">
           {game.platforms.map((p) => (
@@ -114,26 +113,31 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
     </div>
   );
 
+  if (isMobile) {
+    return (
+      <Link
+        to={`/${locale}/games/${game.slug}`}
+        className="hover-grow group block overflow-hidden transition-all duration-500 cursor-pointer rounded-lg"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        {imageBlock}
+        {textBlock}
+      </Link>
+    );
+  }
 
   return (
     <Link
       to={`/${locale}/games/${game.slug}`}
-      className="hover-grow group relative flex flex-col sm:flex-row overflow-hidden transition-all duration-500 sm:h-[222px] cursor-pointer"
+      className="hover-grow group relative flex overflow-hidden transition-all duration-500 h-[222px] cursor-pointer"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* On mobile, always image on top. On desktop, alternate. */}
-      <div className="block sm:hidden">
-        {imageBlock}
-        {textBlock}
-      </div>
-      <div className="hidden sm:contents">
-        {reverse ? <>{textBlock}{imageBlock}</> : <>{imageBlock}{textBlock}</>}
-      </div>
+      {reverse ? <>{textBlock}{imageBlock}</> : <>{imageBlock}{textBlock}</>}
     </Link>
   );
 }
-
 export default function GamesSection() {
   const { locale, t } = useLocale();
 
