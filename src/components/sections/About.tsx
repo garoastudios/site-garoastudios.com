@@ -137,14 +137,14 @@ export default function AboutSection() {
         <h3 className="font-display text-2xl sm:text-3xl text-foreground mb-8 text-center">
           {t.values.heading}
         </h3>
-        <div className="flex gap-6">
-          {/* Left: Photo Carousel */}
-          <div className="hidden lg:block w-[45%] shrink-0">
+        <div className="flex flex-col gap-8">
+          {/* Photo Carousel */}
+          <div className="w-full aspect-[21/9] rounded-xl overflow-hidden">
             <ValuesCarousel />
           </div>
 
-          {/* Right: Value tiles */}
-          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4 auto-rows-fr">
+          {/* Value tiles */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {(['transparency', 'community', 'global', 'dataInformed', 'scalable'] as const).map((key) => (
               <div key={key} className="bg-card border border-border rounded-xl p-5">
                 <h4 className="font-display text-lg text-accent mb-2">
