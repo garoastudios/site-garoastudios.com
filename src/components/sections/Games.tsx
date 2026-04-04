@@ -70,7 +70,7 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
       <img
         src={getGameCapsule(game.asset, locale)}
         alt={title}
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${hovering ? 'opacity-0' : 'opacity-100'}`}
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${videoPlaying ? 'opacity-0' : 'opacity-100'}`}
         loading="lazy"
       />
       {game.trailerWebm && (
