@@ -41,13 +41,15 @@ const PlatformIcon = ({ platform }: { platform: Platform }) => {
 
 function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Locale; title: string; reverse?: boolean }) {
   const [hovering, setHovering] = useState(false);
+  const [videoPlaying, setVideoPlaying] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleMouseEnter = () => {
+    setHovering(true);
     if (game.trailerWebm) {
       timerRef.current = setTimeout(() => {
-        setHovering(true);
+        setVideoPlaying(true);
         videoRef.current?.play();
       }, 500);
     }
@@ -56,6 +58,7 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
   const handleMouseLeave = () => {
     if (timerRef.current) clearTimeout(timerRef.current);
     setHovering(false);
+    setVideoPlaying(false);
     if (videoRef.current) {
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
@@ -67,14 +70,14 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
       <img
         src={getGameCapsule(game.asset, locale)}
         alt={title}
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${hovering ? 'opacity-0' : 'opacity-100'}`}
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${videoPlaying ? 'opacity-0' : 'opacity-100'}`}
         loading="lazy"
       />
       {game.trailerWebm && (
         <video
           ref={videoRef}
           src={game.trailerWebm}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${hovering ? 'opacity-100' : 'opacity-0'}`}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${videoPlaying ? 'opacity-100' : 'opacity-0'}`}
           muted
           loop
           playsInline
@@ -86,15 +89,15 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
   const textBlock = (
     <div className={`relative flex-1 p-5 flex flex-col justify-center gap-1.5 ${reverse ? 'items-end text-right' : ''}`}>
       <div
-        className={`absolute inset-0 transition-opacity duration-500 ${hovering ? 'opacity-80' : 'opacity-40'}`}
+        className={`absolute inset-0 transition-opacity duration-300 ${hovering ? 'opacity-90' : 'opacity-60'}`}
         style={{
           background: reverse
-            ? 'linear-gradient(to left, hsl(256 72% 13%), transparent)'
-            : 'linear-gradient(to right, hsl(256 72% 13%), transparent)',
+            ? 'linear-gradient(to left, hsl(256 60% 10%), transparent)'
+            : 'linear-gradient(to right, hsl(256 60% 10%), transparent)',
         }}
       />
       <div className="relative z-10">
-        <h3 className={`font-display text-lg sm:text-xl transition-colors duration-500 ${hovering ? 'text-[#fabd4b]' : 'text-foreground'}`}>{title}</h3>
+        <h3 className={`font-display text-lg sm:text-xl transition-colors duration-300 ${hovering ? 'text-[#fabd4b]' : 'text-foreground'}`}>{title}</h3>
         <span className="font-display text-sm text-muted-foreground">{game.year}</span>
         <div className="flex items-center gap-2 text-foreground/70 mt-1">
           {game.platforms.map((p) => (
