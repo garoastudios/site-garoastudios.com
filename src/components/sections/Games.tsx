@@ -84,13 +84,23 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
   );
 
   const textBlock = (
-    <div className={`flex-1 p-5 flex flex-col justify-center gap-1.5 ${reverse ? 'items-end text-right' : ''}`}>
-      <h3 className="font-display text-lg sm:text-xl text-foreground">{title}</h3>
-      <span className="font-display text-sm text-muted-foreground">{game.year}</span>
-      <div className="flex items-center gap-2 text-foreground/70 mt-1">
-        {game.platforms.map((p) => (
-          <PlatformIcon key={p} platform={p} />
-        ))}
+    <div className={`relative flex-1 p-5 flex flex-col justify-center gap-1.5 ${reverse ? 'items-end text-right' : ''}`}>
+      <div
+        className={`absolute inset-0 transition-opacity duration-500 ${hovering ? 'opacity-80' : 'opacity-40'}`}
+        style={{
+          background: reverse
+            ? 'linear-gradient(to left, hsl(256 72% 13%), transparent)'
+            : 'linear-gradient(to right, hsl(256 72% 13%), transparent)',
+        }}
+      />
+      <div className="relative z-10">
+        <h3 className={`font-display text-lg sm:text-xl transition-colors duration-500 ${hovering ? 'text-[#fabd4b]' : 'text-foreground'}`}>{title}</h3>
+        <span className="font-display text-sm text-muted-foreground">{game.year}</span>
+        <div className="flex items-center gap-2 text-foreground/70 mt-1">
+          {game.platforms.map((p) => (
+            <PlatformIcon key={p} platform={p} />
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -98,7 +108,7 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
   return (
     <Link
       to={`/${locale}/games/${game.slug}`}
-      className="hover-grow group flex bg-transparent border border-transparent overflow-hidden hover:bg-card hover:border-border transition-all duration-500 h-[193px] sm:h-[222px]"
+      className="hover-grow group flex overflow-hidden transition-all duration-500 h-[193px] sm:h-[222px] cursor-pointer"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
