@@ -119,7 +119,7 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
       </div>
     </Link>
   );
-
+}
 
 export default function GamesSection() {
   const { locale, t } = useLocale();
