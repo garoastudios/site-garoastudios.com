@@ -41,13 +41,15 @@ const PlatformIcon = ({ platform }: { platform: Platform }) => {
 
 function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Locale; title: string; reverse?: boolean }) {
   const [hovering, setHovering] = useState(false);
+  const [videoPlaying, setVideoPlaying] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleMouseEnter = () => {
+    setHovering(true);
     if (game.trailerWebm) {
       timerRef.current = setTimeout(() => {
-        setHovering(true);
+        setVideoPlaying(true);
         videoRef.current?.play();
       }, 500);
     }
@@ -56,6 +58,7 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
   const handleMouseLeave = () => {
     if (timerRef.current) clearTimeout(timerRef.current);
     setHovering(false);
+    setVideoPlaying(false);
     if (videoRef.current) {
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
