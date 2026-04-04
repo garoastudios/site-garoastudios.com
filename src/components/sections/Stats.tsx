@@ -57,6 +57,24 @@ export default function StatsSection() {
         </div>
 
         <h3 className="font-display text-xl sm:text-2xl text-muted-foreground mb-4">
+          {t.stats.wishlist}
+        </h3>
+        <div className="flex flex-wrap justify-center items-center gap-8 mb-12">
+          {storeLinks.map(({ Icon, url, label }) => (
+            <a
+              key={label}
+              href={`${url}?utm_source=garoastudios.com`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="hover-grow text-muted-foreground hover:text-accent transition-colors"
+            >
+              <Icon className={label === 'Nuuvem' ? 'w-[57px] h-[57px]' : 'w-[54px] h-[54px]'} />
+            </a>
+          ))}
+        </div>
+
+        <h3 className="font-display text-xl sm:text-2xl text-muted-foreground mb-4">
           {t.stats.followUs}
         </h3>
         <div className="flex flex-wrap justify-center gap-6">

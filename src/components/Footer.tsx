@@ -3,8 +3,11 @@ import {
   SiBluesky, SiDiscord, SiFacebook, SiInstagram,
   SiLinkedin, SiTelegram, SiTiktok, SiTwitch, SiX, SiYoutube,
 } from './SocialIcons';
+import { SteamIcon, ItchIcon } from './PlatformIcons';
 
 const socials = [
+  { Icon: SteamIcon, url: 'https://store.steampowered.com/publisher/garoastudios', label: 'Steam' },
+  { Icon: ItchIcon, url: 'https://garoa.itch.io/', label: 'itch.io' },
   { Icon: SiBluesky, url: 'https://bsky.app/profile/garoastudios.com', label: 'Bluesky' },
   { Icon: SiDiscord, url: 'https://discord.com/invite/hBdTNPgfx4', label: 'Discord' },
   { Icon: SiFacebook, url: 'https://www.facebook.com/garoastudios/', label: 'Facebook' },
