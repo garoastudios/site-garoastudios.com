@@ -51,7 +51,7 @@ export const en = {
     p2: 'By uniting technical precision with artistic passion, we build games that are not only played, but felt. We are driven by a vision to enrich the global gaming landscape with experiences that are as memorable as they are innovative.',
   },
   values: {
-    heading: 'Core Values',
+    heading: 'Our Values',
     transparency: {
       title: 'Transparency & Integrity',
       description: 'We operate with honesty regarding our milestones, driving budgets, and challenges, building trust with partners and players alike.',
