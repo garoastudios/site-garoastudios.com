@@ -90,7 +90,7 @@ export default function Header() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="font-display text-base text-foreground/80 hover:text-accent transition-colors"
+                  className="hover-grow font-display text-base text-foreground/80 hover:text-accent transition-colors"
                 >
                   {link.label}
                 </a>
