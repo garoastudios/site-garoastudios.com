@@ -111,10 +111,18 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
   return (
     <Link
       to={`/${locale}/games/${game.slug}`}
-      className="hover-grow group flex overflow-hidden transition-all duration-500 h-[193px] sm:h-[222px] cursor-pointer"
+      className="hover-grow group relative flex overflow-hidden transition-all duration-500 h-[193px] sm:h-[222px] cursor-pointer"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
+      <div
+        className={`absolute inset-0 z-[1] pointer-events-none transition-opacity duration-300 ${hovering ? 'opacity-90' : 'opacity-60'}`}
+        style={{
+          background: reverse
+            ? 'linear-gradient(to right, transparent 30%, hsl(250 50% 6%) 65%)'
+            : 'linear-gradient(to left, transparent 30%, hsl(250 50% 6%) 65%)',
+        }}
+      />
       {reverse ? <>{textBlock}{imageBlock}</> : <>{imageBlock}{textBlock}</>}
     </Link>
   );
