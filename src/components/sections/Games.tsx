@@ -108,11 +108,11 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
       onMouseLeave={handleMouseLeave}
     >
       <div
-        className="absolute inset-0 z-[1] pointer-events-none"
+        className="absolute inset-0 z-[5] pointer-events-none"
         style={{
           background: reverse
-            ? 'linear-gradient(to left, transparent 25%, hsl(250 50% 5%) 60%)'
-            : 'linear-gradient(to right, transparent 25%, hsl(250 50% 5%) 60%)',
+            ? 'linear-gradient(to left, transparent 25%, red 60%)'
+            : 'linear-gradient(to right, transparent 25%, red 60%)',
         }}
       />
       {reverse ? <>{textBlock}{imageBlock}</> : <>{imageBlock}{textBlock}</>}
