@@ -59,7 +59,7 @@ export default function Header() {
             <button
               key={loc}
               onClick={() => switchLocale(loc)}
-              className={`px-2 py-1 text-xs font-bold rounded transition-colors ${
+              className={`hover-grow px-2 py-1 text-xs font-bold rounded transition-colors ${
                 loc === locale
                   ? 'bg-accent text-accent-foreground'
                   : 'text-foreground/60 hover:text-foreground'
