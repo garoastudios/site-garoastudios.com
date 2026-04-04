@@ -121,6 +121,15 @@
     scroll-snap-align: start;
     min-height: auto;
   }
+
+  @media (max-width: 767px) {
+    .snap-container {
+      height: auto;
+    }
+    .snap-section {
+      min-height: auto;
+    }
+  }
 }
 
 @keyframes awards-scroll {
