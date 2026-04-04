@@ -44,7 +44,6 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
   const [videoPlaying, setVideoPlaying] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const isMobile = useIsMobile();
 
   const handleMouseEnter = () => {
     setHovering(true);
@@ -66,66 +65,61 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
     }
   };
 
-  const imageBlock = (
-    <div className="relative w-full sm:w-[444px] shrink-0 aspect-[460/215]">
-      <img
-        src={getGameCapsule(game.asset, locale)}
-        alt={title}
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${videoPlaying ? 'opacity-0' : 'opacity-100'}`}
-        loading="lazy"
-      />
-      {game.trailerWebm && (
-        <video
-          ref={videoRef}
-          src={game.trailerWebm}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${videoPlaying ? 'opacity-100' : 'opacity-0'}`}
-          muted
-          loop
-          playsInline
-        />
-      )}
-    </div>
-  );
-
-  const textBlock = (
-    <div
-      className={`relative flex-1 p-4 sm:p-5 flex flex-col justify-center gap-1.5 z-[2] ${!isMobile && reverse ? 'items-end text-right' : ''}`}
-      style={isMobile ? undefined : {
-        background: reverse
-          ? 'linear-gradient(to left, hsl(250 55% 6%), hsl(250 55% 6%) 70%, transparent)'
-          : 'linear-gradient(to right, hsl(250 55% 6%), hsl(250 55% 6%) 70%, transparent)',
-        marginLeft: reverse ? undefined : '-2.4rem',
-        paddingLeft: reverse ? undefined : 'calc(1.25rem + 2.4rem)',
-        marginRight: reverse ? '-2.4rem' : undefined,
-        paddingRight: reverse ? 'calc(1.25rem + 2.4rem)' : undefined,
-      }}
+  return (
+    <Link
+      to={`/${locale}/games/${game.slug}`}
+      className={`hover-grow group relative flex flex-col md:flex-row overflow-hidden transition-all duration-500 md:h-[222px] cursor-pointer ${reverse ? 'md:flex-row-reverse' : ''}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      <div className="relative z-10">
-        <h3 className={`font-display text-lg sm:text-xl transition-colors duration-300 ${hovering ? 'text-accent' : 'text-foreground'}`}>{title}</h3>
-        <span className="font-display text-sm text-muted-foreground">{game.year}</span>
-        <div className="flex items-center gap-2 text-foreground/70 mt-1">
-          {game.platforms.map((p) => (
-            <PlatformIcon key={p} platform={p} />
-          ))}
+      {/* Image */}
+      <div className="relative w-full md:w-[444px] shrink-0 aspect-[460/215]">
+        <img
+          src={getGameCapsule(game.asset, locale)}
+          alt={title}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${videoPlaying ? 'opacity-0' : 'opacity-100'}`}
+          loading="lazy"
+        />
+        {game.trailerWebm && (
+          <video
+            ref={videoRef}
+            src={game.trailerWebm}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${videoPlaying ? 'opacity-100' : 'opacity-0'}`}
+            muted
+            loop
+            playsInline
+          />
+        )}
+      </div>
+
+      {/* Text - on desktop has gradient overlay, on mobile plain */}
+      <div
+        className={`relative flex-1 p-4 md:p-5 flex flex-col justify-center gap-1.5 z-[2] ${reverse ? 'md:items-end md:text-right' : ''}`}
+      >
+        {/* Desktop gradient overlay */}
+        <div
+          className="hidden md:block absolute inset-0"
+          style={{
+            background: reverse
+              ? 'linear-gradient(to left, hsl(250 55% 6%), hsl(250 55% 6%) 70%, transparent)'
+              : 'linear-gradient(to right, hsl(250 55% 6%), hsl(250 55% 6%) 70%, transparent)',
+            [reverse ? 'marginRight' : 'marginLeft']: '-2.4rem',
+            [reverse ? 'paddingRight' : 'paddingLeft']: 'calc(1.25rem + 2.4rem)',
+          }}
+        />
+        <div className="relative z-10">
+          <h3 className={`font-display text-lg md:text-xl transition-colors duration-300 ${hovering ? 'text-accent' : 'text-foreground'}`}>{title}</h3>
+          <span className="font-display text-sm text-muted-foreground">{game.year}</span>
+          <div className="flex items-center gap-2 text-foreground/70 mt-1">
+            {game.platforms.map((p) => (
+              <PlatformIcon key={p} platform={p} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
-
-  if (isMobile) {
-    return (
-      <Link
-        to={`/${locale}/games/${game.slug}`}
-        className="hover-grow group block overflow-hidden transition-all duration-500 cursor-pointer rounded-lg"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        {imageBlock}
-        {textBlock}
-      </Link>
-    );
-  }
-
+}
   return (
     <Link
       to={`/${locale}/games/${game.slug}`}
