@@ -91,8 +91,8 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
       className={`relative flex-1 p-5 flex flex-col justify-center gap-1.5 z-[2] ${reverse ? 'items-end text-right' : ''}`}
       style={{
         background: reverse
-          ? 'linear-gradient(to right, hsl(250 55% 6%), hsl(250 55% 6%) 70%, transparent)'
-          : 'linear-gradient(to left, hsl(250 55% 6%), hsl(250 55% 6%) 70%, transparent)',
+          ? 'linear-gradient(to left, hsl(250 55% 6%), hsl(250 55% 6%) 70%, transparent)'
+          : 'linear-gradient(to right, hsl(250 55% 6%), hsl(250 55% 6%) 70%, transparent)',
         marginLeft: reverse ? undefined : '-2rem',
         paddingLeft: reverse ? undefined : 'calc(1.25rem + 2rem)',
         marginRight: reverse ? '-2rem' : undefined,
