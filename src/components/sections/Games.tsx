@@ -92,8 +92,8 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
         className={`absolute inset-0 transition-opacity duration-300 ${hovering ? 'opacity-90' : 'opacity-60'}`}
         style={{
           background: reverse
-            ? 'linear-gradient(to left, hsl(256 60% 10%), transparent)'
-            : 'linear-gradient(to right, hsl(256 60% 10%), transparent)',
+            ? 'linear-gradient(to left, hsl(256 55% 8%) 0%, hsl(256 55% 8%) 50%, transparent 100%)'
+            : 'linear-gradient(to right, hsl(256 55% 8%) 0%, hsl(256 55% 8%) 50%, transparent 100%)',
         }}
       />
       <div className="relative z-10">
