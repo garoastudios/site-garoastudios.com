@@ -77,7 +77,7 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
         <video
           ref={videoRef}
           src={game.trailerWebm}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${hovering ? 'opacity-100' : 'opacity-0'}`}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${videoPlaying ? 'opacity-100' : 'opacity-0'}`}
           muted
           loop
           playsInline
