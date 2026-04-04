@@ -89,11 +89,11 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
   const textBlock = (
     <div className={`relative flex-1 p-5 flex flex-col justify-center gap-1.5 ${reverse ? 'items-end text-right' : ''}`}>
       <div
-        className={`absolute inset-0 transition-opacity duration-500 ${hovering ? 'opacity-80' : 'opacity-40'}`}
+        className={`absolute inset-0 transition-opacity duration-300 ${hovering ? 'opacity-90' : 'opacity-60'}`}
         style={{
           background: reverse
-            ? 'linear-gradient(to left, hsl(256 72% 13%), transparent)'
-            : 'linear-gradient(to right, hsl(256 72% 13%), transparent)',
+            ? 'linear-gradient(to left, hsl(256 60% 10%), transparent)'
+            : 'linear-gradient(to right, hsl(256 60% 10%), transparent)',
         }}
       />
       <div className="relative z-10">
