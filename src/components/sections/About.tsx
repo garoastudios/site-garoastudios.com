@@ -149,9 +149,9 @@ export default function AboutSection() {
 
           {/* Value tiles */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {(['transparency', 'community', 'global', 'dataInformed', 'scalable'] as const).map((key) => (
+            {(['visionFirst', 'quality', 'transparency', 'global', 'community'] as const).map((key) => (
               <div key={key} className="bg-card border border-border rounded-xl p-5">
-                <h4 className="font-display text-lg text-accent mb-2">
+                <h4 className="font-display text-lg text-accent mb-2 text-center">
                   {t.values[key].title}
                 </h4>
                 <p className="text-muted-foreground text-sm leading-relaxed">
