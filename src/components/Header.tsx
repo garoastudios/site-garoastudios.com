@@ -37,7 +37,7 @@ export default function Header() {
               <a
                 key={link.label}
                 href={link.href}
-                className="font-display text-sm tracking-wide text-foreground/80 hover:text-accent transition-colors"
+                className="hover-grow font-display text-sm tracking-wide text-foreground/80 hover:text-accent transition-colors"
               >
                 {link.label}
               </a>
@@ -45,7 +45,7 @@ export default function Header() {
               <Link
                 key={link.label}
                 to={link.href}
-                className="font-display text-sm tracking-wide text-foreground/80 hover:text-accent transition-colors"
+                className="hover-grow font-display text-sm tracking-wide text-foreground/80 hover:text-accent transition-colors"
               >
                 {link.label}
               </Link>
@@ -59,7 +59,7 @@ export default function Header() {
             <button
               key={loc}
               onClick={() => switchLocale(loc)}
-              className={`px-2 py-1 text-xs font-bold rounded transition-colors ${
+              className={`hover-grow px-2 py-1 text-xs font-bold rounded transition-colors ${
                 loc === locale
                   ? 'bg-accent text-accent-foreground'
                   : 'text-foreground/60 hover:text-foreground'
@@ -90,7 +90,7 @@ export default function Header() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="font-display text-base text-foreground/80 hover:text-accent transition-colors"
+                  className="hover-grow font-display text-base text-foreground/80 hover:text-accent transition-colors"
                 >
                   {link.label}
                 </a>
@@ -99,7 +99,7 @@ export default function Header() {
                   key={link.label}
                   to={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="font-display text-base text-foreground/80 hover:text-accent transition-colors"
+                  className="hover-grow font-display text-base text-foreground/80 hover:text-accent transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -111,7 +111,7 @@ export default function Header() {
               <button
                 key={loc}
                 onClick={() => { switchLocale(loc); setMobileOpen(false); }}
-                className={`px-2 py-1 text-xs font-bold rounded transition-colors ${
+                className={`hover-grow px-2 py-1 text-xs font-bold rounded transition-colors ${
                   loc === locale
                     ? 'bg-accent text-accent-foreground'
                     : 'text-foreground/60 hover:text-foreground'
