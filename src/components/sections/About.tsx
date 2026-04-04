@@ -12,6 +12,8 @@ import photo3 from '@/assets/photos/rhythmania_showcase_riofilme.jpg';
 import photo4 from '@/assets/photos/astro_pig_sbgames_2019.jpg';
 import photo5 from '@/assets/photos/astro_pig_gamethon.jpg';
 import photo6 from '@/assets/photos/rhythmania_brazil_direct_2025.png';
+import photo7 from '@/assets/photos/rhythmania_jogatorio_2025.jpg';
+import photo8 from '@/assets/photos/clj_artists_alley_big_2023.jpg';
 
 const PHOTOS = [
   { src: photo1, caption: 'Cat Leather Jackets official selection exhibit at gamescom latam 2024' },
@@ -20,6 +22,8 @@ const PHOTOS = [
   { src: photo4, caption: 'Astro Pig prototype winning Popular Choice at SBGames 2019' },
   { src: photo5, caption: 'Astro Pig prototype winning first place at Gamethon 2019' },
   { src: photo6, caption: 'Rhythmania on Brazil Direct finals at gamescom latam 2025' },
+  { src: photo7, caption: 'RhythMania on Jogatório Festival 2025 official selection' },
+  { src: photo8, caption: "Cat Leather Jackets lead artist Kuating's booth at BIG Festival 2023 Artists' Alley" },
 ];
 
 const logoByLocale: Record<Locale, string> = {
