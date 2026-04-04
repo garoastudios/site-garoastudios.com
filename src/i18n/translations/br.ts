@@ -51,7 +51,7 @@ export const br = {
     p2: 'Unindo precisão técnica com paixão artística, construímos jogos que não são apenas jogados, mas sentidos. Somos movidos pela visão de enriquecer o cenário global de jogos com experiências tão memoráveis quanto inovadoras.',
   },
   values: {
-    heading: 'Valores Fundamentais',
+    heading: 'Nossos Valores',
     transparency: {
       title: 'Transparência e Integridade',
       description: 'Operamos com honestidade em relação aos nossos marcos, orçamentos e desafios, construindo confiança com parceiros e jogadores.',
