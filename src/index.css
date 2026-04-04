@@ -82,6 +82,7 @@
   }
 
   body {
+    font-family: 'Work Sans', sans-serif;
     @apply text-foreground;
     background: url('/images/garoa_starry_bg.png') no-repeat center center fixed;
     background-size: cover;
