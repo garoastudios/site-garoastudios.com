@@ -123,6 +123,19 @@
   }
 }
 
+@media (max-width: 767px) {
+  .snap-container {
+    height: auto !important;
+    overflow-y: visible !important;
+  }
+  .snap-section {
+    min-height: auto !important;
+  }
+  .snap-section-hero {
+    min-height: 50vh !important;
+  }
+}
+
 @keyframes awards-scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }

@@ -47,7 +47,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="hero" className="snap-section relative flex items-center justify-center overflow-hidden bg-background">
+    <section id="hero" className="snap-section snap-section-hero relative flex items-center justify-center overflow-hidden bg-background">
       {/* Images */}
       {order.map((src, i) => (
         <img

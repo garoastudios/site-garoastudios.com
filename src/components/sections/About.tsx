@@ -112,26 +112,26 @@ export default function AboutSection() {
   const { locale, t } = useLocale();
 
   return (
-    <section id="about" className="snap-section flex flex-col justify-center px-4 py-14">
+    <section id="about" className="snap-section flex flex-col md:justify-center px-4 py-14">
       <div className="max-w-5xl mx-auto w-full">
         <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-foreground mb-4 text-center">
           {t.about.heading}
         </h2>
 
-        <div className="bg-card border border-border rounded-xl p-8 sm:p-12 mb-12 flex items-center gap-8">
+        <div className="bg-card border border-border rounded-xl p-6 sm:p-12 mb-12 flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
           <img
             src={logoByLocale[locale]}
             alt="Garoa Studios"
-            className="w-36 sm:w-44 shrink-0 rounded-xl"
+            className="w-28 sm:w-44 shrink-0 rounded-xl"
           />
           <div>
-            <h3 className="font-display text-2xl sm:text-3xl text-accent mb-6">
+            <h3 className="font-display text-xl sm:text-3xl text-accent mb-4 sm:mb-6 text-center sm:text-left">
               {t.about.welcome}
             </h3>
-            <p className="text-foreground/90 text-lg leading-relaxed mb-4">
+            <p className="text-foreground/90 text-base sm:text-lg leading-relaxed mb-4">
               {t.about.p1}
             </p>
-            <p className="text-foreground/90 text-lg leading-relaxed">
+            <p className="text-foreground/90 text-base sm:text-lg leading-relaxed">
               {t.about.p2}
             </p>
           </div>
