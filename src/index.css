@@ -129,6 +129,9 @@
     .snap-section {
       min-height: auto;
     }
+    .snap-section-hero {
+      min-height: 60vh;
+    }
   }
 }
 
