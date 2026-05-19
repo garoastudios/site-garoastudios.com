@@ -85,7 +85,7 @@ export const es = {
     subject: 'Asunto',
     message: 'Mensaje',
     send: 'Enviar Mensaje',
-    success: '¡Mensaje preparado! Tu cliente de email se abrirá pronto.',
+    success: '¡Email copiado al portapapeles!',
     error: 'Algo salió mal. Por favor, inténtalo de nuevo.',
   },
   press: {

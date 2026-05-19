@@ -85,7 +85,7 @@ export const zh = {
     subject: '主题',
     message: '消息',
     send: '发送消息',
-    success: '消息已准备！您的邮件客户端将很快打开。',
+    success: '邮箱已复制到剪贴板！',
     error: '出了点问题，请重试。',
   },
   press: {
