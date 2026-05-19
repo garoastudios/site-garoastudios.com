@@ -25,7 +25,19 @@ export default function Footer() {
   const { t } = useLocale();
 
   return (
-    <footer className="bg-card border-t border-border py-8">
+    <>
+      <div className="flex justify-center py-8">
+        <a
+          href="https://rj.acjogos.com.br/?utm_source=garoastudios.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="ACJOGOS-RJ"
+          className="hover-grow inline-block"
+        >
+          <img src={acjogosLogo} alt="ACJOGOS-RJ" className="h-12 w-auto" />
+        </a>
+      </div>
+      <footer className="bg-card border-t border-border py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap justify-center gap-4 mb-6">
           {socials.map(({ Icon, url, label }) => (
