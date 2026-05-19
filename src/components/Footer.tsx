@@ -4,6 +4,7 @@ import {
   SiLinkedin, SiTelegram, SiTiktok, SiTwitch, SiX, SiYoutube,
 } from './SocialIcons';
 import { SteamIcon, ItchIcon } from './PlatformIcons';
+import acjogosLogo from '@/assets/acjogos-rj.png';
 
 const socials = [
   { Icon: SteamIcon, url: 'https://store.steampowered.com/publisher/garoastudios', label: 'Steam' },
