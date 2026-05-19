@@ -15,7 +15,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="snap-section flex flex-col items-center md:justify-center px-4 pt-7 pb-14">
+    <section id="contact" className="snap-section-auto flex flex-col items-center px-4 pt-7 pb-14">
       <div className="max-w-xl mx-auto w-full text-center">
         <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-foreground mb-10">
           {t.contact.heading}
