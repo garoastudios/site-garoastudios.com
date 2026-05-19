@@ -57,6 +57,8 @@ export default function Footer() {
           {t.footer.trademark}
         </p>
       </div>
-    </footer>
+      </footer>
+    </>
+
   );
 }
