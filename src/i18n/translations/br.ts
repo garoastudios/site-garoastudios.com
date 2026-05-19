@@ -85,7 +85,7 @@ export const br = {
     subject: 'Assunto',
     message: 'Mensagem',
     send: 'Enviar Mensagem',
-    success: 'Mensagem preparada! Seu cliente de email será aberto em breve.',
+    success: 'Email copiado!',
     error: 'Algo deu errado. Por favor, tente novamente.',
   },
   press: {

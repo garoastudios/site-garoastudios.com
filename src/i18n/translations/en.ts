@@ -85,7 +85,7 @@ export const en = {
     subject: 'Subject',
     message: 'Message',
     send: 'Send Message',
-    success: 'Message prepared! Your email client will open shortly.',
+    success: 'Email copied to clipboard!',
     error: 'Something went wrong. Please try again.',
   },
   press: {
