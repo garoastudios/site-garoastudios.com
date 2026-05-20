@@ -5,7 +5,7 @@ export default function Footer() {
   const { t } = useLocale();
 
   return (
-    <footer className="bg-card border-t border-border py-8">
+    <footer className="bg-background/80 backdrop-blur-md border-t border-border py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-center gap-3">
           <p className="text-sm text-muted-foreground">

@@ -84,7 +84,7 @@ export default function AwardsSection() {
   useLocale();
 
   return (
-    <section id="awards" className="snap-section-auto flex flex-col items-center justify-center pt-6 pb-3 overflow-hidden">
+    <section id="awards" className="snap-section-auto flex flex-col items-center justify-center pt-6 pb-16 overflow-hidden">
 
 
       {/* Row 1: scrolls right-to-left */}
