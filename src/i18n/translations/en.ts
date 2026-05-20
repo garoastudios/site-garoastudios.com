@@ -6,6 +6,7 @@ export const en = {
     jobs: 'JOBS',
     workWithUs: 'WORK WITH US',
     contact: 'CONTACT',
+    links: 'LINKS',
   },
   hero: {
     dialogue: "That said, I can repair your device, but, as you can see, I'm not exactly equipped for it right now.",
@@ -100,6 +101,11 @@ export const en = {
   jobs: {
     heading: 'Jobs',
     noOpenings: 'There are no current openings. Follow us on our socials to be notified as soon as we have new work opportunities!',
+  },
+  links: {
+    heading: 'Links',
+    stores: 'Stores',
+    socials: 'Socials',
   },
   footer: {
     trademark: '™ Garoa Studios 2018 — 2026',
