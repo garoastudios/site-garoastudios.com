@@ -14,7 +14,7 @@ export default function LandingPage() {
   const { locale, t } = useLocale();
 
   useEffect(() => {
-    document.title = `Garoa Studios — ${t.stats.heading}`;
+    document.title = 'Garoa';
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) metaDesc.setAttribute('content', t.stats.subtitle);
   }, [locale, t]);

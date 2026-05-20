@@ -31,7 +31,7 @@ export default function LinksPage() {
   const { t } = useLocale();
 
   useEffect(() => {
-    document.title = `${t.links.heading} — Garoa Studios`;
+    document.title = `${t.links.heading} — Garoa`;
   }, [t]);
 
   return (

@@ -55,7 +55,7 @@ export default function GamePage() {
 
   useEffect(() => {
     if (gameInfo) {
-      document.title = `${gameInfo.title} — Garoa Studios`;
+      document.title = `${gameInfo.title} — Garoa`;
     }
   }, [gameInfo]);
 
