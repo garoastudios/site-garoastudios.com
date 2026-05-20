@@ -1,12 +1,12 @@
 export const en = {
   nav: {
-    games: 'GAMES',
-    aboutUs: 'ABOUT US',
-    press: 'PRESS',
-    jobs: 'JOBS',
-    workWithUs: 'WORK WITH US',
-    contact: 'CONTACT',
-    links: 'LINKS',
+    games: 'games',
+    aboutUs: 'about us',
+    press: 'press',
+    jobs: 'jobs',
+    workWithUs: 'work with us',
+    contact: 'contact',
+    links: 'links',
   },
   hero: {
     dialogue: "That said, I can repair your device, but, as you can see, I'm not exactly equipped for it right now.",

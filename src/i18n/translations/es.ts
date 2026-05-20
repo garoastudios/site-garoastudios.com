@@ -1,12 +1,12 @@
 export const es = {
   nav: {
-    games: 'JUEGOS',
-    aboutUs: 'SOBRE NOSOTROS',
-    press: 'PRENSA',
-    jobs: 'EMPLEO',
-    workWithUs: 'TRABAJA CON NOSOTROS',
-    contact: 'CONTACTO',
-    links: 'ENLACES',
+    games: 'juegos',
+    aboutUs: 'sobre nosotros',
+    press: 'prensa',
+    jobs: 'empleo',
+    workWithUs: 'trabaja con nosotros',
+    contact: 'contacto',
+    links: 'enlaces',
   },
   hero: {
     dialogue: 'Dicho esto, puedo reparar tu dispositivo, pero, como puedes ver, no estoy exactamente equipado para eso ahora.',
