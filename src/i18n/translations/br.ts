@@ -1,12 +1,12 @@
 export const br = {
   nav: {
-    games: 'JOGOS',
-    aboutUs: 'SOBRE NÓS',
-    press: 'IMPRENSA',
-    jobs: 'VAGAS',
-    workWithUs: 'TRABALHE CONOSCO',
-    contact: 'CONTATO',
-    links: 'LINKS',
+    games: 'jogos',
+    aboutUs: 'sobre nós',
+    press: 'imprensa',
+    jobs: 'vagas',
+    workWithUs: 'trabalhe conosco',
+    contact: 'contato',
+    links: 'links',
   },
   hero: {
     dialogue: 'Dito isso, posso consertar seu dispositivo, mas, como pode ver, não estou exatamente equipado para isso agora.',
