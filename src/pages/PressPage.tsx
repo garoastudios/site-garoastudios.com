@@ -11,9 +11,10 @@ export default function PressPage() {
   }, [t]);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <Header />
-      <main className="pt-16">
+      <main className="pt-16 flex-1">
+
         <div className="max-w-3xl mx-auto px-4 py-20">
           <h1 className="font-display text-4xl sm:text-5xl text-foreground mb-4">
             {t.press.heading}
