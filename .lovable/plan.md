@@ -1,0 +1,1 @@
+Increase the opacity of the `body::before` pseudo-element in `src/index.css` from `0.7` to `0.85` so the starry background appears darker.
