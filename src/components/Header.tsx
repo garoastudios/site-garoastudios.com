@@ -5,13 +5,6 @@ import { useLocale } from '@/i18n/useLocale';
 import { LOCALE_ORDER, LOCALE_LABELS } from '@/i18n/config';
 import garoaLogoIcon from '@/assets/logos/garoa_logo_icon.png';
 import garoaLogoHorizontal from '@/assets/logos/garoa_logo_horizontal.png';
-import { SteamIcon, ItchIcon, NuuvemIcon } from '@/components/PlatformIcons';
-
-const headerStores = [
-  { Icon: SteamIcon, url: 'https://store.steampowered.com/publisher/garoastudios', label: 'Steam' },
-  { Icon: ItchIcon, url: 'https://garoa.itch.io/', label: 'itch.io' },
-  { Icon: NuuvemIcon, url: 'https://www.nuuvem.com/br-pt/catalog/publishers/garoa-studios', label: 'Nuuvem' },
-];
 
 export default function Header() {
   const { locale, t, getLogo, switchLocale } = useLocale();

@@ -24,6 +24,7 @@ const App = () => (
           <Route path="/:locale/games/:gameSlug" element={<GamePage />} />
           <Route path="/:locale/press" element={<PressPage />} />
           <Route path="/:locale/jobs" element={<JobsPage />} />
+          <Route path="/:locale/links" element={<LinksPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
