@@ -6,6 +6,7 @@ export const ja = {
     jobs: '採用',
     workWithUs: '採用情報',
     contact: 'お問い合わせ',
+    links: 'リンク',
   },
   hero: {
     dialogue: 'とはいえ、あなたのデバイスを修理することはできますが、ご覧の通り、今はその準備ができていません。',
@@ -100,6 +101,11 @@ export const ja = {
   jobs: {
     heading: '採用',
     noOpenings: '現在、募集中のポジションはありません。新しい機会が発生した際にお知らせできるよう、ぜひソーシャルメディアをフォローしてください！',
+  },
+  links: {
+    heading: 'リンク',
+    stores: 'ストア',
+    socials: 'ソーシャル',
   },
   footer: {
     trademark: '™ ガロア 2018 — 2026',
