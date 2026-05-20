@@ -24,23 +24,23 @@ export const br = {
   games: {
     heading: 'NOSSOS JOGOS',
     rhythmania: {
-      title: 'RITMANIA',
+      title: 'RitMania',
       description: 'Uma coletânea vibrante de minigames rítmicos de um botão só, com uma grande variedade de estilos de arte e gêneros musicais brasileiros!',
     },
     cartomante: {
-      title: 'CARTOMANTE',
+      title: 'Cartomante',
       description: 'Uma visual novel de múltiplos finais sobre adivinhação para clientes excêntricos com cartas de tarô.',
     },
     standByMe: {
-      title: 'STAND BY ME',
+      title: 'Stand By Me',
       description: 'Um puzzle colorido e groovy baseado em física sobre cuidar dos seus amigos.',
     },
     catLeatherJackets: {
-      title: 'CAT LEATHER JACKETS',
+      title: 'Cat Leather Jackets',
       description: 'Um jogo com estilo graphic novel de música/ritmo sobre uma banda adolescente de punk rock e ska punk.',
     },
     astroPig: {
-      title: 'ASTRO PIG',
+      title: 'Astro Pig',
       description: 'Um puzzle-platformer lo-fi de aventura com estética anos 90 sobre um porquinho astronauta e sua nave inteligente.',
     },
     learnMore: 'saiba mais',

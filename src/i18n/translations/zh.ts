@@ -28,19 +28,19 @@ export const zh = {
       description: '一款充满活力的节奏类迷你游戏合集，采用单按钮操作，结合丰富多彩的美术风格和多样的巴西音乐流派！',
     },
     cartomante: {
-      title: 'CARTOMANTE - FORTUNE TELLER',
+      title: 'Cartomante - Fortune Teller',
       description: '一款多结局分支视觉小说，为古怪的客户用塔罗牌占卜命运。',
     },
     standByMe: {
-      title: 'STAND BY ME',
+      title: 'Stand By Me',
       description: '一款色彩缤纷、节奏感十足的物理益智游戏，主题是关心你的朋友。',
     },
     catLeatherJackets: {
-      title: 'CAT LEATHER JACKETS',
+      title: 'Cat Leather Jackets',
       description: '一款漫画风格的音乐/节奏游戏，讲述一个青少年朋克摇滚和斯卡朋克乐队的故事。',
     },
     astroPig: {
-      title: 'ASTRO PIG',
+      title: 'Astro Pig',
       description: '一款90年代风格的低保真冒险解谜平台游戏，讲述一只小猪宇航员和他的智能飞船的故事。',
     },
     learnMore: '了解更多',
