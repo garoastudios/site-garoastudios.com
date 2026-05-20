@@ -75,7 +75,7 @@ function GameCard({ game, locale, title }: { game: GameDef; locale: Locale; titl
         <img
           src={getGameCapsule(game.asset, locale)}
           alt={title}
-          className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 transition-opacity duration-300 ${videoPlaying ? 'opacity-0' : 'opacity-100'}`}
+          className={`w-full h-full object-cover transition-[transform,opacity] duration-500 group-hover:scale-105 ${videoPlaying ? 'opacity-0' : 'opacity-100'}`}
           loading="lazy"
         />
         {game.trailerWebm && (
