@@ -21,6 +21,7 @@ export default function Header() {
     { label: t.nav.press, href: `/${locale}/press`, isAnchor: false },
     { label: t.nav.jobs, href: `/${locale}/jobs`, isAnchor: false },
     { label: t.nav.contact, href: anchorHref('contact'), isAnchor: true },
+    { label: t.nav.links, href: `/${locale}/links`, isAnchor: false },
   ];
 
   return (
@@ -35,21 +36,6 @@ export default function Header() {
           <Link to={`/${locale}`} className="lg:hidden flex-shrink-0">
             <img src={garoaLogoHorizontal} alt="Garoa Studios" className="h-[36px] w-auto" />
           </Link>
-          {/* Desktop store icons */}
-          <div className="hidden lg:flex items-center gap-2">
-            {headerStores.map(({ Icon, url, label }) => (
-              <a
-                key={label}
-                href={`${url}?utm_source=garoastudios.com`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="hover-grow text-muted-foreground hover:text-accent transition-colors"
-              >
-                <Icon className={label === 'Nuuvem' ? 'w-6 h-6' : 'w-5 h-5'} />
-              </a>
-            ))}
-          </div>
         </div>
 
         {/* Desktop nav */}
@@ -122,21 +108,6 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Store icons */}
-          <div className="flex items-center gap-3 px-4 pb-3">
-            {headerStores.map(({ Icon, url, label }) => (
-              <a
-                key={label}
-                href={`${url}?utm_source=garoastudios.com`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="hover-grow text-muted-foreground hover:text-accent transition-colors"
-              >
-                <Icon className={label === 'Nuuvem' ? 'w-6 h-6' : 'w-5 h-5'} />
-              </a>
-            ))}
-          </div>
 
           {/* Navigation links */}
           <nav className="flex flex-col px-4 pb-4 gap-3">
