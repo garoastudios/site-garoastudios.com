@@ -1,9 +1,15 @@
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useLocale } from '@/i18n/useLocale';
 import { type Locale } from '@/i18n/config';
 import { getGameCapsule } from '@/i18n/assets';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import rhythmaniaTrailer from '@/assets/games/rhythmania_microtrailer.webm';
+import astroPigTrailer from '@/assets/games/astro_pig_microtrailer.webm';
+import catLeatherJacketsTrailer from '@/assets/games/cat_leather_jackets_microtrailer.webm';
+import standByMeTrailer from '@/assets/games/stand_by_me_microtrailer.webm';
+import cartomanteTrailer from '@/assets/games/cartomante_microtrailer.webm';
 import { SteamIcon, ItchIcon, NuuvemIcon, SpawndIcon } from '@/components/PlatformIcons';
 
 type Platform = 'steam' | 'itch' | 'nuuvem' | 'spawnd';
@@ -14,14 +20,15 @@ interface GameDef {
   asset: string;
   year: string;
   platforms: Platform[];
+  trailerWebm?: string;
 }
 
 const GAMES: GameDef[] = [
-  { slug: 'rhythmania', key: 'rhythmania', asset: 'rhythmania', year: 'Coming Soon', platforms: ['steam', 'itch', 'spawnd'] },
-  { slug: 'astro-pig', key: 'astroPig', asset: 'astro_pig', year: '2024', platforms: ['steam', 'itch', 'nuuvem'] },
-  { slug: 'cat-leather-jackets', key: 'catLeatherJackets', asset: 'cat_leather_jackets', year: '2023', platforms: ['steam', 'itch', 'nuuvem'] },
-  { slug: 'stand-by-me', key: 'standByMe', asset: 'stand_by_me', year: '2021', platforms: ['steam', 'itch', 'nuuvem'] },
-  { slug: 'cartomante', key: 'cartomante', asset: 'cartomante', year: '2020', platforms: ['steam', 'itch', 'nuuvem'] },
+  { slug: 'rhythmania', key: 'rhythmania', asset: 'rhythmania', year: 'Coming Soon', platforms: ['steam', 'itch', 'spawnd'], trailerWebm: rhythmaniaTrailer },
+  { slug: 'astro-pig', key: 'astroPig', asset: 'astro_pig', year: '2024', platforms: ['steam', 'itch', 'nuuvem'], trailerWebm: astroPigTrailer },
+  { slug: 'cat-leather-jackets', key: 'catLeatherJackets', asset: 'cat_leather_jackets', year: '2023', platforms: ['steam', 'itch', 'nuuvem'], trailerWebm: catLeatherJacketsTrailer },
+  { slug: 'stand-by-me', key: 'standByMe', asset: 'stand_by_me', year: '2021', platforms: ['steam', 'itch', 'nuuvem'], trailerWebm: standByMeTrailer },
+  { slug: 'cartomante', key: 'cartomante', asset: 'cartomante', year: '2020', platforms: ['steam', 'itch', 'nuuvem'], trailerWebm: cartomanteTrailer },
 ];
 
 const PlatformIcon = ({ platform }: { platform: Platform }) => {
@@ -35,18 +42,52 @@ const PlatformIcon = ({ platform }: { platform: Platform }) => {
 };
 
 function GameCard({ game, locale, title }: { game: GameDef; locale: Locale; title: string }) {
+  const [videoPlaying, setVideoPlaying] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleMouseEnter = () => {
+    if (game.trailerWebm) {
+      timerRef.current = setTimeout(() => {
+        setVideoPlaying(true);
+        videoRef.current?.play();
+      }, 500);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (timerRef.current) clearTimeout(timerRef.current);
+    setVideoPlaying(false);
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  };
+
   return (
     <Link
       to={`/${locale}/games/${game.slug}`}
       className="hover-grow group block overflow-hidden rounded-lg bg-card transition-all duration-300"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      <div className="aspect-[460/215] overflow-hidden">
+      <div className="relative aspect-[460/215] overflow-hidden">
         <img
           src={getGameCapsule(game.asset, locale)}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 transition-opacity duration-300 ${videoPlaying ? 'opacity-0' : 'opacity-100'}`}
           loading="lazy"
         />
+        {game.trailerWebm && (
+          <video
+            ref={videoRef}
+            src={game.trailerWebm}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${videoPlaying ? 'opacity-100' : 'opacity-0'}`}
+            muted
+            loop
+            playsInline
+          />
+        )}
       </div>
       <div className="p-4">
         <h3 className="font-display text-base sm:text-lg text-foreground group-hover:text-accent transition-colors duration-300">
