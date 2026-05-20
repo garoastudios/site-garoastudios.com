@@ -45,6 +45,7 @@ export const ja = {
     },
     learnMore: '詳細を見る',
     backToGames: 'すべてのゲーム',
+    viewAllGames: 'すべてのゲームを見る',
     backToHome: 'ホームに戻る',
   },
   about: {

@@ -45,6 +45,7 @@ export const en = {
     },
     learnMore: 'Learn More',
     backToGames: 'All Our Games',
+    viewAllGames: 'View All Games',
     backToHome: 'Back to Home',
   },
   about: {

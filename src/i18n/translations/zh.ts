@@ -45,6 +45,7 @@ export const zh = {
     },
     learnMore: '了解更多',
     backToGames: '所有游戏',
+    viewAllGames: '查看所有游戏',
     backToHome: '返回首页',
   },
   about: {
