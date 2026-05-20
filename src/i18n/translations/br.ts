@@ -45,6 +45,7 @@ export const br = {
     },
     learnMore: 'Saiba Mais',
     backToGames: 'Todos os Nossos Jogos',
+    viewAllGames: 'Ver Todos os Jogos',
     backToHome: 'Voltar para o Início',
   },
   about: {
