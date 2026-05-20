@@ -6,6 +6,7 @@ export const zh = {
     jobs: '招聘',
     workWithUs: '加入我们',
     contact: '联系',
+    links: '链接',
   },
   hero: {
     dialogue: '话虽如此，我可以修理你的设备，但如你所见，我现在并没有准备好。',
@@ -100,6 +101,11 @@ export const zh = {
   jobs: {
     heading: '招聘',
     noOpenings: '目前没有空缺职位。请关注我们的社交媒体，以便在有新机会时第一时间获得通知！',
+  },
+  links: {
+    heading: '链接',
+    stores: '商店',
+    socials: '社交媒体',
   },
   footer: {
     trademark: '™ 细雨工作室 2018 — 2026',

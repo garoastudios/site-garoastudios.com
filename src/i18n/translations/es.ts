@@ -6,6 +6,7 @@ export const es = {
     jobs: 'EMPLEO',
     workWithUs: 'TRABAJA CON NOSOTROS',
     contact: 'CONTACTO',
+    links: 'ENLACES',
   },
   hero: {
     dialogue: 'Dicho esto, puedo reparar tu dispositivo, pero, como puedes ver, no estoy exactamente equipado para eso ahora.',
@@ -100,6 +101,11 @@ export const es = {
   jobs: {
     heading: 'Empleo',
     noOpenings: 'No hay vacantes disponibles en este momento. ¡Síguenos en nuestras redes sociales para enterarte cuando tengamos nuevas oportunidades!',
+  },
+  links: {
+    heading: 'Enlaces',
+    stores: 'Tiendas',
+    socials: 'Redes Sociales',
   },
   footer: {
     trademark: '™ Garoa Studios 2018 — 2026',
