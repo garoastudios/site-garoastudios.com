@@ -432,4 +432,66 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://garoastudios.com/en/games/astro-pig"/>
   </url>
 
+  <!-- Links -->
+  <url>
+    <loc>https://garoastudios.com/en/links</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://garoastudios.com/en/links"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://garoastudios.com/br/links"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://garoastudios.com/es/links"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://garoastudios.com/zh/links"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://garoastudios.com/ja/links"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://garoastudios.com/en/links"/>
+  </url>
+  <url>
+    <loc>https://garoastudios.com/br/links</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://garoastudios.com/en/links"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://garoastudios.com/br/links"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://garoastudios.com/es/links"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://garoastudios.com/zh/links"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://garoastudios.com/ja/links"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://garoastudios.com/en/links"/>
+  </url>
+  <url>
+    <loc>https://garoastudios.com/es/links</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://garoastudios.com/en/links"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://garoastudios.com/br/links"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://garoastudios.com/es/links"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://garoastudios.com/zh/links"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://garoastudios.com/ja/links"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://garoastudios.com/en/links"/>
+  </url>
+  <url>
+    <loc>https://garoastudios.com/zh/links</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://garoastudios.com/en/links"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://garoastudios.com/br/links"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://garoastudios.com/es/links"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://garoastudios.com/zh/links"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://garoastudios.com/ja/links"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://garoastudios.com/en/links"/>
+  </url>
+  <url>
+    <loc>https://garoastudios.com/ja/links</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://garoastudios.com/en/links"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://garoastudios.com/br/links"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://garoastudios.com/es/links"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://garoastudios.com/zh/links"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://garoastudios.com/ja/links"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://garoastudios.com/en/links"/>
+  </url>
+
 </urlset>
