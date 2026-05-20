@@ -136,6 +136,15 @@ export default function GamesSection() {
             <GameCard key={game.slug} game={game} locale={locale} title={t.games[game.key].title} reverse={i % 2 === 1} />
           ))}
         </div>
+
+        <div className="mt-10 flex justify-center">
+          <Link
+            to={`/${locale}/games`}
+            className="hover-grow inline-flex items-center justify-center px-8 py-3 font-display text-lg border border-foreground/20 rounded-md text-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+          >
+            {t.games.viewAllGames}
+          </Link>
+        </div>
       </div>
     </section>
   );
