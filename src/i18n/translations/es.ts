@@ -24,23 +24,23 @@ export const es = {
   games: {
     heading: 'NUESTROS JUEGOS',
     rhythmania: {
-      title: 'RITMANÍA',
+      title: 'RitManía',
       description: '¡Una vibrante colección de minijuegos rítmicos de un solo botón, con arte colorido y una gran variedad de géneros musicales brasileños!',
     },
     cartomante: {
-      title: 'CARTOMANTE - FORTUNE TELLER',
+      title: 'Cartomante - Fortune Teller',
       description: 'Una novela visual ramificada con múltiples finales sobre adivinación para clientes excéntricos con cartas de tarot.',
     },
     standByMe: {
-      title: 'STAND BY ME',
+      title: 'Stand By Me',
       description: 'Un juego de física colorido y groovy sobre cuidar a tus amigos.',
     },
     catLeatherJackets: {
-      title: 'CAT LEATHER JACKETS',
+      title: 'Cat Leather Jackets',
       description: 'Un juego de música/ritmo con estilo de novela gráfica sobre una banda adolescente de punk rock y ska punk.',
     },
     astroPig: {
-      title: 'ASTRO PIG',
+      title: 'Astro Pig',
       description: 'Un puzzle-platformer lo-fi de aventura inspirado en los 90 sobre un cerdito astronauta y su nave inteligente.',
     },
     learnMore: 'saber más',

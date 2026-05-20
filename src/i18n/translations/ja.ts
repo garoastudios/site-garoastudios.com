@@ -28,19 +28,19 @@ export const ja = {
       description: '色鮮やかなビジュアルと多彩なブラジル音楽ジャンルが楽しめる、ワンボタン操作のリズムミニゲームコレクション！',
     },
     cartomante: {
-      title: 'CARTOMANTE - FORTUNE TELLER',
+      title: 'Cartomante - Fortune Teller',
       description: 'エキセントリックなクライアントにタロットカードで占いをする、マルチエンディングの分岐型ビジュアルノベル。',
     },
     standByMe: {
-      title: 'STAND BY ME',
+      title: 'Stand By Me',
       description: '友達を大切にすることがテーマの、カラフルでグルーヴィーな物理パズルゲーム。',
     },
     catLeatherJackets: {
-      title: 'CAT LEATHER JACKETS',
+      title: 'Cat Leather Jackets',
       description: 'ティーンエイジャーのパンクロック＆スカパンクバンドを描いた、グラフィックノベル風の音楽・リズムゲーム。',
     },
     astroPig: {
-      title: 'ASTRO PIG',
+      title: 'Astro Pig',
       description: '子豚の宇宙飛行士とその知的な宇宙船を描いた、90年代風ローファイアドベンチャーパズルプラットフォーマー。',
     },
     learnMore: '詳細を見る',
