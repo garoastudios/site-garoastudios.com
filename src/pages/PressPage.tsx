@@ -7,7 +7,7 @@ export default function PressPage() {
   const { t } = useLocale();
 
   useEffect(() => {
-    document.title = `${t.press.heading} — Garoa Studios`;
+    document.title = `${t.press.heading} — Garoa`;
   }, [t]);
 
   return (

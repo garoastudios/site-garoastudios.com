@@ -24,7 +24,7 @@ export default function JobsPage() {
   const { t } = useLocale();
 
   useEffect(() => {
-    document.title = `${t.jobs.heading} — Garoa Studios`;
+    document.title = `${t.jobs.heading} — Garoa`;
   }, [t]);
 
   return (
