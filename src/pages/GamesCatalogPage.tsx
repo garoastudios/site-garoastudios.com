@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLocale } from '@/i18n/useLocale';
 import { type Locale } from '@/i18n/config';
 import { getGameCapsule } from '@/i18n/assets';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import rhythmaniaTrailer from '@/assets/games/rhythmania_microtrailer.webm';
@@ -43,14 +44,17 @@ const PlatformIcon = ({ platform }: { platform: Platform }) => {
 
 function GameCard({ game, locale, title }: { game: GameDef; locale: Locale; title: string }) {
   const [videoPlaying, setVideoPlaying] = useState(false);
+  const [videoSrc, setVideoSrc] = useState<string | undefined>(undefined);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const reducedMotion = useReducedMotion();
 
   const handleMouseEnter = () => {
-    if (game.trailerWebm) {
+    if (game.trailerWebm && !reducedMotion) {
+      if (!videoSrc) setVideoSrc(game.trailerWebm);
       timerRef.current = setTimeout(() => {
         setVideoPlaying(true);
-        videoRef.current?.play();
+        videoRef.current?.play().catch(() => {});
       }, 500);
     }
   };
@@ -78,14 +82,15 @@ function GameCard({ game, locale, title }: { game: GameDef; locale: Locale; titl
           className={`w-full h-full object-cover transition-[transform,opacity] duration-500 group-hover:scale-105 ${videoPlaying ? 'opacity-0' : 'opacity-100'}`}
           loading="lazy"
         />
-        {game.trailerWebm && (
+        {game.trailerWebm && !reducedMotion && videoSrc && (
           <video
             ref={videoRef}
-            src={game.trailerWebm}
+            src={videoSrc}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${videoPlaying ? 'opacity-100' : 'opacity-0'}`}
             muted
             loop
             playsInline
+            preload="none"
           />
         )}
       </div>

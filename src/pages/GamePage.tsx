@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useLocale } from '@/i18n/useLocale';
 import { getGameCapsule } from '@/i18n/assets';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import rhythmaniaTrailer from '@/assets/games/rhythmania_microtrailer.webm';
@@ -45,6 +46,7 @@ const STEAM_WIDGETS: Record<string, string> = {
 export default function GamePage() {
   const { gameSlug } = useParams<{ gameSlug: string }>();
   const { locale, t } = useLocale();
+  const reducedMotion = useReducedMotion();
 
   const key = SLUG_TO_KEY[gameSlug || ''] as keyof typeof t.games | undefined;
   const gameInfo = key ? (t.games[key] as { title: string; description: string }) : null;
@@ -72,13 +74,15 @@ export default function GamePage() {
       <Header />
       <main className="pt-16">
         <div className="relative">
-          {trailer ? (
+          {trailer && !reducedMotion ? (
             <video
               src={trailer}
               autoPlay
               muted
               loop
               playsInline
+              preload="metadata"
+              poster={getGameCapsule(assetSlug, locale)}
               className="w-full h-[50vh] object-cover"
             />
           ) : (
