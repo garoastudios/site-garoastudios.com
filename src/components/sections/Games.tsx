@@ -114,7 +114,7 @@ function GameCard({ game, locale, title, reverse }: { game: GameDef; locale: Loc
           }}
         />
         <div className="relative z-10">
-          <h3 className={`font-display text-lg md:text-xl transition-colors duration-300 ${hovering ? 'text-accent' : 'text-foreground'}`}>{title}</h3>
+          <h3 className={`font-display text-lg md:text-xl normal-case transition-colors duration-300 ${hovering ? 'text-accent' : 'text-foreground'}`}>{title}</h3>
           <span className="font-display text-sm text-muted-foreground">{game.year}</span>
           <div className="flex items-center gap-2 text-foreground/70 mt-1">
             {game.platforms.map((p) => (

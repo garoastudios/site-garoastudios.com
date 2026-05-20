@@ -95,7 +95,7 @@ function GameCard({ game, locale, title }: { game: GameDef; locale: Locale; titl
         )}
       </div>
       <div className="p-4">
-        <h3 className="font-display text-base sm:text-lg text-foreground group-hover:text-accent transition-colors duration-300">
+        <h3 className="font-display text-base sm:text-lg normal-case text-foreground group-hover:text-accent transition-colors duration-300">
           {title}
         </h3>
         <span className="font-display text-sm text-muted-foreground">{game.year}</span>
