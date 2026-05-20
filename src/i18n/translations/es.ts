@@ -44,7 +44,8 @@ export const es = {
       description: 'Un puzzle-platformer lo-fi de aventura inspirado en los 90 sobre un cerdito astronauta y su nave inteligente.',
     },
     learnMore: 'Saber Más',
-    backToGames: 'Todos Nuestros Juegos',
+    backToGames: 'Todos Nuestros Jogos',
+    viewAllGames: 'Ver Todos los Juegos',
     backToHome: 'Volver al Inicio',
   },
   about: {
