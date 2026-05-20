@@ -5,8 +5,9 @@ const SECTIONS = [
   { id: 'stats', label: 'Stats' },
   { id: 'games', label: 'Games' },
   { id: 'about', label: 'About' },
-  { id: 'awards', label: 'Awards' },
   { id: 'contact', label: 'Contact' },
+  { id: 'awards', label: 'Awards' },
+
 ];
 
 export default function SectionIndicator() {

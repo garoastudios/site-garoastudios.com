@@ -81,13 +81,11 @@ const ROW1 = ALL_LAURELS.slice(0, half);
 const ROW2 = ALL_LAURELS.slice(half);
 
 export default function AwardsSection() {
-  const { t } = useLocale();
+  useLocale();
 
   return (
     <section id="awards" className="snap-section-auto flex flex-col items-center justify-center pt-6 pb-3 overflow-hidden">
-      <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-foreground mb-8 text-center px-4">
-        {t.awards.heading}
-      </h2>
+
 
       {/* Row 1: scrolls right-to-left */}
       <div className="relative w-full overflow-hidden mb-6">

@@ -28,8 +28,9 @@ export default function LandingPage() {
         <StatsSection />
         <GamesSection />
         <AboutSection />
-        <AwardsSection />
         <ContactSection />
+        <AwardsSection />
+
       </main>
       <Footer />
     </div>
