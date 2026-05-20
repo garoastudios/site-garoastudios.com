@@ -7,6 +7,7 @@ import GamePage from "./pages/GamePage";
 import GamesCatalogPage from "./pages/GamesCatalogPage";
 import PressPage from "./pages/PressPage";
 import JobsPage from "./pages/JobsPage";
+import LinksPage from "./pages/LinksPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
