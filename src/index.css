@@ -94,7 +94,7 @@
   }
 
   body {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     @apply text-foreground;
     background: url('/images/garoa_starry_bg.png') no-repeat center center fixed;
     background-size: cover;
@@ -117,7 +117,7 @@
 
 @layer utilities {
   .font-display {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
