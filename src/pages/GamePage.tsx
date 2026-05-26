@@ -1,8 +1,9 @@
-import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useLocale } from '@/i18n/useLocale';
 import { getGameCapsule } from '@/i18n/assets';
 import { useReducedMotion } from '@/hooks/use-reduced-motion';
+import SEO from '@/components/SEO';
+import { SEO as SEO_DATA, SITE_URL } from '@/i18n/seo';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import rhythmaniaTrailer from '@/assets/games/rhythmania_microtrailer.webm';
@@ -10,6 +11,7 @@ import astroPigTrailer from '@/assets/games/astro_pig_microtrailer.webm';
 import catLeatherJacketsTrailer from '@/assets/games/cat_leather_jackets_microtrailer.webm';
 import standByMeTrailer from '@/assets/games/stand_by_me_microtrailer.webm';
 import cartomanteTrailer from '@/assets/games/cartomante_microtrailer.webm';
+
 
 const SLUG_TO_TRAILER: Record<string, string> = {
   'rhythmania': rhythmaniaTrailer,
@@ -55,13 +57,7 @@ export default function GamePage() {
   const trailer = SLUG_TO_TRAILER[gameSlug || ''];
   const isRhythmania = gameSlug === 'rhythmania';
 
-  useEffect(() => {
-    if (gameInfo) {
-      document.title = `${gameInfo.title} — Garoa`;
-    }
-  }, [gameInfo]);
-
-  if (!gameInfo) {
+  if (!gameInfo || !key || !gameSlug) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p className="text-foreground">Game not found</p>
@@ -69,10 +65,50 @@ export default function GamePage() {
     );
   }
 
+  const seo = SEO_DATA[locale];
+  const seoMeta = seo.gameMeta[key as keyof typeof seo.gameMeta];
+  const capsuleUrl = `${SITE_URL}${getGameCapsule(assetSlug, locale)}`;
+  const gameUrl = `${SITE_URL}/${locale}/games/${gameSlug}`;
+
+  const videoGameJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'VideoGame',
+    '@id': `${gameUrl}#videogame`,
+    name: gameInfo.title,
+    description: gameInfo.description,
+    url: gameUrl,
+    image: capsuleUrl,
+    inLanguage: ['en', 'pt-BR', 'es', 'zh', 'ja'],
+    publisher: { '@id': `${SITE_URL}/#organization` },
+    author: { '@id': `${SITE_URL}/#organization` },
+    gamePlatform: ['PC', 'Steam', 'itch.io'],
+    applicationCategory: 'Game',
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/${locale}` },
+      { '@type': 'ListItem', position: 2, name: t.games.heading, item: `${SITE_URL}/${locale}/games` },
+      { '@type': 'ListItem', position: 3, name: gameInfo.title, item: gameUrl },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        locale={locale}
+        title={seoMeta.title}
+        description={seoMeta.description}
+        path={`/games/${gameSlug}`}
+        image={capsuleUrl}
+        ogType="product"
+        jsonLd={[videoGameJsonLd, breadcrumbJsonLd]}
+      />
       <Header />
       <main className="pt-16">
+
         <div className="relative">
           {trailer && !reducedMotion ? (
             <video

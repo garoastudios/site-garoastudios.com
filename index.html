@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Garoa</title>
-    <meta name="description" content="that purple award-winning studio from Rio">
+    <title>Garoa Studios — Indie Game Studio from Rio de Janeiro</title>
+    <meta name="description" content="Garoa Studios is an award-winning indie game developer based in Rio de Janeiro, Brazil, crafting experimental rhythm, narrative and puzzle games since 2018." />
+    <meta name="keywords" content="Garoa Studios, indie games, Brazilian game studio, Rio de Janeiro, rhythm games, visual novel, RhythMania, Cartomante, Stand By Me, Cat Leather Jackets, Astro Pig" />
+    <meta name="author" content="Garoa Studios" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="theme-color" content="#160938" />
+    <meta name="geo.region" content="BR-RJ" />
+    <meta name="geo.placename" content="Rio de Janeiro" />
 
     <link rel="icon" type="image/png" href="/favicon-96x96.png">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -16,17 +22,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 
+    <!-- Sitewide fallback OG tags. Per-route tags from react-helmet-async override these for JS-executing crawlers. -->
     <meta property="og:type" content="website" />
-    
-    
-    <meta property="og:url" content="https://garoastudios.com" />
-    <meta property="og:site_name" content="Garoa" />
+    <meta property="og:site_name" content="Garoa Studios" />
+    <meta property="og:title" content="Garoa Studios — Indie Game Studio from Rio de Janeiro" />
+    <meta property="og:description" content="Award-winning indie game developer from Rio de Janeiro, crafting experimental rhythm, narrative and puzzle games since 2018." />
+    <meta property="og:url" content="https://garoastudios.com/en" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="pt_BR" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+    <meta property="og:locale:alternate" content="ja_JP" />
+    <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5b1e0bbe-c985-44b4-bec8-0cf9a04b0720/id-preview-22a3f296--c926a280-6037-4cae-8150-9227ccb28113.lovable.app-1774735600082.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    
-    
+    <meta name="twitter:site" content="@garoastudios" />
+    <meta name="twitter:creator" content="@garoastudios" />
+    <meta name="twitter:title" content="Garoa Studios — Indie Game Studio from Rio de Janeiro" />
+    <meta name="twitter:description" content="Award-winning indie game developer from Rio de Janeiro, crafting experimental rhythm, narrative and puzzle games since 2018." />
+    <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5b1e0bbe-c985-44b4-bec8-0cf9a04b0720/id-preview-22a3f296--c926a280-6037-4cae-8150-9227ccb28113.lovable.app-1774735600082.png" />
 
-    <link rel="canonical" href="https://garoastudios.com" />
+    <!-- Canonical is set per route by react-helmet-async; intentionally omitted here to avoid duplicate canonicals. -->
 
     <!-- Google Search Console placeholder -->
     <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" /> -->
@@ -38,29 +54,61 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://garoastudios.com/#organization",
       "name": "Garoa Studios",
+      "alternateName": ["Garoa", "Garoastudios"],
       "url": "https://garoastudios.com",
+      "logo": "https://garoastudios.com/garoa_logo.png",
+      "image": "https://garoastudios.com/garoa_logo.png",
       "foundingDate": "2018",
-      "foundingLocation": "Rio de Janeiro, Brazil",
-      "description": "A Development and Entertainment studio crafting the next generation of game experiences.",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Rio de Janeiro, Brazil"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rio de Janeiro",
+        "addressRegion": "RJ",
+        "addressCountry": "BR"
+      },
+      "areaServed": "Worldwide",
+      "knowsLanguage": ["en", "pt-BR", "es", "zh", "ja"],
+      "description": "Garoa Studios is an award-winning indie video game developer based in Rio de Janeiro, Brazil. The studio creates experimental rhythm, narrative and puzzle games such as RhythMania, Cartomante, Stand By Me, Cat Leather Jackets and Astro Pig.",
+      "slogan": "We make games with heart and soul.",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "contactType": "press",
+        "email": "press@garoastudios.com",
+        "availableLanguage": ["English", "Portuguese", "Spanish"]
+      }],
       "sameAs": [
+        "https://store.steampowered.com/publisher/garoastudios",
+        "https://garoa.itch.io/",
         "https://x.com/garoastudios",
         "https://youtube.com/@garoastudios",
         "https://instagram.com/garoastudios",
         "https://discord.com/invite/hBdTNPgfx4",
         "https://www.linkedin.com/company/garoastudios",
         "https://www.facebook.com/garoastudios/",
-        "https://tiktok.com/@garoastudios"
+        "https://tiktok.com/@garoastudios",
+        "https://bsky.app/profile/garoastudios.com",
+        "https://www.twitch.tv/garoastudios"
       ]
     }
     </script>
-    <meta property="og:title" content="Garoa">
-  <meta name="twitter:title" content="Garoa">
-  <meta property="og:description" content="that purple award-winning studio from Rio">
-  <meta name="twitter:description" content="that purple award-winning studio from Rio">
-  <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5b1e0bbe-c985-44b4-bec8-0cf9a04b0720/id-preview-22a3f296--c926a280-6037-4cae-8150-9227ccb28113.lovable.app-1774735600082.png">
-  <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5b1e0bbe-c985-44b4-bec8-0cf9a04b0720/id-preview-22a3f296--c926a280-6037-4cae-8150-9227ccb28113.lovable.app-1774735600082.png">
-</head>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://garoastudios.com/#website",
+      "url": "https://garoastudios.com",
+      "name": "Garoa Studios",
+      "publisher": { "@id": "https://garoastudios.com/#organization" },
+      "inLanguage": ["en", "pt-BR", "es", "zh", "ja"]
+    }
+    </script>
+  </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

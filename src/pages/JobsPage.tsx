@@ -1,5 +1,6 @@
-import { useEffect } from 'react';
 import { useLocale } from '@/i18n/useLocale';
+import SEO from '@/components/SEO';
+import { SEO as SEO_DATA } from '@/i18n/seo';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import {
@@ -21,14 +22,12 @@ const socials = [
 ];
 
 export default function JobsPage() {
-  const { t } = useLocale();
-
-  useEffect(() => {
-    document.title = `${t.jobs.heading} — Garoa`;
-  }, [t]);
+  const { locale, t } = useLocale();
+  const seo = SEO_DATA[locale];
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEO locale={locale} title={seo.jobs.title} description={seo.jobs.description} path="/jobs" />
       <Header />
       <main className="pt-16 flex-1">
 

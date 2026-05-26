@@ -1,17 +1,17 @@
 import { useEffect } from 'react';
 import { useLocale } from '@/i18n/useLocale';
+import SEO from '@/components/SEO';
+import { SEO as SEO_DATA } from '@/i18n/seo';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export default function PressPage() {
-  const { t } = useLocale();
-
-  useEffect(() => {
-    document.title = `${t.press.heading} — Garoa`;
-  }, [t]);
+  const { locale, t } = useLocale();
+  const seo = SEO_DATA[locale];
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEO locale={locale} title={seo.press.title} description={seo.press.description} path="/press" />
       <Header />
       <main className="pt-16 flex-1">
 

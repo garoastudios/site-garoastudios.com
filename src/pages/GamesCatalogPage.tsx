@@ -4,6 +4,8 @@ import { useLocale } from '@/i18n/useLocale';
 import { type Locale } from '@/i18n/config';
 import { getGameCapsule } from '@/i18n/assets';
 import { useReducedMotion } from '@/hooks/use-reduced-motion';
+import SEO from '@/components/SEO';
+import { SEO as SEO_DATA, SITE_URL } from '@/i18n/seo';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import rhythmaniaTrailer from '@/assets/games/rhythmania_microtrailer.webm';
@@ -12,6 +14,7 @@ import catLeatherJacketsTrailer from '@/assets/games/cat_leather_jackets_microtr
 import standByMeTrailer from '@/assets/games/stand_by_me_microtrailer.webm';
 import cartomanteTrailer from '@/assets/games/cartomante_microtrailer.webm';
 import { SteamIcon, ItchIcon, NuuvemIcon, SpawndIcon } from '@/components/PlatformIcons';
+
 
 type Platform = 'steam' | 'itch' | 'nuuvem' | 'spawnd';
 
@@ -111,9 +114,31 @@ function GameCard({ game, locale, title }: { game: GameDef; locale: Locale; titl
 
 export default function GamesCatalogPage() {
   const { locale, t } = useLocale();
+  const seo = SEO_DATA[locale];
+
+  const itemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: seo.games.title,
+    description: seo.games.description,
+    numberOfItems: GAMES.length,
+    itemListElement: GAMES.map((game, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `${SITE_URL}/${locale}/games/${game.slug}`,
+      name: t.games[game.key].title,
+    })),
+  };
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        locale={locale}
+        title={seo.games.title}
+        description={seo.games.description}
+        path="/games"
+        jsonLd={itemListJsonLd}
+      />
       <Header />
       <main className="pt-24 pb-20 px-4">
         <div className="max-w-5xl mx-auto">
@@ -146,3 +171,4 @@ export default function GamesCatalogPage() {
     </div>
   );
 }
+
