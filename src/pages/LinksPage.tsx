@@ -1,5 +1,6 @@
-import { useEffect } from 'react';
 import { useLocale } from '@/i18n/useLocale';
+import SEO from '@/components/SEO';
+import { SEO as SEO_DATA } from '@/i18n/seo';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { SteamIcon, ItchIcon, NuuvemIcon } from '@/components/PlatformIcons';
@@ -28,16 +29,15 @@ const socials = [
 ];
 
 export default function LinksPage() {
-  const { t } = useLocale();
-
-  useEffect(() => {
-    document.title = `${t.links.heading} — Garoa`;
-  }, [t]);
+  const { locale, t } = useLocale();
+  const seo = SEO_DATA[locale];
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEO locale={locale} title={seo.links.title} description={seo.links.description} path="/links" />
       <Header />
       <main className="pt-16 flex-1">
+
 
         <div className="max-w-3xl mx-auto px-4 py-20 text-center">
           <h1 className="font-display text-4xl sm:text-5xl text-foreground mb-12">
