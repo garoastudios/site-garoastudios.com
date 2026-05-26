@@ -1,8 +1,9 @@
-import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useLocale } from '@/i18n/useLocale';
 import { getGameCapsule } from '@/i18n/assets';
 import { useReducedMotion } from '@/hooks/use-reduced-motion';
+import SEO from '@/components/SEO';
+import { SEO as SEO_DATA, SITE_URL } from '@/i18n/seo';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import rhythmaniaTrailer from '@/assets/games/rhythmania_microtrailer.webm';
@@ -10,6 +11,7 @@ import astroPigTrailer from '@/assets/games/astro_pig_microtrailer.webm';
 import catLeatherJacketsTrailer from '@/assets/games/cat_leather_jackets_microtrailer.webm';
 import standByMeTrailer from '@/assets/games/stand_by_me_microtrailer.webm';
 import cartomanteTrailer from '@/assets/games/cartomante_microtrailer.webm';
+
 
 const SLUG_TO_TRAILER: Record<string, string> = {
   'rhythmania': rhythmaniaTrailer,
