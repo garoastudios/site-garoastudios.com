@@ -26,7 +26,7 @@ export default function JobsPage() {
   const seo = SEO_DATA[locale];
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <SEO locale={locale} title={seo.jobs.title} description={seo.jobs.description} path="/jobs" />
       <Header />
       <main className="pt-16 flex-1">

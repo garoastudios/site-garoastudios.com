@@ -33,7 +33,7 @@ export default function LinksPage() {
   const seo = SEO_DATA[locale];
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <SEO locale={locale} title={seo.links.title} description={seo.links.description} path="/links" />
       <Header />
       <main className="pt-16 flex-1">

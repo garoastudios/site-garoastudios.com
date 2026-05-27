@@ -10,7 +10,7 @@ export default function PressPage() {
   const seo = SEO_DATA[locale];
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <SEO locale={locale} title={seo.press.title} description={seo.press.description} path="/press" />
       <Header />
       <main className="pt-16 flex-1">
