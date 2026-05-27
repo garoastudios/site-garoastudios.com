@@ -131,7 +131,7 @@ export default function GamesCatalogPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <SEO
         locale={locale}
         title={seo.games.title}
