@@ -20,7 +20,6 @@ export default function Header() {
     { label: t.nav.aboutUs, href: anchorHref('about'), isAnchor: true },
     { label: t.nav.press, href: `/${locale}/press`, isAnchor: false },
     { label: t.nav.jobs, href: `/${locale}/jobs`, isAnchor: false },
-    { label: t.nav.contact, href: anchorHref('contact'), isAnchor: true },
     { label: t.nav.links, href: `/${locale}/links`, isAnchor: false },
   ];
 
