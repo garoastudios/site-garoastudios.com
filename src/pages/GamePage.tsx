@@ -176,7 +176,11 @@ export default function GamePage() {
                   title={`${gameInfo.title} on Steam`}
                 />
               </div>
+            </Reveal>
+          )}
+
           {/* YouTube Trailer (non-RhythMania placed below Steam widget) */}
+
           {youtubeId && !isRhythmania && (
             <Reveal delay={140}>
               <div className="mb-8 w-full max-w-[646px] aspect-video">
@@ -229,7 +233,7 @@ export default function GamePage() {
             </Reveal>
           )}
 
-          )}
+
 
           <Link
             to={`/${locale}/games`}
