@@ -58,9 +58,6 @@ export default function JobsPage() {
           </div>
         </Reveal>
       </main>
-
-        </div>
-      </main>
       <Footer />
     </div>
   );
