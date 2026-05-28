@@ -116,7 +116,7 @@ export default function Header() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="hover-grow font-display text-base text-foreground/80 hover:text-accent transition-colors"
+                  className="hover-grow inline-block origin-left self-start font-display text-base text-foreground/80 hover:text-accent transition-colors"
                 >
                   {link.label}
                 </a>
@@ -125,7 +125,7 @@ export default function Header() {
                   key={link.label}
                   to={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="hover-grow font-display text-base text-foreground/80 hover:text-accent transition-colors"
+                  className="hover-grow inline-block origin-left self-start font-display text-base text-foreground/80 hover:text-accent transition-colors"
                 >
                   {link.label}
                 </Link>
