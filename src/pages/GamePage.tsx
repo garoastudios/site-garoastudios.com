@@ -47,14 +47,29 @@ const STEAM_WIDGETS: Record<string, string> = {
   'astro-pig': 'https://store.steampowered.com/widget/1800390/',
 };
 
-export default function GamePage() {
-  const { gameSlug } = useParams<{ gameSlug: string }>();
-  const { locale, t } = useLocale();
-  const reducedMotion = useReducedMotion();
+const STEAM_WIDGETS: Record<string, string> = {
+  'rhythmania': 'https://store.steampowered.com/widget/2322070/',
+  'cartomante': 'https://store.steampowered.com/widget/1361760/',
+  'stand-by-me': 'https://store.steampowered.com/widget/1484600/',
+  'cat-leather-jackets': 'https://store.steampowered.com/widget/1673830/',
+  'astro-pig': 'https://store.steampowered.com/widget/1800390/',
+};
 
-  const key = SLUG_TO_KEY[gameSlug || ''] as keyof typeof t.games | undefined;
-  const gameInfo = key ? (t.games[key] as { title: string; description: string }) : null;
-  const assetSlug = SLUG_TO_ASSET[gameSlug || ''];
+const YOUTUBE_TRAILERS: Record<string, string> = {
+  'cartomante': 'qPkon4cQZhc',
+  'stand-by-me': 'KeyrpuHDfcw',
+  'cat-leather-jackets': 'InR20y_pXoA',
+  'astro-pig': 'HdFu2XK3DF0',
+};
+
+const RHYTHMANIA_TRAILERS_BY_LOCALE: Record<string, string> = {
+  en: 'cOjvLEuSWg4',
+  br: 'FJJeQDGXPyc',
+  ja: '0Y9eTx1JUVs',
+  es: 'cOjvLEuSWg4',
+  zh: 'cOjvLEuSWg4',
+};
+
   const steamWidget = STEAM_WIDGETS[gameSlug || ''];
   const trailer = SLUG_TO_TRAILER[gameSlug || ''];
   const isRhythmania = gameSlug === 'rhythmania';
