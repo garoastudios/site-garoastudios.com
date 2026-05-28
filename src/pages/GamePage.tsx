@@ -176,6 +176,20 @@ export default function GamePage() {
                   title={`${gameInfo.title} on Steam`}
                 />
               </div>
+          {/* YouTube Trailer (non-RhythMania placed below Steam widget) */}
+          {youtubeId && !isRhythmania && (
+            <Reveal delay={140}>
+              <div className="mb-8 w-full max-w-[646px] aspect-video">
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${youtubeId}?controls=0`}
+                  title={`${gameInfo.title} trailer`}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="w-full h-full rounded-lg"
+                />
+              </div>
             </Reveal>
           )}
 
@@ -196,6 +210,25 @@ export default function GamePage() {
                 />
               </div>
             </Reveal>
+          )}
+
+          {/* YouTube Trailer (RhythMania placed below Spawnd embed) */}
+          {isRhythmania && youtubeId && (
+            <Reveal delay={200}>
+              <div className="mb-8 w-full max-w-[646px] aspect-video">
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${youtubeId}?controls=0`}
+                  title={`${gameInfo.title} trailer`}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="w-full h-full rounded-lg"
+                />
+              </div>
+            </Reveal>
+          )}
+
           )}
 
           <Link
