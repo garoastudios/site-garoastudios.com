@@ -110,5 +110,6 @@ export const en = {
   },
   footer: {
     trademark: '™ Garoa Studios 2018 — 2026',
+    affiliateOf: 'an affiliate of',
   },
 };
