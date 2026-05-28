@@ -86,9 +86,6 @@ export default function LinksPage() {
           </Reveal>
         </div>
       </main>
-
-        </div>
-      </main>
       <Footer />
     </div>
   );
