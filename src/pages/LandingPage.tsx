@@ -3,8 +3,7 @@ import SEO from '@/components/SEO';
 import { SEO as SEO_DATA, SITE_URL } from '@/i18n/seo';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+
 import SectionIndicator from '@/components/SectionIndicator';
 import Reveal from '@/components/Reveal';
 import HeroSection from '@/components/sections/Hero';
