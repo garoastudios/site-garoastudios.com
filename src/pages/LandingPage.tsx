@@ -42,13 +42,13 @@ export default function LandingPage() {
       <SectionIndicator />
       <main className="pt-16">
         <HeroSection />
-        <StatsSection />
-        <GamesSection />
-        <AboutSection />
-        <ContactSection />
-        <AwardsSection />
-
+        <Reveal><StatsSection /></Reveal>
+        <Reveal><GamesSection /></Reveal>
+        <Reveal><AboutSection /></Reveal>
+        <Reveal><ContactSection /></Reveal>
+        <Reveal><AwardsSection /></Reveal>
       </main>
+
       <Footer />
     </div>
   );
