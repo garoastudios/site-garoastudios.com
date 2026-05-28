@@ -159,7 +159,6 @@ export default function GamesCatalogPage() {
             ))}
           </div>
 
-          </div>
 
           <div className="text-center mt-12">
             <Link
