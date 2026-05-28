@@ -113,4 +113,3 @@ export const ja = {
     affiliateOf: 'グループ企業',
   },
 };
-};

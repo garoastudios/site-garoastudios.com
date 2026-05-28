@@ -110,5 +110,6 @@ export const zh = {
   },
   footer: {
     trademark: '™ 细雨工作室 2018 — 2026',
+    affiliateOf: '关联公司',
   },
 };
