@@ -185,8 +185,7 @@ export default function GamePage() {
         </div>
       </main>
 
-        </div>
-      </main>
+
       <Footer />
     </div>
   );
