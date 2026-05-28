@@ -6,6 +6,8 @@ import SEO from '@/components/SEO';
 import { SEO as SEO_DATA, SITE_URL } from '@/i18n/seo';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Reveal from '@/components/Reveal';
+
 import rhythmaniaTrailer from '@/assets/games/rhythmania_microtrailer.webm';
 import astroPigTrailer from '@/assets/games/astro_pig_microtrailer.webm';
 import catLeatherJacketsTrailer from '@/assets/games/cat_leather_jackets_microtrailer.webm';
