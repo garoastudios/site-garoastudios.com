@@ -110,5 +110,7 @@ export const ja = {
   },
   footer: {
     trademark: '™ ガロア 2018 — 2026',
+    affiliateOf: 'グループ企業',
   },
+};
 };
