@@ -132,7 +132,10 @@ export default function GamePage() {
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
         </div>
+
+        <div className="max-w-3xl mx-auto px-4 -mt-20 relative z-10 pb-20">
           <Reveal>
+
             <h1 className="font-display text-4xl sm:text-5xl normal-case text-foreground mb-6">
               {gameInfo.title}
             </h1>
