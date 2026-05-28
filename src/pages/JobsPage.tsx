@@ -3,6 +3,8 @@ import SEO from '@/components/SEO';
 import { SEO as SEO_DATA } from '@/i18n/seo';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Reveal from '@/components/Reveal';
+
 import {
   SiBluesky, SiDiscord, SiFacebook, SiInstagram,
   SiLinkedin, SiTelegram, SiTiktok, SiTwitch, SiX, SiYoutube,
