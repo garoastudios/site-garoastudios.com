@@ -91,7 +91,23 @@
     .hover-grow:hover {
       transform: none !important;
     }
+    .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+    }
   }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
 
   body {
     font-family: 'Nunito', sans-serif;
