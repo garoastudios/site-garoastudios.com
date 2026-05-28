@@ -132,44 +132,48 @@ export default function GamePage() {
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
         </div>
-
-        <div className="max-w-3xl mx-auto px-4 -mt-20 relative z-10 pb-20">
-          <h1 className="font-display text-4xl sm:text-5xl normal-case text-foreground mb-6">
-            {gameInfo.title}
-          </h1>
-          <p className="text-foreground/90 text-lg leading-relaxed mb-8">
-            {gameInfo.description}
-          </p>
+          <Reveal>
+            <h1 className="font-display text-4xl sm:text-5xl normal-case text-foreground mb-6">
+              {gameInfo.title}
+            </h1>
+            <p className="text-foreground/90 text-lg leading-relaxed mb-8">
+              {gameInfo.description}
+            </p>
+          </Reveal>
 
           {/* Steam Widget */}
           {steamWidget && (
-            <div className="mb-8 w-full max-w-[646px]">
-              <iframe
-                src={steamWidget}
-                frameBorder="0"
-                width="646"
-                height="190"
-                className="w-full rounded-lg"
-                title={`${gameInfo.title} on Steam`}
-              />
-            </div>
+            <Reveal delay={120}>
+              <div className="mb-8 w-full max-w-[646px]">
+                <iframe
+                  src={steamWidget}
+                  frameBorder="0"
+                  width="646"
+                  height="190"
+                  className="w-full rounded-lg"
+                  title={`${gameInfo.title} on Steam`}
+                />
+              </div>
+            </Reveal>
           )}
 
           {/* Spawnd Playable Embed (RhythMania only) */}
           {isRhythmania && (
-            <div className="mb-8 w-full max-w-[640px]">
-              <iframe
-                src="https://www.spawnd.gg/-/games/embed/26?description=false"
-                width="640"
-                height="360"
-                frameBorder="0"
-                allow="autoplay; encrypted-media; clipboard-write; clipboard-read; web-share; cross-origin-isolated"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                className="w-full rounded-lg"
-                title="Play RhythMania on spawnd.gg"
-              />
-            </div>
+            <Reveal delay={160}>
+              <div className="mb-8 w-full max-w-[640px]">
+                <iframe
+                  src="https://www.spawnd.gg/-/games/embed/26?description=false"
+                  width="640"
+                  height="360"
+                  frameBorder="0"
+                  allow="autoplay; encrypted-media; clipboard-write; clipboard-read; web-share; cross-origin-isolated"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="w-full rounded-lg"
+                  title="Play RhythMania on spawnd.gg"
+                />
+              </div>
+            </Reveal>
           )}
 
           <Link
@@ -178,6 +182,9 @@ export default function GamePage() {
           >
             ← {t.games.backToGames}
           </Link>
+        </div>
+      </main>
+
         </div>
       </main>
       <Footer />
