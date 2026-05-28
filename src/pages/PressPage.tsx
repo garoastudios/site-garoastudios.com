@@ -4,6 +4,8 @@ import SEO from '@/components/SEO';
 import { SEO as SEO_DATA } from '@/i18n/seo';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Reveal from '@/components/Reveal';
+
 
 export default function PressPage() {
   const { locale, t } = useLocale();
@@ -22,20 +24,24 @@ export default function PressPage() {
           <p className="text-muted-foreground text-lg mb-12">
             {t.press.subtitle}
           </p>
+          <Reveal>
+            <div className="bg-card border border-border rounded-xl p-8 mb-8">
+              <h2 className="font-display text-2xl text-accent mb-4">{t.press.pressKit}</h2>
+              <p className="text-muted-foreground mb-6">{t.press.pressKitDesc}</p>
+              <p className="text-foreground/70 italic text-sm">{t.press.comingSoon}</p>
+            </div>
+          </Reveal>
 
-          <div className="bg-card border border-border rounded-xl p-8 mb-8">
-            <h2 className="font-display text-2xl text-accent mb-4">{t.press.pressKit}</h2>
-            <p className="text-muted-foreground mb-6">{t.press.pressKitDesc}</p>
-            <p className="text-foreground/70 italic text-sm">{t.press.comingSoon}</p>
-          </div>
-
-          <div className="bg-card border border-border rounded-xl p-8">
-            <h2 className="font-display text-2xl text-accent mb-4">{t.press.mediaMentions}</h2>
-            <p className="text-foreground/70 italic text-sm">{t.press.comingSoon}</p>
-          </div>
+          <Reveal delay={120}>
+            <div className="bg-card border border-border rounded-xl p-8">
+              <h2 className="font-display text-2xl text-accent mb-4">{t.press.mediaMentions}</h2>
+              <p className="text-foreground/70 italic text-sm">{t.press.comingSoon}</p>
+            </div>
+          </Reveal>
         </div>
       </main>
       <Footer />
     </div>
+
   );
 }

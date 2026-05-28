@@ -3,6 +3,8 @@ import SEO from '@/components/SEO';
 import { SEO as SEO_DATA } from '@/i18n/seo';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Reveal from '@/components/Reveal';
+
 import {
   SiBluesky, SiDiscord, SiFacebook, SiInstagram,
   SiLinkedin, SiTelegram, SiTiktok, SiTwitch, SiX, SiYoutube,
@@ -30,30 +32,31 @@ export default function JobsPage() {
       <SEO locale={locale} title={seo.jobs.title} description={seo.jobs.description} path="/jobs" />
       <Header />
       <main className="pt-16 flex-1">
+        <Reveal>
+          <div className="max-w-3xl mx-auto px-4 py-20 text-center">
+            <h1 className="font-display text-4xl sm:text-5xl text-foreground mb-6">
+              {t.jobs.heading}
+            </h1>
+            <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto leading-relaxed">
+              {t.jobs.noOpenings}
+            </p>
 
-        <div className="max-w-3xl mx-auto px-4 py-20 text-center">
-          <h1 className="font-display text-4xl sm:text-5xl text-foreground mb-6">
-            {t.jobs.heading}
-          </h1>
-          <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto leading-relaxed">
-            {t.jobs.noOpenings}
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            {socials.map(({ Icon, url, label }) => (
-              <a
-                key={label}
-                href={`${url}?utm_source=garoastudios.com`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="text-muted-foreground hover:text-accent transition-colors"
-              >
-                <Icon className="w-6 h-6" />
-              </a>
-            ))}
+            <div className="flex flex-wrap justify-center gap-4">
+              {socials.map(({ Icon, url, label }) => (
+                <a
+                  key={label}
+                  href={`${url}?utm_source=garoastudios.com`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="text-muted-foreground hover:text-accent transition-colors"
+                >
+                  <Icon className="w-6 h-6" />
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
+        </Reveal>
       </main>
       <Footer />
     </div>

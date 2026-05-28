@@ -8,6 +8,8 @@ import SEO from '@/components/SEO';
 import { SEO as SEO_DATA, SITE_URL } from '@/i18n/seo';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Reveal from '@/components/Reveal';
+
 import rhythmaniaTrailer from '@/assets/games/rhythmania_microtrailer.webm';
 import astroPigTrailer from '@/assets/games/astro_pig_microtrailer.webm';
 import catLeatherJacketsTrailer from '@/assets/games/cat_leather_jackets_microtrailer.webm';
@@ -145,17 +147,18 @@ export default function GamesCatalogPage() {
           <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-foreground mb-10 text-center">
             {t.games.heading}
           </h1>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {GAMES.map((game) => (
-              <GameCard
-                key={game.slug}
-                game={game}
-                locale={locale}
-                title={t.games[game.key].title}
-              />
+            {GAMES.map((game, idx) => (
+              <Reveal key={game.slug} delay={idx * 80}>
+                <GameCard
+                  game={game}
+                  locale={locale}
+                  title={t.games[game.key].title}
+                />
+              </Reveal>
             ))}
           </div>
+
 
           <div className="text-center mt-12">
             <Link

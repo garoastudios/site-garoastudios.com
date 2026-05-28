@@ -3,6 +3,8 @@ import SEO from '@/components/SEO';
 import { SEO as SEO_DATA } from '@/i18n/seo';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Reveal from '@/components/Reveal';
+
 import { SteamIcon, ItchIcon, NuuvemIcon } from '@/components/PlatformIcons';
 import {
   SiBluesky, SiDiscord, SiFacebook, SiInstagram,
@@ -43,42 +45,45 @@ export default function LinksPage() {
           <h1 className="font-display text-4xl sm:text-5xl text-foreground mb-12">
             {t.links.heading}
           </h1>
+          <Reveal>
+            <h2 className="font-display text-xl sm:text-2xl text-muted-foreground mb-6">
+              {t.links.stores}
+            </h2>
+            <div className="flex flex-wrap justify-center items-center gap-8 mb-14">
+              {stores.map(({ Icon, url, label }) => (
+                <a
+                  key={label}
+                  href={`${url}?utm_source=garoastudios.com`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="hover-grow text-muted-foreground hover:text-accent transition-colors"
+                >
+                  <Icon className={label === 'Nuuvem' ? 'w-[57px] h-[57px]' : 'w-[54px] h-[54px]'} />
+                </a>
+              ))}
+            </div>
+          </Reveal>
 
-          <h2 className="font-display text-xl sm:text-2xl text-muted-foreground mb-6">
-            {t.links.stores}
-          </h2>
-          <div className="flex flex-wrap justify-center items-center gap-8 mb-14">
-            {stores.map(({ Icon, url, label }) => (
-              <a
-                key={label}
-                href={`${url}?utm_source=garoastudios.com`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="hover-grow text-muted-foreground hover:text-accent transition-colors"
-              >
-                <Icon className={label === 'Nuuvem' ? 'w-[57px] h-[57px]' : 'w-[54px] h-[54px]'} />
-              </a>
-            ))}
-          </div>
-
-          <h2 className="font-display text-xl sm:text-2xl text-muted-foreground mb-6">
-            {t.links.socials}
-          </h2>
-          <div className="flex flex-wrap justify-center gap-6">
-            {socials.map(({ Icon, url, label }) => (
-              <a
-                key={label}
-                href={`${url}?utm_source=garoastudios.com`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="hover-grow text-muted-foreground hover:text-accent transition-colors"
-              >
-                <Icon className="w-9 h-9" />
-              </a>
-            ))}
-          </div>
+          <Reveal delay={120}>
+            <h2 className="font-display text-xl sm:text-2xl text-muted-foreground mb-6">
+              {t.links.socials}
+            </h2>
+            <div className="flex flex-wrap justify-center gap-6">
+              {socials.map(({ Icon, url, label }) => (
+                <a
+                  key={label}
+                  href={`${url}?utm_source=garoastudios.com`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="hover-grow text-muted-foreground hover:text-accent transition-colors"
+                >
+                  <Icon className="w-9 h-9" />
+                </a>
+              ))}
+            </div>
+          </Reveal>
         </div>
       </main>
       <Footer />
