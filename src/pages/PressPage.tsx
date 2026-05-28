@@ -39,11 +39,9 @@ export default function PressPage() {
             </div>
           </Reveal>
         </div>
-
-          </div>
-        </div>
       </main>
       <Footer />
     </div>
+
   );
 }
