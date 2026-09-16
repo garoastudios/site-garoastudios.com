@@ -1,7 +1,7 @@
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { useLocale } from '@/i18n/useLocale';
-import { HTML_LANG, SITE_URL } from '@/i18n/seo';
+import { SITE_URL } from '@/i18n/seo';
 import { getJobPosting } from '@/data/jobPostings';
 import SEO from '@/components/SEO';
 import Header from '@/components/Header';
@@ -23,23 +23,14 @@ export default function JobPostingPage() {
   const jsonLd = [
     {
       '@context': 'https://schema.org',
-      '@type': 'JobPosting',
-      title: copy.title,
+      '@type': 'Article',
+      headline: copy.title,
       description: copy.seoDescription,
-      employmentType: 'CONTRACTOR',
-      hiringOrganization: {
+      author: {
         '@type': 'Organization',
         name: 'Garoa Studios',
         sameAs: SITE_URL,
       },
-      jobLocationType: 'TELECOMMUTE',
-      applicantLocationRequirements: { '@type': 'Country', name: 'Brazil' },
-      baseSalary: {
-        '@type': 'MonetaryAmount',
-        currency: 'BRL',
-        value: { '@type': 'QuantitativeValue', value: 400, unitText: 'per language' },
-      },
-      inLanguage: HTML_LANG[locale],
       url: pageUrl,
     },
     {
@@ -91,6 +82,7 @@ export default function JobPostingPage() {
                       {section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
                     </ul>
                   )}
+                  {section.trailingParagraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
                 </section>
               ))}
 

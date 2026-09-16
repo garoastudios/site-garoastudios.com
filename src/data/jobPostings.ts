@@ -4,6 +4,7 @@ export type JobSection = {
   heading?: string;
   paragraphs?: string[];
   bullets?: string[];
+  trailingParagraphs?: string[];
 };
 
 export type JobPostingCopy = {
@@ -68,7 +69,7 @@ export const JOB_POSTINGS: JobPosting[] = [
               'Cachê: R$ 400 por idioma.',
               'Pagamento: 50% no início do trabalho e 50% após a entrega.',
             ],
-            paragraphs: ['É desejável, mas não obrigatório, poder emitir nota fiscal pela prestação do serviço.'],
+            trailingParagraphs: ['É desejável, mas não obrigatório, poder emitir nota fiscal pela prestação do serviço.'],
           },
           { paragraphs: ['Procuramos pessoas interessadas não apenas em traduzir o texto, mas em encontrar soluções que façam o RitMania funcionar de forma natural, divertida e culturalmente relevante em outro idioma, preservando o espírito do original sem ficar preso a ele.'] },
         ],
@@ -117,7 +118,7 @@ export const JOB_POSTINGS: JobPosting[] = [
               'Fee: R$ 400 per language.',
               'Payment: 50% at the start of the work and 50% after delivery.',
             ],
-            paragraphs: ['Being able to issue an invoice for the service is desirable, but not required.'],
+            trailingParagraphs: ['Being able to issue an invoice for the service is desirable, but not required.'],
           },
           { paragraphs: ['We are looking for people interested not only in translating the text, but in finding solutions that make RhythMania feel natural, fun, and culturally relevant in another language, preserving the spirit of the original without being constrained by it.'] },
         ],
@@ -166,7 +167,7 @@ export const JOB_POSTINGS: JobPosting[] = [
               'Honorarios: R$ 400 por idioma.',
               'Pago: 50 % al inicio del trabajo y 50 % después de la entrega.',
             ],
-            paragraphs: ['Es deseable, pero no obligatorio, poder emitir una factura por la prestación del servicio.'],
+            trailingParagraphs: ['Es deseable, pero no obligatorio, poder emitir una factura por la prestación del servicio.'],
           },
           { paragraphs: ['Buscamos personas interesadas no solo en traducir el texto, sino en encontrar soluciones que hagan que RitManía funcione de forma natural, divertida y culturalmente relevante en otro idioma, preservando el espíritu del original sin quedar atadas a él.'] },
         ],
@@ -215,7 +216,7 @@ export const JOB_POSTINGS: JobPosting[] = [
               '报酬：每种语言 400 巴西雷亚尔。',
               '付款：工作开始时支付 50%，交付后支付另外 50%。',
             ],
-            paragraphs: ['能够为该服务开具发票者优先，但并非必要条件。'],
+            trailingParagraphs: ['能够为该服务开具发票者优先，但并非必要条件。'],
           },
           { paragraphs: ['我们寻找的不只是逐字翻译的人，而是能找到合适方案，让 RitMania 在另一种语言中依然自然、有趣且具有文化共鸣的人；既保留原作精神，又不受原文形式束缚。'] },
         ],
@@ -264,7 +265,7 @@ export const JOB_POSTINGS: JobPosting[] = [
               '報酬：1言語につき400ブラジルレアル。',
               '支払い：業務開始時に50％、納品後に50％。',
             ],
-            paragraphs: ['業務に対する請求書を発行できることが望ましいですが、必須ではありません。'],
+            trailingParagraphs: ['業務に対する請求書を発行できることが望ましいですが、必須ではありません。'],
           },
           { paragraphs: ['単に文章を翻訳するだけでなく、原作の精神を保ちながら原文に縛られず、別の言語でもRitManiaが自然で楽しく、文化的に意味のあるものになるような表現を見つけられる方を求めています。'] },
         ],
