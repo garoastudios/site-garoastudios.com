@@ -30,6 +30,8 @@ const socials = [
 export default function JobsPage() {
   const { locale, t } = useLocale();
   const seo = SEO_DATA[locale];
+  const { data: postings = [], isLoading } = useOpenPostings();
+
 
   return (
     <div className="min-h-screen flex flex-col">
