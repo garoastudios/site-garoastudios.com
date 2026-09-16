@@ -102,6 +102,8 @@ export const br = {
   jobs: {
     heading: 'Vagas',
     noOpenings: 'Não há vagas abertas no momento. Siga-nos em nossas redes sociais para ser notificado assim que tivermos novas oportunidades!',
+    closedNotice: 'Esta vaga foi encerrada e não está mais recebendo candidaturas.',
+    closedApplyLabel: 'candidaturas encerradas',
   },
   links: {
     heading: 'Links',

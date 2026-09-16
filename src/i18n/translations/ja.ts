@@ -102,6 +102,8 @@ export const ja = {
   jobs: {
     heading: '採用',
     noOpenings: '現在、募集中のポジションはありません。新しい機会が発生した際にお知らせできるよう、ぜひソーシャルメディアをフォローしてください！',
+    closedNotice: 'この募集は終了しており、応募を受け付けていません。',
+    closedApplyLabel: '応募受付終了',
   },
   links: {
     heading: 'リンク',

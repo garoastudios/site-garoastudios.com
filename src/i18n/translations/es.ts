@@ -102,6 +102,8 @@ export const es = {
   jobs: {
     heading: 'Empleo',
     noOpenings: 'No hay vacantes disponibles en este momento. ¡Síguenos en nuestras redes sociales para enterarte cuando tengamos nuevas oportunidades!',
+    closedNotice: 'Esta vacante está cerrada y ya no acepta candidaturas.',
+    closedApplyLabel: 'candidaturas cerradas',
   },
   links: {
     heading: 'Enlaces',
