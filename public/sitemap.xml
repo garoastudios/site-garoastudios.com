@@ -494,4 +494,67 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://garoastudios.com/en/links"/>
   </url>
 
+
+  <!-- Job posting: 2026-01 -->
+  <url>
+    <loc>https://garoastudios.com/en/jobs/2026-01</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://garoastudios.com/en/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://garoastudios.com/br/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://garoastudios.com/es/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://garoastudios.com/zh/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://garoastudios.com/ja/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://garoastudios.com/en/jobs/2026-01"/>
+  </url>
+  <url>
+    <loc>https://garoastudios.com/br/jobs/2026-01</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://garoastudios.com/en/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://garoastudios.com/br/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://garoastudios.com/es/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://garoastudios.com/zh/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://garoastudios.com/ja/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://garoastudios.com/en/jobs/2026-01"/>
+  </url>
+  <url>
+    <loc>https://garoastudios.com/es/jobs/2026-01</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://garoastudios.com/en/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://garoastudios.com/br/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://garoastudios.com/es/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://garoastudios.com/zh/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://garoastudios.com/ja/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://garoastudios.com/en/jobs/2026-01"/>
+  </url>
+  <url>
+    <loc>https://garoastudios.com/zh/jobs/2026-01</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://garoastudios.com/en/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://garoastudios.com/br/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://garoastudios.com/es/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://garoastudios.com/zh/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://garoastudios.com/ja/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://garoastudios.com/en/jobs/2026-01"/>
+  </url>
+  <url>
+    <loc>https://garoastudios.com/ja/jobs/2026-01</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://garoastudios.com/en/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://garoastudios.com/br/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://garoastudios.com/es/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://garoastudios.com/zh/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://garoastudios.com/ja/jobs/2026-01"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://garoastudios.com/en/jobs/2026-01"/>
+  </url>
+
 </urlset>

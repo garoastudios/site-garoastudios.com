@@ -56,7 +56,7 @@ export const SEO: Record<Locale, LocaleSeo> = {
     },
     jobs: {
       title: 'Careers — Garoa Studios',
-      description: 'Work with Garoa Studios, an award-winning indie game team in Rio de Janeiro. Follow us on social media for new openings.',
+      description: 'Explore current openings at Garoa Studios, including freelance localization work for the RhythMania Demo.',
     },
     links: {
       title: 'Links — Garoa Studios',
@@ -86,7 +86,7 @@ export const SEO: Record<Locale, LocaleSeo> = {
     },
     jobs: {
       title: 'Vagas — Garoa Studios',
-      description: 'Trabalhe com a Garoa Studios, estúdio indie premiado do Rio de Janeiro. Siga nossas redes sociais para saber de novas vagas.',
+      description: 'Confira as vagas abertas na Garoa Studios, incluindo trabalho freelance de localização para a Demo do RitMania.',
     },
     links: {
       title: 'Links — Garoa Studios',
@@ -116,7 +116,7 @@ export const SEO: Record<Locale, LocaleSeo> = {
     },
     jobs: {
       title: 'Empleo — Garoa Studios',
-      description: 'Trabaja con Garoa Studios, estudio indie premiado de Río de Janeiro. Síguenos en redes para enterarte de nuevas vacantes.',
+      description: 'Consulta las vacantes de Garoa Studios, incluido el trabajo freelance de localización para la Demo de RitManía.',
     },
     links: {
       title: 'Enlaces — Garoa Studios',
@@ -146,7 +146,7 @@ export const SEO: Record<Locale, LocaleSeo> = {
     },
     jobs: {
       title: '招聘 — 细雨工作室 Garoa',
-      description: '加入位于里约的获奖独立游戏团队细雨工作室。请关注我们的社交媒体以获取新职位通知。',
+      description: '查看细雨工作室当前的招聘信息，包括 RitMania Demo 的自由职业本地化工作。',
     },
     links: {
       title: '链接 — 细雨工作室 Garoa',
@@ -176,7 +176,7 @@ export const SEO: Record<Locale, LocaleSeo> = {
     },
     jobs: {
       title: '採用 — Garoa Studios',
-      description: 'リオデジャネイロの受賞インディースタジオGaroa Studiosで一緒に働きませんか。新しい採用情報はSNSでお知らせします。',
+      description: 'Garoa Studiosの募集中の仕事をご覧ください。RitMania Demoのフリーランス・ローカライズ業務を掲載中です。',
     },
     links: {
       title: 'リンク — Garoa Studios',
