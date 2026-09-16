@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useLocale } from '@/i18n/useLocale';
 import { LOCALE_ORDER, LOCALE_LABELS } from '@/i18n/config';
-import { JOB_POSTINGS } from '@/data/jobPostings';
+import { useOpenPostings } from '@/hooks/use-open-postings';
 import garoaLogoIcon from '@/assets/logos/garoa_logo_icon.png';
 import garoaLogoHorizontal from '@/assets/logos/garoa_logo_horizontal.png';
 
@@ -13,7 +13,8 @@ export default function Header() {
   const location = useLocation();
 
   const isLandingPage = location.pathname === `/${locale}` || location.pathname === `/${locale}/`;
-  const hasOpenJobs = JOB_POSTINGS.length > 0;
+  const { data: openPostings } = useOpenPostings();
+  const hasOpenJobs = (openPostings?.length ?? 0) > 0;
 
   const anchorHref = (hash: string) => isLandingPage ? `#${hash}` : `/${locale}#${hash}`;
 
