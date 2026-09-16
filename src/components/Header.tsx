@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useLocale } from '@/i18n/useLocale';
 import { LOCALE_ORDER, LOCALE_LABELS } from '@/i18n/config';
+import { JOB_POSTINGS } from '@/data/jobPostings';
 import garoaLogoIcon from '@/assets/logos/garoa_logo_icon.png';
 import garoaLogoHorizontal from '@/assets/logos/garoa_logo_horizontal.png';
 
@@ -12,15 +13,16 @@ export default function Header() {
   const location = useLocation();
 
   const isLandingPage = location.pathname === `/${locale}` || location.pathname === `/${locale}/`;
+  const hasOpenJobs = JOB_POSTINGS.length > 0;
 
   const anchorHref = (hash: string) => isLandingPage ? `#${hash}` : `/${locale}#${hash}`;
 
   const navLinks = [
-    { label: t.nav.games, href: isLandingPage ? anchorHref('games') : `/${locale}/games`, isAnchor: isLandingPage },
-    { label: t.nav.aboutUs, href: anchorHref('about'), isAnchor: true },
-    { label: t.nav.press, href: `/${locale}/press`, isAnchor: false },
-    { label: t.nav.jobs, href: `/${locale}/jobs`, isAnchor: false },
-    { label: t.nav.links, href: `/${locale}/links`, isAnchor: false },
+    { id: 'games', label: t.nav.games, href: isLandingPage ? anchorHref('games') : `/${locale}/games`, isAnchor: isLandingPage },
+    { id: 'about', label: t.nav.aboutUs, href: anchorHref('about'), isAnchor: true },
+    { id: 'press', label: t.nav.press, href: `/${locale}/press`, isAnchor: false },
+    { id: 'jobs', label: t.nav.jobs, href: `/${locale}/jobs`, isAnchor: false },
+    { id: 'links', label: t.nav.links, href: `/${locale}/links`, isAnchor: false },
   ];
 
   return (
