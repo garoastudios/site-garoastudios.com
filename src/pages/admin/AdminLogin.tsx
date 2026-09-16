@@ -41,7 +41,7 @@ export default function AdminLogin() {
     setBusy(true);
     const { error } = await supabase.auth.signInWithOtp({
       email: email.trim().toLowerCase(),
-      options: { shouldCreateUser: true },
+      options: { shouldCreateUser: false },
     });
     setBusy(false);
     if (error) {
