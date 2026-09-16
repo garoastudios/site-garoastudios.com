@@ -102,6 +102,8 @@ export const zh = {
   jobs: {
     heading: '招聘',
     noOpenings: '目前没有空缺职位。请关注我们的社交媒体，以便在有新机会时第一时间获得通知！',
+    closedNotice: '该招聘已结束，不再接受申请。',
+    closedApplyLabel: '申请已关闭',
   },
   links: {
     heading: '链接',

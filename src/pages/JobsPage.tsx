@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { useLocale } from '@/i18n/useLocale';
-import { JOB_POSTINGS } from '@/data/jobPostings';
+import { pickCopy } from '@/lib/postings';
+import { useOpenPostings } from '@/hooks/use-open-postings';
 import SEO from '@/components/SEO';
 import { SEO as SEO_DATA } from '@/i18n/seo';
 import Header from '@/components/Header';
@@ -29,6 +30,8 @@ const socials = [
 export default function JobsPage() {
   const { locale, t } = useLocale();
   const seo = SEO_DATA[locale];
+  const { data: postings = [], isLoading } = useOpenPostings();
+
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -41,14 +44,17 @@ export default function JobsPage() {
               {t.jobs.heading}
             </h1>
 
-            {JOB_POSTINGS.length > 0 ? (
+            {isLoading ? (
+              <div className="h-24" />
+            ) : postings.length > 0 ? (
               <div className="space-y-4">
-                {JOB_POSTINGS.map((posting) => {
-                  const copy = posting.copy[locale];
+                {postings.map((posting) => {
+                  const copy = pickCopy(posting, locale);
+                  if (!copy) return null;
                   return (
                     <Link
-                      key={posting.slug}
-                      to={`/${locale}/jobs/${posting.slug}`}
+                      key={posting.code}
+                      to={`/${locale}/jobs/${posting.code}`}
                       className="group flex min-h-24 items-center justify-between gap-5 rounded-md border border-foreground/20 bg-card/70 px-6 py-5 text-foreground backdrop-blur-sm transition-all duration-300 hover:border-accent hover:bg-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                     >
                       <h2 className="normal-case font-display text-xl sm:text-2xl leading-snug">

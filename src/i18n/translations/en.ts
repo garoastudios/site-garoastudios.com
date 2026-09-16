@@ -102,6 +102,8 @@ export const en = {
   jobs: {
     heading: 'Jobs',
     noOpenings: 'There are no current openings. Follow us on our socials to be notified as soon as we have new work opportunities!',
+    closedNotice: 'This posting has closed and is no longer accepting submissions.',
+    closedApplyLabel: 'applications closed',
   },
   links: {
     heading: 'Links',

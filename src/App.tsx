@@ -9,6 +9,9 @@ import PressPage from "./pages/PressPage";
 import JobsPage from "./pages/JobsPage";
 import JobPostingPage from "./pages/JobPostingPage";
 import LinksPage from "./pages/LinksPage";
+import AdminLogin from "./pages/admin/AdminLogin";
+import AdminPostings from "./pages/admin/AdminPostings";
+import AdminPostingEditor from "./pages/admin/AdminPostingEditor";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +23,11 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Navigate to="/en" replace />} />
+          <Route path="/admin" element={<Navigate to="/admin/postings" replace />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/postings" element={<AdminPostings />} />
+          <Route path="/admin/postings/new" element={<AdminPostingEditor />} />
+          <Route path="/admin/postings/:code/edit" element={<AdminPostingEditor />} />
           <Route path="/:locale" element={<LandingPage />} />
           <Route path="/:locale/games" element={<GamesCatalogPage />} />
           <Route path="/:locale/games/:gameSlug" element={<GamePage />} />
