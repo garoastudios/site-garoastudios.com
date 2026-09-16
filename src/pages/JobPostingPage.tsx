@@ -89,14 +89,14 @@ export default function JobPostingPage() {
               <p className="font-bold text-foreground">{copy.closing}</p>
             </div>
 
-            <div className="mt-12 flex flex-col sm:flex-row gap-4 sm:items-center">
-              <Button asChild size="lg" className="hover-grow bg-accent text-accent-foreground hover:bg-accent/90 text-base">
+            <div className="mt-12 flex flex-col sm:flex-row gap-8 sm:items-center">
+              <Button asChild size="lg" className="hover-grow origin-right bg-accent text-accent-foreground hover:bg-accent/90 text-base">
                 <a href={posting.applicationUrl} target="_blank" rel="noopener noreferrer">
                   {copy.applyLabel}
                   <ExternalLink aria-hidden="true" />
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="hover-grow bg-transparent text-base">
+              <Button asChild variant="outline" size="lg" className="hover-grow origin-left bg-transparent text-base">
                 <Link to={`/${locale}/jobs`}>
                   <ArrowLeft aria-hidden="true" />
                   {copy.backLabel}

@@ -31,7 +31,7 @@ export const JOB_POSTINGS: JobPosting[] = [
     applicationUrl: 'https://forms.gle/6SZKoUBepXegfJjK9?utm_source=garoastudios.com',
     copy: {
       br: {
-        title: 'Chamada para localizadores - RitMania',
+        title: 'RhythMania Demo - Localização - Russo, Hindi, Coreano, Chinês Simplificado, Árabe',
         intro: [
           'Estamos buscando localizadores para a Demo do RitMania, um jogo de ritmo de um só botão inspirado por jogos como Rhythm Heaven, desenvolvido no Brasil e construído em torno de situações cotidianas, humor, referências culturais e no “caos divertido” que é muito familiar para nós.',
           'A Demo está entrando em uma nova etapa de localização, e procuramos profissionais para trabalhar nos seguintes idiomas:',
@@ -80,7 +80,7 @@ export const JOB_POSTINGS: JobPosting[] = [
         seoDescription: 'Vaga freelance para localizar a Demo do RitMania em chinês simplificado, hindi, árabe, russo ou coreano. Confira requisitos, prazo e cachê.',
       },
       en: {
-        title: 'Call for localizers - RhythMania',
+        title: 'RhythMania Demo - Localization - Russian, Hindi, Korean, Simplified Chinese, Arabic',
         intro: [
           'We are looking for localizers for the RhythMania Demo, a one-button rhythm game inspired by titles such as Rhythm Heaven, developed in Brazil and built around everyday situations, humor, cultural references, and the “fun chaos” that feels very familiar to us.',
           'The Demo is entering a new localization stage, and we are looking for professionals to work in the following languages:',
@@ -129,7 +129,7 @@ export const JOB_POSTINGS: JobPosting[] = [
         seoDescription: 'Freelance opening to localize the RhythMania Demo into Simplified Chinese, Hindi, Arabic, Russian, or Korean. See requirements, timeline, and fee.',
       },
       es: {
-        title: 'Convocatoria para localizadores - RitManía',
+        title: 'RhythMania Demo - Localización - Ruso, Hindi, Coreano, Chino Simplificado, Árabe',
         intro: [
           'Buscamos localizadores para la Demo de RitManía, un juego de ritmo de un solo botón inspirado en títulos como Rhythm Heaven, desarrollado en Brasil y construido en torno a situaciones cotidianas, humor, referencias culturales y ese “caos divertido” que nos resulta tan familiar.',
           'La Demo está entrando en una nueva etapa de localización y buscamos profesionales para trabajar en los siguientes idiomas:',
@@ -178,7 +178,7 @@ export const JOB_POSTINGS: JobPosting[] = [
         seoDescription: 'Vacante freelance para localizar la Demo de RitManía al chino simplificado, hindi, árabe, ruso o coreano. Consulta requisitos, plazo y honorarios.',
       },
       zh: {
-        title: 'RitMania 本地化人员招募',
+        title: 'RhythMania Demo - 本地化 - 俄语、印地语、韩语、简体中文、阿拉伯语',
         intro: [
           '我们正在为 RitMania Demo 招募本地化人员。RitMania 是一款受《节奏天国》等作品启发的单按钮节奏游戏，由巴西团队开发，内容围绕日常情境、幽默、文化元素，以及我们十分熟悉的“欢乐混乱”展开。',
           'Demo 即将进入新的本地化阶段，我们正在寻找能够负责以下语言的专业人士：',
@@ -227,7 +227,7 @@ export const JOB_POSTINGS: JobPosting[] = [
         seoDescription: 'RitMania Demo 自由职业本地化岗位，目标语言为简体中文、印地语、阿拉伯语、俄语或韩语。查看要求、期限与报酬。',
       },
       ja: {
-        title: 'RitMania ローカライザー募集',
+        title: 'RhythMania Demo - ローカライズ - ロシア語、ヒンディー語、韓国語、簡体字中国語、アラビア語',
         intro: [
           'RitMania Demoのローカライザーを募集します。RitManiaは『リズム天国』などに影響を受けたワンボタンのリズムゲームです。ブラジルで開発され、日常のシチュエーションやユーモア、文化的な引用、そして私たちにとってなじみ深い「楽しいカオス」を軸に作られています。',
           'Demoは新たなローカライズ段階に入り、以下の言語を担当するプロフェッショナルを募集しています。',
