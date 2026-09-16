@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { useLocale } from '@/i18n/useLocale';
-import { JOB_POSTINGS } from '@/data/jobPostings';
+import { pickCopy } from '@/lib/postings';
+import { useOpenPostings } from '@/hooks/use-open-postings';
 import SEO from '@/components/SEO';
 import { SEO as SEO_DATA } from '@/i18n/seo';
 import Header from '@/components/Header';
