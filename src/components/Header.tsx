@@ -41,25 +41,31 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-6">
-          {navLinks.map((link) => (
-            link.isAnchor && isLandingPage ? (
+          {navLinks.map((link) => {
+            const showBadge = link.id === 'jobs' && hasOpenJobs;
+            const badge = showBadge ? (
+              <span className="absolute -top-1.5 -right-2.5 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-accent-foreground text-[10px] font-bold leading-none">
+                !
+              </span>
+            ) : null;
+            return link.isAnchor && isLandingPage ? (
               <a
-                key={link.label}
+                key={link.id}
                 href={link.href}
-                className="hover-grow font-display text-sm tracking-wide text-foreground/80 hover:text-accent transition-colors"
+                className="relative hover-grow font-display text-sm tracking-wide text-foreground/80 hover:text-accent transition-colors"
               >
-                {link.label}
+                {link.label}{badge}
               </a>
             ) : (
               <Link
-                key={link.label}
+                key={link.id}
                 to={link.href}
-                className="hover-grow font-display text-sm tracking-wide text-foreground/80 hover:text-accent transition-colors"
+                className="relative hover-grow font-display text-sm tracking-wide text-foreground/80 hover:text-accent transition-colors"
               >
-                {link.label}
+                {link.label}{badge}
               </Link>
-            )
-          ))}
+            );
+          })}
         </nav>
 
         {/* Desktop language switcher */}
@@ -112,27 +118,33 @@ export default function Header() {
 
           {/* Navigation links */}
           <nav className="flex flex-col px-4 pb-4 gap-3">
-            {navLinks.map((link) => (
-              link.isAnchor && isLandingPage ? (
+            {navLinks.map((link) => {
+              const showBadge = link.id === 'jobs' && hasOpenJobs;
+              const badge = showBadge ? (
+                <span className="absolute -top-1 right-0 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-accent-foreground text-[10px] font-bold leading-none">
+                  !
+                </span>
+              ) : null;
+              return link.isAnchor && isLandingPage ? (
                 <a
-                  key={link.label}
+                  key={link.id}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="hover-grow inline-block origin-left self-start font-display text-base text-foreground/80 hover:text-accent transition-colors"
+                  className="relative hover-grow inline-block origin-left self-start font-display text-base text-foreground/80 hover:text-accent transition-colors"
                 >
-                  {link.label}
+                  {link.label}{badge}
                 </a>
               ) : (
                 <Link
-                  key={link.label}
+                  key={link.id}
                   to={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="hover-grow inline-block origin-left self-start font-display text-base text-foreground/80 hover:text-accent transition-colors"
+                  className="relative hover-grow inline-block origin-left self-start font-display text-base text-foreground/80 hover:text-accent transition-colors"
                 >
-                  {link.label}
+                  {link.label}{badge}
                 </Link>
-              )
-            ))}
+              );
+            })}
           </nav>
         </div>
       )}
