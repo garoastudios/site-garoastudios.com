@@ -84,11 +84,10 @@ ${blocks.join('\n')}
 </urlset>
 `;
 
-  return new Response(xml, {
-    headers: {
-      'Content-Type': 'application/xml; charset=utf-8',
-      'Cache-Control': 'public, max-age=600',
-      'Access-Control-Allow-Origin': '*',
-    },
-  });
+  const headers = new Headers();
+  headers.set('content-type', 'application/xml');
+  headers.set('cache-control', 'public, max-age=600');
+  headers.set('access-control-allow-origin', '*');
+
+  return new Response(xml, { headers });
 });
