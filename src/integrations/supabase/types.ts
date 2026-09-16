@@ -14,13 +14,108 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      admin_emails: {
+        Row: {
+          created_at: string
+          email: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+        }
+        Relationships: []
+      }
+      job_posting_translations: {
+        Row: {
+          apply_label: string
+          back_label: string
+          body_md: string
+          created_at: string
+          id: string
+          locale: string
+          posting_id: string
+          seo_description: string
+          seo_title: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          apply_label?: string
+          back_label?: string
+          body_md?: string
+          created_at?: string
+          id?: string
+          locale: string
+          posting_id: string
+          seo_description?: string
+          seo_title?: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          apply_label?: string
+          back_label?: string
+          body_md?: string
+          created_at?: string
+          id?: string
+          locale?: string
+          posting_id?: string
+          seo_description?: string
+          seo_title?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "job_posting_translations_posting_id_fkey"
+            columns: ["posting_id"]
+            isOneToOne: false
+            referencedRelation: "job_postings"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      job_postings: {
+        Row: {
+          apply_url: string
+          closes_at: string | null
+          code: string
+          created_at: string
+          id: string
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          apply_url: string
+          closes_at?: string | null
+          code: string
+          created_at?: string
+          id?: string
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          apply_url?: string
+          closes_at?: string | null
+          code?: string
+          created_at?: string
+          id?: string
+          status?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      is_site_admin: { Args: never; Returns: boolean }
+      next_job_posting_code: { Args: never; Returns: string }
     }
     Enums: {
       [_ in never]: never
