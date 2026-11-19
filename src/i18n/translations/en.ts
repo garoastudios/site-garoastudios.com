@@ -111,7 +111,7 @@ export const en = {
     socials: 'Socials',
   },
   footer: {
-    trademark: '™ Garoa Studios 2018 — 2026',
+    trademark: '™ Garoa Studios 2019 — 2027',
     affiliateOf: 'an affiliate of',
   },
 };

@@ -111,7 +111,7 @@ export const zh = {
     socials: '社交媒体',
   },
   footer: {
-    trademark: '™ 细雨工作室 2018 — 2026',
+    trademark: '™ 细雨工作室 2019 — 2027',
     affiliateOf: '关联公司',
   },
 };

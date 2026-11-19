@@ -111,7 +111,7 @@ export const ja = {
     socials: 'ソーシャル',
   },
   footer: {
-    trademark: '™ ガロア 2018 — 2026',
+    trademark: '™ ガロア 2019 — 2027',
     affiliateOf: 'グループ企業',
   },
 };
