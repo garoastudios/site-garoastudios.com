@@ -51,7 +51,7 @@ export const en = {
   about: {
     heading: 'About Us',
     welcome: 'WELCOME TO GAROA STUDIOS!',
-    p1: 'Established in 2018 in the vibrant city of Rio de Janeiro, we are a dedicated development team focused on crafting unique entertainment experiences.',
+    p1: 'Established in 2019 in the vibrant city of Rio de Janeiro, we are a dedicated development team focused on crafting unique entertainment experiences.',
     p2: 'By uniting technical precision with artistic passion, we build games that are not only played, but felt. We are driven by a vision to enrich the global gaming landscape with experiences that are as memorable as they are innovative.',
   },
   values: {
