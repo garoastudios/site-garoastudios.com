@@ -38,6 +38,8 @@ export default function SEO({
   const jsonLdArray = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 
   return (
+    // google-site-verification and msvalidate.01 stay in index.html. Helmet only
+    // replaces tags it renders, so this component must not redeclare those names.
     <Helmet>
       <html lang={HTML_LANG[locale]} />
       <title>{title}</title>

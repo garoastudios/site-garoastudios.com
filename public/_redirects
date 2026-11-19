@@ -1,2 +1,3 @@
-/sitemap.xml  https://genlwdwksyibltortrnd.supabase.co/functions/v1/sitemap  200
+# /sitemap.xml is written at build time (scripts/sitemapPlugin.ts). Do not proxy it;
+# a rewrite here overrides the file and the SPA fallback below must not swallow it.
 /*    /index.html   200
