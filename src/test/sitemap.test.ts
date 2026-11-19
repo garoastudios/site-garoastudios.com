@@ -57,7 +57,7 @@ describe("search console meta", () => {
     const html = readFileSync("index.html", "utf8");
     const withoutComments = html.replace(/<!--[\s\S]*?-->/g, "");
     expect(withoutComments).toContain(
-      '<meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />',
+      '<meta name="google-site-verification" content="zPIBO4XOiHom-s4YFE3tWA-tq4XqBYBntInceVDSk8c" />',
     );
   });
 
