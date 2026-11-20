@@ -44,7 +44,7 @@ export const SEO: Record<Locale, LocaleSeo> = {
     brandTagline: 'Award-winning indie game studio from Rio de Janeiro, Brazil',
     home: {
       title: 'Garoa Studios — Indie Game Studio from Rio de Janeiro',
-      description: 'Garoa Studios is an award-winning indie game developer based in Rio de Janeiro, Brazil, crafting experimental rhythm, narrative and puzzle games since 2018.',
+      description: 'Garoa Studios is an award-winning indie game developer based in Rio de Janeiro, Brazil, crafting experimental rhythm, narrative and puzzle games since 2019.',
     },
     games: {
       title: 'Our Games — Garoa Studios',
@@ -74,7 +74,7 @@ export const SEO: Record<Locale, LocaleSeo> = {
     brandTagline: 'Estúdio independente premiado, do Rio de Janeiro',
     home: {
       title: 'Garoa Studios — Estúdio Indie de Jogos do Rio de Janeiro',
-      description: 'A Garoa Studios é um estúdio independente premiado, sediado no Rio de Janeiro, criando jogos experimentais de ritmo, narrativa e puzzle desde 2018.',
+      description: 'A Garoa Studios é um estúdio independente premiado, sediado no Rio de Janeiro, criando jogos experimentais de ritmo, narrativa e puzzle desde 2019.',
     },
     games: {
       title: 'Nossos Jogos — Garoa Studios',
@@ -104,7 +104,7 @@ export const SEO: Record<Locale, LocaleSeo> = {
     brandTagline: 'Estudio indie de videojuegos premiado, de Río de Janeiro',
     home: {
       title: 'Garoa Studios — Estudio Indie de Videojuegos de Río',
-      description: 'Garoa Studios es un estudio indie premiado con sede en Río de Janeiro, creando juegos experimentales de ritmo, narrativa y puzzle desde 2018.',
+      description: 'Garoa Studios es un estudio indie premiado con sede en Río de Janeiro, creando juegos experimentales de ritmo, narrativa y puzzle desde 2019.',
     },
     games: {
       title: 'Nuestros Juegos — Garoa Studios',
@@ -134,7 +134,7 @@ export const SEO: Record<Locale, LocaleSeo> = {
     brandTagline: '来自里约热内卢的获奖独立游戏工作室',
     home: {
       title: '细雨工作室 Garoa — 来自里约的独立游戏工作室',
-      description: '细雨工作室（Garoa Studios）是一家位于里约热内卢的获奖独立游戏开发商，自2018年起创作实验性的节奏、叙事与解谜游戏。',
+      description: '细雨工作室（Garoa Studios）是一家位于里约热内卢的获奖独立游戏开发商，自2019年起创作实验性的节奏、叙事与解谜游戏。',
     },
     games: {
       title: '我们的游戏 — 细雨工作室 Garoa',
@@ -164,7 +164,7 @@ export const SEO: Record<Locale, LocaleSeo> = {
     brandTagline: 'リオデジャネイロ発、受賞歴あるインディーゲームスタジオ',
     home: {
       title: 'Garoa Studios — リオデジャネイロのインディーゲームスタジオ',
-      description: 'Garoa Studios（ガロア）は2018年設立、リオデジャネイロを拠点に実験的なリズム・ナラティブ・パズルゲームを制作する受賞歴あるインディースタジオです。',
+      description: 'Garoa Studios（ガロア）は2019年設立、リオデジャネイロを拠点に実験的なリズム・ナラティブ・パズルゲームを制作する受賞歴あるインディースタジオです。',
     },
     games: {
       title: '私たちのゲーム — Garoa Studios',

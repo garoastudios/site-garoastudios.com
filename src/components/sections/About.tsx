@@ -20,7 +20,7 @@ const PHOTOS = [
   { src: photo2, caption: 'Astro Pig winning Popular Choice at gamescom latam 2024' },
   { src: photo3, caption: 'Rhythmania showcase at Rio de Janeiro Film and Games Commission 2025' },
   { src: photo4, caption: 'Astro Pig prototype winning Popular Choice at SBGames 2019' },
-  { src: photo5, caption: 'Astro Pig prototype winning first place at Gamethon 2019' },
+  { src: photo5, caption: 'Astro Pig prototype winning first place at Gamethon 2018' },
   { src: photo6, caption: 'Rhythmania on Brazil Direct finals at gamescom latam 2025' },
   { src: photo7, caption: 'RhythMania on Jogatório Festival 2025 official selection' },
   { src: photo8, caption: "Cat Leather Jackets lead artist Kuating's booth at BIG Festival 2023 Artists' Alley" },

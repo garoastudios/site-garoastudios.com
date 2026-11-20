@@ -51,7 +51,7 @@ export const es = {
   about: {
     heading: 'Sobre Nosotros',
     welcome: '¡BIENVENIDO A GAROA STUDIOS!',
-    p1: 'Establecida en 2018 en la vibrante ciudad de Río de Janeiro, somos un equipo dedicado enfocado en crear experiencias de entretenimiento únicas.',
+    p1: 'Establecida en 2019 en la vibrante ciudad de Río de Janeiro, somos un equipo dedicado enfocado en crear experiencias de entretenimiento únicas.',
     p2: 'Uniendo precisión técnica con pasión artística, construimos juegos que no solo se juegan, sino que se sienten. Nos impulsa la visión de enriquecer el panorama global de los juegos.',
   },
   values: {
@@ -111,7 +111,7 @@ export const es = {
     socials: 'Redes Sociales',
   },
   footer: {
-    trademark: '™ Garoa Studios 2018 — 2026',
+    trademark: '™ Garoa Studios 2019 — 2027',
     affiliateOf: 'afiliada a',
   },
 };
